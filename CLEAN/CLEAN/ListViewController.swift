@@ -8,10 +8,10 @@
 
 import UIKit
 
-class ListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class ListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var num = 12
+    var num = 9
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +51,12 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
         }
     
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.bounds.width/3, height: collectionView.bounds.height/3)
+    }
+    
+
 
     /*
     // MARK: - Navigation
