@@ -14,6 +14,8 @@
 		3AEDB40A20A4406C0069726C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AEDB40820A4406C0069726C /* LaunchScreen.storyboard */; };
 		3AEDB41520A4406C0069726C /* CLEANTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDB41420A4406C0069726C /* CLEANTests.swift */; };
 		3AEDB42020A4406C0069726C /* CLEANUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDB41F20A4406C0069726C /* CLEANUITests.swift */; };
+		B6CBED3520B2E55700FDC309 /* AnimUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CBED3420B2E55700FDC309 /* AnimUtils.swift */; };
+		B6CBED3920B2FC6600FDC309 /* FinishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CBED3820B2FC6600FDC309 /* FinishListViewController.swift */; };
 		B6FBB53E20AC70180066EE2D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FBB53D20AC70180066EE2D /* MainViewController.swift */; };
 		B6FBB54020AC70C70066EE2D /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FBB53F20AC70C70066EE2D /* ListViewController.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +51,8 @@
 		3AEDB41B20A4406C0069726C /* CLEANUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CLEANUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AEDB41F20A4406C0069726C /* CLEANUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLEANUITests.swift; sourceTree = "<group>"; };
 		3AEDB42120A4406C0069726C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6CBED3420B2E55700FDC309 /* AnimUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimUtils.swift; sourceTree = "<group>"; };
+		B6CBED3820B2FC6600FDC309 /* FinishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishListViewController.swift; sourceTree = "<group>"; };
 		B6FBB53D20AC70180066EE2D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B6FBB53F20AC70C70066EE2D /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,8 +135,12 @@
 				3AEDB40120A4406C0069726C /* ViewController.swift */,
 				3AEDB40320A4406C0069726C /* Main.storyboard */,
 				3AEDB40620A4406C0069726C /* Assets.xcassets */,
+				B6CBED3420B2E55700FDC309 /* AnimUtils.swift */,
 				3AEDB40820A4406C0069726C /* LaunchScreen.storyboard */,
 				3AEDB40B20A4406C0069726C /* Info.plist */,
+				B6FBB53D20AC70180066EE2D /* MainViewController.swift */,
+				B6FBB53F20AC70C70066EE2D /* ListViewController.swift */,
+				B6CBED3820B2FC6600FDC309 /* FinishListViewController.swift */,
 			);
 			path = CLEAN;
 			sourceTree = "<group>";
@@ -294,6 +302,8 @@
 				3AEDB40220A4406C0069726C /* ViewController.swift in Sources */,
 				B6FBB54020AC70C70066EE2D /* ListViewController.swift in Sources */,
 				3AEDB40020A4406C0069726C /* AppDelegate.swift in Sources */,
+				B6CBED3520B2E55700FDC309 /* AnimUtils.swift in Sources */,
+				B6CBED3920B2FC6600FDC309 /* FinishListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
