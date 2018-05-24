@@ -24,7 +24,6 @@
 		3A44326120B64CE90009FC39 /* FSCalendarStickyHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A44324720B64CE90009FC39 /* FSCalendarStickyHeader.m */; };
 		3A44326220B64CE90009FC39 /* FSCalendarTransitionCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A44324920B64CE90009FC39 /* FSCalendarTransitionCoordinator.m */; };
 		3A44326320B64CE90009FC39 /* FSCalendarWeekdayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A44324B20B64CE90009FC39 /* FSCalendarWeekdayView.m */; };
-		3A44326420B64CE90009FC39 /* FSCalendar.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3A44324D20B64CE90009FC39 /* FSCalendar.xcconfig */; };
 		3A44326520B64CE90009FC39 /* FSCalendar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A44324E20B64CE90009FC39 /* FSCalendar-dummy.m */; };
 		3A44326620B64CE90009FC39 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A44325120B64CE90009FC39 /* Info.plist */; };
 		3AEDB40020A4406C0069726C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDB3FF20A4406C0069726C /* AppDelegate.swift */; };
@@ -381,12 +380,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "김장현";
 				TargetAttributes = {
 					3AEDB3FB20A4406C0069726C = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = PJW7G3548D;
+						DevelopmentTeam = 7W56LGYY5D;
 						ProvisioningStyle = Automatic;
 					};
 					3AEDB40F20A4406C0069726C = {
@@ -427,7 +426,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AEDB40A20A4406C0069726C /* LaunchScreen.storyboard in Resources */,
-				3A44326420B64CE90009FC39 /* FSCalendar.xcconfig in Resources */,
 				3AEDB40720A4406C0069726C /* Assets.xcassets in Resources */,
 				3A44326620B64CE90009FC39 /* Info.plist in Resources */,
 				3AEDB40520A4406C0069726C /* Main.storyboard in Resources */,
@@ -617,7 +615,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -625,7 +625,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -668,7 +672,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -676,7 +682,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -707,7 +717,7 @@
 			baseConfigurationReference = D7A9D624102B7EC9D7D09642 /* Pods-CLEAN.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = PJW7G3548D;
+				DEVELOPMENT_TEAM = 7W56LGYY5D;
 				INFOPLIST_FILE = CLEAN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "--.CLEAN";
@@ -721,7 +731,7 @@
 			baseConfigurationReference = A80F8BCAF250B1F80184A715 /* Pods-CLEAN.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = PJW7G3548D;
+				DEVELOPMENT_TEAM = 7W56LGYY5D;
 				INFOPLIST_FILE = CLEAN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "--.CLEAN";
