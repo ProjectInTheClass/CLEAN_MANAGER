@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AC5B09A612F0A11A9CC025A /* Pods_CLEANTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 674656127D51431991DEA30D /* Pods_CLEANTests.framework */; };
+		3A44325420B64CE90009FC39 /* FSCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A44322D20B64CE90009FC39 /* FSCalendar.m */; };
+		3A44325520B64CE90009FC39 /* FSCalendar+Deprecated.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A44322E20B64CE90009FC39 /* FSCalendar+Deprecated.m */; };
+		3A44325620B64CE90009FC39 /* FSCalendarAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A44323020B64CE90009FC39 /* FSCalendarAppearance.m */; };
+		3A44325720B64CE90009FC39 /* FSCalendarCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A44323220B64CE90009FC39 /* FSCalendarCalculator.m */; };
+		3A44325820B64CE90009FC39 /* FSCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A44323420B64CE90009FC39 /* FSCalendarCell.m */; };
+		3A44325920B64CE90009FC39 /* FSCalendarCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A44323620B64CE90009FC39 /* FSCalendarCollectionView.m */; };
+		3A44325A20B64CE90009FC39 /* FSCalendarCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A44323820B64CE90009FC39 /* FSCalendarCollectionViewLayout.m */; };
+		3A44325B20B64CE90009FC39 /* FSCalendarConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A44323A20B64CE90009FC39 /* FSCalendarConstants.m */; };
+		3A44325C20B64CE90009FC39 /* FSCalendarDelegationFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A44323C20B64CE90009FC39 /* FSCalendarDelegationFactory.m */; };
+		3A44325D20B64CE90009FC39 /* FSCalendarDelegationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A44323E20B64CE90009FC39 /* FSCalendarDelegationProxy.m */; };
+		3A44325E20B64CE90009FC39 /* FSCalendarExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A44324120B64CE90009FC39 /* FSCalendarExtensions.m */; };
+		3A44325F20B64CE90009FC39 /* FSCalendarHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A44324320B64CE90009FC39 /* FSCalendarHeaderView.m */; };
+		3A44326020B64CE90009FC39 /* FSCalendarScopeHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A44324520B64CE90009FC39 /* FSCalendarScopeHandle.m */; };
+		3A44326120B64CE90009FC39 /* FSCalendarStickyHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A44324720B64CE90009FC39 /* FSCalendarStickyHeader.m */; };
+		3A44326220B64CE90009FC39 /* FSCalendarTransitionCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A44324920B64CE90009FC39 /* FSCalendarTransitionCoordinator.m */; };
+		3A44326320B64CE90009FC39 /* FSCalendarWeekdayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A44324B20B64CE90009FC39 /* FSCalendarWeekdayView.m */; };
+		3A44326420B64CE90009FC39 /* FSCalendar.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3A44324D20B64CE90009FC39 /* FSCalendar.xcconfig */; };
+		3A44326520B64CE90009FC39 /* FSCalendar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A44324E20B64CE90009FC39 /* FSCalendar-dummy.m */; };
+		3A44326620B64CE90009FC39 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A44325120B64CE90009FC39 /* Info.plist */; };
 		3AEDB40020A4406C0069726C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDB3FF20A4406C0069726C /* AppDelegate.swift */; };
 		3AEDB40220A4406C0069726C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDB40120A4406C0069726C /* ViewController.swift */; };
 		3AEDB40520A4406C0069726C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AEDB40320A4406C0069726C /* Main.storyboard */; };
@@ -14,6 +34,8 @@
 		3AEDB40A20A4406C0069726C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AEDB40820A4406C0069726C /* LaunchScreen.storyboard */; };
 		3AEDB41520A4406C0069726C /* CLEANTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDB41420A4406C0069726C /* CLEANTests.swift */; };
 		3AEDB42020A4406C0069726C /* CLEANUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDB41F20A4406C0069726C /* CLEANUITests.swift */; };
+		3E8100A4753A4D6CA529D417 /* Pods_CLEANUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28F6C03E12F199F6AAC71AA /* Pods_CLEANUITests.framework */; };
+		713116078B3315BD38ADAEFA /* Pods_CLEAN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA401160F79D0B5BF18AAEC /* Pods_CLEAN.framework */; };
 		B6CBED3520B2E55700FDC309 /* AnimUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CBED3420B2E55700FDC309 /* AnimUtils.swift */; };
 		B6CBED3920B2FC6600FDC309 /* FinishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CBED3820B2FC6600FDC309 /* FinishListViewController.swift */; };
 		B6FBB53E20AC70180066EE2D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FBB53D20AC70180066EE2D /* MainViewController.swift */; };
@@ -38,6 +60,47 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1DA401160F79D0B5BF18AAEC /* Pods_CLEAN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CLEAN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		288CD2B9C8F2AE3A0DB576ED /* Pods-CLEANUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLEANUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CLEANUITests/Pods-CLEANUITests.release.xcconfig"; sourceTree = "<group>"; };
+		32121066C77A8D094BA5F569 /* Pods-CLEANTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLEANTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CLEANTests/Pods-CLEANTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3A44322C20B64CE90009FC39 /* FSCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendar.h; path = FSCalendar/FSCalendar.h; sourceTree = "<group>"; };
+		3A44322D20B64CE90009FC39 /* FSCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendar.m; path = FSCalendar/FSCalendar.m; sourceTree = "<group>"; };
+		3A44322E20B64CE90009FC39 /* FSCalendar+Deprecated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "FSCalendar+Deprecated.m"; path = "FSCalendar/FSCalendar+Deprecated.m"; sourceTree = "<group>"; };
+		3A44322F20B64CE90009FC39 /* FSCalendarAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarAppearance.h; path = FSCalendar/FSCalendarAppearance.h; sourceTree = "<group>"; };
+		3A44323020B64CE90009FC39 /* FSCalendarAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarAppearance.m; path = FSCalendar/FSCalendarAppearance.m; sourceTree = "<group>"; };
+		3A44323120B64CE90009FC39 /* FSCalendarCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarCalculator.h; path = FSCalendar/FSCalendarCalculator.h; sourceTree = "<group>"; };
+		3A44323220B64CE90009FC39 /* FSCalendarCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarCalculator.m; path = FSCalendar/FSCalendarCalculator.m; sourceTree = "<group>"; };
+		3A44323320B64CE90009FC39 /* FSCalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarCell.h; path = FSCalendar/FSCalendarCell.h; sourceTree = "<group>"; };
+		3A44323420B64CE90009FC39 /* FSCalendarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarCell.m; path = FSCalendar/FSCalendarCell.m; sourceTree = "<group>"; };
+		3A44323520B64CE90009FC39 /* FSCalendarCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarCollectionView.h; path = FSCalendar/FSCalendarCollectionView.h; sourceTree = "<group>"; };
+		3A44323620B64CE90009FC39 /* FSCalendarCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarCollectionView.m; path = FSCalendar/FSCalendarCollectionView.m; sourceTree = "<group>"; };
+		3A44323720B64CE90009FC39 /* FSCalendarCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarCollectionViewLayout.h; path = FSCalendar/FSCalendarCollectionViewLayout.h; sourceTree = "<group>"; };
+		3A44323820B64CE90009FC39 /* FSCalendarCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarCollectionViewLayout.m; path = FSCalendar/FSCalendarCollectionViewLayout.m; sourceTree = "<group>"; };
+		3A44323920B64CE90009FC39 /* FSCalendarConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarConstants.h; path = FSCalendar/FSCalendarConstants.h; sourceTree = "<group>"; };
+		3A44323A20B64CE90009FC39 /* FSCalendarConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarConstants.m; path = FSCalendar/FSCalendarConstants.m; sourceTree = "<group>"; };
+		3A44323B20B64CE90009FC39 /* FSCalendarDelegationFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarDelegationFactory.h; path = FSCalendar/FSCalendarDelegationFactory.h; sourceTree = "<group>"; };
+		3A44323C20B64CE90009FC39 /* FSCalendarDelegationFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarDelegationFactory.m; path = FSCalendar/FSCalendarDelegationFactory.m; sourceTree = "<group>"; };
+		3A44323D20B64CE90009FC39 /* FSCalendarDelegationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarDelegationProxy.h; path = FSCalendar/FSCalendarDelegationProxy.h; sourceTree = "<group>"; };
+		3A44323E20B64CE90009FC39 /* FSCalendarDelegationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarDelegationProxy.m; path = FSCalendar/FSCalendarDelegationProxy.m; sourceTree = "<group>"; };
+		3A44323F20B64CE90009FC39 /* FSCalendarDynamicHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarDynamicHeader.h; path = FSCalendar/FSCalendarDynamicHeader.h; sourceTree = "<group>"; };
+		3A44324020B64CE90009FC39 /* FSCalendarExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarExtensions.h; path = FSCalendar/FSCalendarExtensions.h; sourceTree = "<group>"; };
+		3A44324120B64CE90009FC39 /* FSCalendarExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarExtensions.m; path = FSCalendar/FSCalendarExtensions.m; sourceTree = "<group>"; };
+		3A44324220B64CE90009FC39 /* FSCalendarHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarHeaderView.h; path = FSCalendar/FSCalendarHeaderView.h; sourceTree = "<group>"; };
+		3A44324320B64CE90009FC39 /* FSCalendarHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarHeaderView.m; path = FSCalendar/FSCalendarHeaderView.m; sourceTree = "<group>"; };
+		3A44324420B64CE90009FC39 /* FSCalendarScopeHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarScopeHandle.h; path = FSCalendar/FSCalendarScopeHandle.h; sourceTree = "<group>"; };
+		3A44324520B64CE90009FC39 /* FSCalendarScopeHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarScopeHandle.m; path = FSCalendar/FSCalendarScopeHandle.m; sourceTree = "<group>"; };
+		3A44324620B64CE90009FC39 /* FSCalendarStickyHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarStickyHeader.h; path = FSCalendar/FSCalendarStickyHeader.h; sourceTree = "<group>"; };
+		3A44324720B64CE90009FC39 /* FSCalendarStickyHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarStickyHeader.m; path = FSCalendar/FSCalendarStickyHeader.m; sourceTree = "<group>"; };
+		3A44324820B64CE90009FC39 /* FSCalendarTransitionCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarTransitionCoordinator.h; path = FSCalendar/FSCalendarTransitionCoordinator.h; sourceTree = "<group>"; };
+		3A44324920B64CE90009FC39 /* FSCalendarTransitionCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarTransitionCoordinator.m; path = FSCalendar/FSCalendarTransitionCoordinator.m; sourceTree = "<group>"; };
+		3A44324A20B64CE90009FC39 /* FSCalendarWeekdayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarWeekdayView.h; path = FSCalendar/FSCalendarWeekdayView.h; sourceTree = "<group>"; };
+		3A44324B20B64CE90009FC39 /* FSCalendarWeekdayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarWeekdayView.m; path = FSCalendar/FSCalendarWeekdayView.m; sourceTree = "<group>"; };
+		3A44324C20B64CE90009FC39 /* FSCalendar.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = FSCalendar.modulemap; sourceTree = "<group>"; };
+		3A44324D20B64CE90009FC39 /* FSCalendar.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = FSCalendar.xcconfig; sourceTree = "<group>"; };
+		3A44324E20B64CE90009FC39 /* FSCalendar-dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCalendar-dummy.m"; sourceTree = "<group>"; };
+		3A44324F20B64CE90009FC39 /* FSCalendar-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCalendar-prefix.pch"; sourceTree = "<group>"; };
+		3A44325020B64CE90009FC39 /* FSCalendar-umbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCalendar-umbrella.h"; sourceTree = "<group>"; };
+		3A44325120B64CE90009FC39 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AEDB3FC20A4406C0069726C /* CLEAN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLEAN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AEDB3FF20A4406C0069726C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AEDB40120A4406C0069726C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,10 +114,16 @@
 		3AEDB41B20A4406C0069726C /* CLEANUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CLEANUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AEDB41F20A4406C0069726C /* CLEANUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLEANUITests.swift; sourceTree = "<group>"; };
 		3AEDB42120A4406C0069726C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		674656127D51431991DEA30D /* Pods_CLEANTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CLEANTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D31885822A424DAADC7B204 /* Pods-CLEANUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLEANUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CLEANUITests/Pods-CLEANUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		92283D2CA4F44621C938E250 /* Pods-CLEANTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLEANTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CLEANTests/Pods-CLEANTests.release.xcconfig"; sourceTree = "<group>"; };
+		A80F8BCAF250B1F80184A715 /* Pods-CLEAN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLEAN.release.xcconfig"; path = "Pods/Target Support Files/Pods-CLEAN/Pods-CLEAN.release.xcconfig"; sourceTree = "<group>"; };
 		B6CBED3420B2E55700FDC309 /* AnimUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimUtils.swift; sourceTree = "<group>"; };
 		B6CBED3820B2FC6600FDC309 /* FinishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishListViewController.swift; sourceTree = "<group>"; };
 		B6FBB53D20AC70180066EE2D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B6FBB53F20AC70C70066EE2D /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		C28F6C03E12F199F6AAC71AA /* Pods_CLEANUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CLEANUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7A9D624102B7EC9D7D09642 /* Pods-CLEAN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLEAN.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CLEAN/Pods-CLEAN.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				713116078B3315BD38ADAEFA /* Pods_CLEAN.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AC5B09A612F0A11A9CC025A /* Pods_CLEANTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +147,68 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E8100A4753A4D6CA529D417 /* Pods_CLEANUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A44325220B64CE90009FC39 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3A44324C20B64CE90009FC39 /* FSCalendar.modulemap */,
+				3A44324D20B64CE90009FC39 /* FSCalendar.xcconfig */,
+				3A44324E20B64CE90009FC39 /* FSCalendar-dummy.m */,
+				3A44324F20B64CE90009FC39 /* FSCalendar-prefix.pch */,
+				3A44325020B64CE90009FC39 /* FSCalendar-umbrella.h */,
+				3A44325120B64CE90009FC39 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FSCalendar";
+			sourceTree = "<group>";
+		};
+		3A44325320B64CE90009FC39 /* FSCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				3A44322C20B64CE90009FC39 /* FSCalendar.h */,
+				3A44322D20B64CE90009FC39 /* FSCalendar.m */,
+				3A44322E20B64CE90009FC39 /* FSCalendar+Deprecated.m */,
+				3A44322F20B64CE90009FC39 /* FSCalendarAppearance.h */,
+				3A44323020B64CE90009FC39 /* FSCalendarAppearance.m */,
+				3A44323120B64CE90009FC39 /* FSCalendarCalculator.h */,
+				3A44323220B64CE90009FC39 /* FSCalendarCalculator.m */,
+				3A44323320B64CE90009FC39 /* FSCalendarCell.h */,
+				3A44323420B64CE90009FC39 /* FSCalendarCell.m */,
+				3A44323520B64CE90009FC39 /* FSCalendarCollectionView.h */,
+				3A44323620B64CE90009FC39 /* FSCalendarCollectionView.m */,
+				3A44323720B64CE90009FC39 /* FSCalendarCollectionViewLayout.h */,
+				3A44323820B64CE90009FC39 /* FSCalendarCollectionViewLayout.m */,
+				3A44323920B64CE90009FC39 /* FSCalendarConstants.h */,
+				3A44323A20B64CE90009FC39 /* FSCalendarConstants.m */,
+				3A44323B20B64CE90009FC39 /* FSCalendarDelegationFactory.h */,
+				3A44323C20B64CE90009FC39 /* FSCalendarDelegationFactory.m */,
+				3A44323D20B64CE90009FC39 /* FSCalendarDelegationProxy.h */,
+				3A44323E20B64CE90009FC39 /* FSCalendarDelegationProxy.m */,
+				3A44323F20B64CE90009FC39 /* FSCalendarDynamicHeader.h */,
+				3A44324020B64CE90009FC39 /* FSCalendarExtensions.h */,
+				3A44324120B64CE90009FC39 /* FSCalendarExtensions.m */,
+				3A44324220B64CE90009FC39 /* FSCalendarHeaderView.h */,
+				3A44324320B64CE90009FC39 /* FSCalendarHeaderView.m */,
+				3A44324420B64CE90009FC39 /* FSCalendarScopeHandle.h */,
+				3A44324520B64CE90009FC39 /* FSCalendarScopeHandle.m */,
+				3A44324620B64CE90009FC39 /* FSCalendarStickyHeader.h */,
+				3A44324720B64CE90009FC39 /* FSCalendarStickyHeader.m */,
+				3A44324820B64CE90009FC39 /* FSCalendarTransitionCoordinator.h */,
+				3A44324920B64CE90009FC39 /* FSCalendarTransitionCoordinator.m */,
+				3A44324A20B64CE90009FC39 /* FSCalendarWeekdayView.h */,
+				3A44324B20B64CE90009FC39 /* FSCalendarWeekdayView.m */,
+				3A44325220B64CE90009FC39 /* Support Files */,
+			);
+			name = FSCalendar;
+			path = ../Pods/FSCalendar;
+			sourceTree = "<group>";
+		};
 		3AA09CC620AEB29200B9C820 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,8 +219,6 @@
 		3AA09CC720AEB2A300B9C820 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B6FBB53D20AC70180066EE2D /* MainViewController.swift */,
-				B6FBB53F20AC70C70066EE2D /* ListViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -112,6 +237,8 @@
 				3AEDB41320A4406C0069726C /* CLEANTests */,
 				3AEDB41E20A4406C0069726C /* CLEANUITests */,
 				3AEDB3FD20A4406C0069726C /* Products */,
+				B8E310EE64E14F05A65D13C5 /* Pods */,
+				AAF7D26F43A31315B767F625 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +255,7 @@
 		3AEDB3FE20A4406C0069726C /* CLEAN */ = {
 			isa = PBXGroup;
 			children = (
+				3A44325320B64CE90009FC39 /* FSCalendar */,
 				3AA09CC820AEB2AC00B9C820 /* Control */,
 				3AA09CC720AEB2A300B9C820 /* View */,
 				3AA09CC620AEB29200B9C820 /* Model */,
@@ -163,6 +291,29 @@
 			path = CLEANUITests;
 			sourceTree = "<group>";
 		};
+		AAF7D26F43A31315B767F625 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DA401160F79D0B5BF18AAEC /* Pods_CLEAN.framework */,
+				674656127D51431991DEA30D /* Pods_CLEANTests.framework */,
+				C28F6C03E12F199F6AAC71AA /* Pods_CLEANUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B8E310EE64E14F05A65D13C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D7A9D624102B7EC9D7D09642 /* Pods-CLEAN.debug.xcconfig */,
+				A80F8BCAF250B1F80184A715 /* Pods-CLEAN.release.xcconfig */,
+				32121066C77A8D094BA5F569 /* Pods-CLEANTests.debug.xcconfig */,
+				92283D2CA4F44621C938E250 /* Pods-CLEANTests.release.xcconfig */,
+				6D31885822A424DAADC7B204 /* Pods-CLEANUITests.debug.xcconfig */,
+				288CD2B9C8F2AE3A0DB576ED /* Pods-CLEANUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,9 +321,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3AEDB42420A4406C0069726C /* Build configuration list for PBXNativeTarget "CLEAN" */;
 			buildPhases = (
+				3B22B2989463EDDFCEA606EC /* [CP] Check Pods Manifest.lock */,
 				3AEDB3F820A4406C0069726C /* Sources */,
 				3AEDB3F920A4406C0069726C /* Frameworks */,
 				3AEDB3FA20A4406C0069726C /* Resources */,
+				82F64EE6D3850D34CD2A1AED /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -187,6 +340,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3AEDB42720A4406C0069726C /* Build configuration list for PBXNativeTarget "CLEANTests" */;
 			buildPhases = (
+				A5780FEC7101D1D1484576B1 /* [CP] Check Pods Manifest.lock */,
 				3AEDB40C20A4406C0069726C /* Sources */,
 				3AEDB40D20A4406C0069726C /* Frameworks */,
 				3AEDB40E20A4406C0069726C /* Resources */,
@@ -205,6 +359,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3AEDB42A20A4406C0069726C /* Build configuration list for PBXNativeTarget "CLEANUITests" */;
 			buildPhases = (
+				9F30B0EE7D0B3CF0321AD054 /* [CP] Check Pods Manifest.lock */,
 				3AEDB41720A4406C0069726C /* Sources */,
 				3AEDB41820A4406C0069726C /* Frameworks */,
 				3AEDB41920A4406C0069726C /* Resources */,
@@ -272,7 +427,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AEDB40A20A4406C0069726C /* LaunchScreen.storyboard in Resources */,
+				3A44326420B64CE90009FC39 /* FSCalendar.xcconfig in Resources */,
 				3AEDB40720A4406C0069726C /* Assets.xcassets in Resources */,
+				3A44326620B64CE90009FC39 /* Info.plist in Resources */,
 				3AEDB40520A4406C0069726C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,17 +450,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3B22B2989463EDDFCEA606EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CLEAN-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82F64EE6D3850D34CD2A1AED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CLEAN/Pods-CLEAN-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CLEAN/Pods-CLEAN-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F30B0EE7D0B3CF0321AD054 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CLEANUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5780FEC7101D1D1484576B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CLEANTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3AEDB3F820A4406C0069726C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A44325B20B64CE90009FC39 /* FSCalendarConstants.m in Sources */,
 				B6FBB53E20AC70180066EE2D /* MainViewController.swift in Sources */,
+				3A44325520B64CE90009FC39 /* FSCalendar+Deprecated.m in Sources */,
+				3A44325420B64CE90009FC39 /* FSCalendar.m in Sources */,
+				3A44325620B64CE90009FC39 /* FSCalendarAppearance.m in Sources */,
+				3A44325A20B64CE90009FC39 /* FSCalendarCollectionViewLayout.m in Sources */,
+				3A44326120B64CE90009FC39 /* FSCalendarStickyHeader.m in Sources */,
 				3AEDB40220A4406C0069726C /* ViewController.swift in Sources */,
+				3A44325D20B64CE90009FC39 /* FSCalendarDelegationProxy.m in Sources */,
 				B6FBB54020AC70C70066EE2D /* ListViewController.swift in Sources */,
+				3A44326220B64CE90009FC39 /* FSCalendarTransitionCoordinator.m in Sources */,
+				3A44325720B64CE90009FC39 /* FSCalendarCalculator.m in Sources */,
+				3A44325920B64CE90009FC39 /* FSCalendarCollectionView.m in Sources */,
+				3A44325E20B64CE90009FC39 /* FSCalendarExtensions.m in Sources */,
+				3A44326320B64CE90009FC39 /* FSCalendarWeekdayView.m in Sources */,
 				3AEDB40020A4406C0069726C /* AppDelegate.swift in Sources */,
+				3A44326020B64CE90009FC39 /* FSCalendarScopeHandle.m in Sources */,
+				3A44325820B64CE90009FC39 /* FSCalendarCell.m in Sources */,
 				B6CBED3520B2E55700FDC309 /* AnimUtils.swift in Sources */,
+				3A44325C20B64CE90009FC39 /* FSCalendarDelegationFactory.m in Sources */,
+				3A44325F20B64CE90009FC39 /* FSCalendarHeaderView.m in Sources */,
 				B6CBED3920B2FC6600FDC309 /* FinishListViewController.swift in Sources */,
+				3A44326520B64CE90009FC39 /* FSCalendar-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +704,7 @@
 		};
 		3AEDB42520A4406C0069726C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7A9D624102B7EC9D7D09642 /* Pods-CLEAN.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PJW7G3548D;
@@ -468,6 +718,7 @@
 		};
 		3AEDB42620A4406C0069726C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A80F8BCAF250B1F80184A715 /* Pods-CLEAN.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PJW7G3548D;
@@ -481,6 +732,7 @@
 		};
 		3AEDB42820A4406C0069726C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32121066C77A8D094BA5F569 /* Pods-CLEANTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -495,6 +747,7 @@
 		};
 		3AEDB42920A4406C0069726C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92283D2CA4F44621C938E250 /* Pods-CLEANTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -509,6 +762,7 @@
 		};
 		3AEDB42B20A4406C0069726C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D31885822A424DAADC7B204 /* Pods-CLEANUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = CLEANUITests/Info.plist;
@@ -522,6 +776,7 @@
 		};
 		3AEDB42C20A4406C0069726C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 288CD2B9C8F2AE3A0DB576ED /* Pods-CLEANUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = CLEANUITests/Info.plist;
