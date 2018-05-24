@@ -3,7 +3,7 @@
 //  CLEAN
 //
 //  Created by eunji on 2018. 5. 21..
-//  Copyright © 2018년 김장현. All rights reserved.
+//  Copyright © 2018년 eunji. All rights reserved.
 //
 
 import UIKit

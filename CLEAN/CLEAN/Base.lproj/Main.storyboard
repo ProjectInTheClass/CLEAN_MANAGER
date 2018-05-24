@@ -81,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lKf-G6-hee" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-12" y="2080"/>
+            <point key="canvasLocation" x="-815" y="2693"/>
         </scene>
         <!--청소추가목록-->
         <scene sceneID="751-Pp-fXu">
@@ -420,7 +420,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="58Q-gD-707" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2452" y="699"/>
+            <point key="canvasLocation" x="-1476" y="2693"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="6kM-nZ-ATT">
