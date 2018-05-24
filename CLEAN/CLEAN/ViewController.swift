@@ -8,16 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate {
+class ViewController: UIViewController {
     
-    @IBOutlet
-    weak var calendar: FSCalendar!
-    
-    @IBOutlet
-    weak var calendarHeightConstraint: NSLayoutConstraint!
-    
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
