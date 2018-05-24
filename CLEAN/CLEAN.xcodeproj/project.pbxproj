@@ -33,6 +33,7 @@
 		3AEDB40A20A4406C0069726C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AEDB40820A4406C0069726C /* LaunchScreen.storyboard */; };
 		3AEDB41520A4406C0069726C /* CLEANTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDB41420A4406C0069726C /* CLEANTests.swift */; };
 		3AEDB42020A4406C0069726C /* CLEANUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDB41F20A4406C0069726C /* CLEANUITests.swift */; };
+		3AFF591B20B69EC6004E7EDA /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AFF591A20B69EC6004E7EDA /* libsqlite3.tbd */; };
 		3E8100A4753A4D6CA529D417 /* Pods_CLEANUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28F6C03E12F199F6AAC71AA /* Pods_CLEANUITests.framework */; };
 		713116078B3315BD38ADAEFA /* Pods_CLEAN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA401160F79D0B5BF18AAEC /* Pods_CLEAN.framework */; };
 		B6CBED3520B2E55700FDC309 /* AnimUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CBED3420B2E55700FDC309 /* AnimUtils.swift */; };
@@ -113,6 +114,7 @@
 		3AEDB41B20A4406C0069726C /* CLEANUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CLEANUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AEDB41F20A4406C0069726C /* CLEANUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLEANUITests.swift; sourceTree = "<group>"; };
 		3AEDB42120A4406C0069726C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AFF591A20B69EC6004E7EDA /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		674656127D51431991DEA30D /* Pods_CLEANTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CLEANTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D31885822A424DAADC7B204 /* Pods-CLEANUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLEANUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CLEANUITests/Pods-CLEANUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		92283D2CA4F44621C938E250 /* Pods-CLEANTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLEANTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CLEANTests/Pods-CLEANTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AFF591B20B69EC6004E7EDA /* libsqlite3.tbd in Frameworks */,
 				713116078B3315BD38ADAEFA /* Pods_CLEAN.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +296,7 @@
 		AAF7D26F43A31315B767F625 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3AFF591A20B69EC6004E7EDA /* libsqlite3.tbd */,
 				1DA401160F79D0B5BF18AAEC /* Pods_CLEAN.framework */,
 				674656127D51431991DEA30D /* Pods_CLEANTests.framework */,
 				C28F6C03E12F199F6AAC71AA /* Pods_CLEANUITests.framework */,
