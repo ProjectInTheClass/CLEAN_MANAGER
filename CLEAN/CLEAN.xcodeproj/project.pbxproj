@@ -32,6 +32,8 @@
 		3A73206B20BBAD5300F45379 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A73206420BBAD5300F45379 /* FMDatabaseQueue.m */; };
 		3A73206C20BBAD5300F45379 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A73206620BBAD5300F45379 /* FMDatabaseAdditions.m */; };
 		3A73206D20BBAD5300F45379 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A73206820BBAD5300F45379 /* FMDatabasePool.m */; };
+		3A73207020BBAFFB00F45379 /* SpaceTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A73206F20BBAFFB00F45379 /* SpaceTable.swift */; };
+		3A73207220BBB04100F45379 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A73207120BBB04100F45379 /* Constant.swift */; };
 		3AEDB40020A4406C0069726C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDB3FF20A4406C0069726C /* AppDelegate.swift */; };
 		3AEDB40220A4406C0069726C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDB40120A4406C0069726C /* ViewController.swift */; };
 		3AEDB40520A4406C0069726C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AEDB40320A4406C0069726C /* Main.storyboard */; };
@@ -119,6 +121,8 @@
 		3A73206720BBAD5300F45379 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
 		3A73206820BBAD5300F45379 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
 		3A73206E20BBADBE00F45379 /* database2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "database2-Bridging-Header.h"; sourceTree = "<group>"; };
+		3A73206F20BBAFFB00F45379 /* SpaceTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceTable.swift; sourceTree = "<group>"; };
+		3A73207120BBB04100F45379 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		3AEDB3FC20A4406C0069726C /* CLEAN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLEAN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AEDB3FF20A4406C0069726C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AEDB40120A4406C0069726C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -232,6 +236,7 @@
 		3AA09CC620AEB29200B9C820 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3A73206F20BBAFFB00F45379 /* SpaceTable.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -240,10 +245,6 @@
 			isa = PBXGroup;
 			children = (
 				3AEDB3FF20A4406C0069726C /* AppDelegate.swift */,
-				3AEDB40120A4406C0069726C /* ViewController.swift */,
-				B6FBB53F20AC70C70066EE2D /* ListViewController.swift */,
-				B6FBB53D20AC70180066EE2D /* MainViewController.swift */,
-				B6CBED3820B2FC6600FDC309 /* FinishListViewController.swift */,
 				B6CBED3420B2E55700FDC309 /* AnimUtils.swift */,
 				3AEDB40320A4406C0069726C /* Main.storyboard */,
 				3AEDB40820A4406C0069726C /* LaunchScreen.storyboard */,
@@ -254,6 +255,10 @@
 		3AA09CC820AEB2AC00B9C820 /* Control */ = {
 			isa = PBXGroup;
 			children = (
+				3AEDB40120A4406C0069726C /* ViewController.swift */,
+				B6FBB53F20AC70C70066EE2D /* ListViewController.swift */,
+				B6FBB53D20AC70180066EE2D /* MainViewController.swift */,
+				B6CBED3820B2FC6600FDC309 /* FinishListViewController.swift */,
 			);
 			name = Control;
 			sourceTree = "<group>";
@@ -296,6 +301,7 @@
 				3A73206720BBAD5300F45379 /* FMDatabasePool.h */,
 				3A73206820BBAD5300F45379 /* FMDatabasePool.m */,
 				3A73206E20BBADBE00F45379 /* database2-Bridging-Header.h */,
+				3A73207120BBB04100F45379 /* Constant.swift */,
 				3AA09CC620AEB29200B9C820 /* Model */,
 				3AA09CC820AEB2AC00B9C820 /* Control */,
 				3AA09CC720AEB2A300B9C820 /* View */,
@@ -564,6 +570,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A44325B20B64CE90009FC39 /* FSCalendarConstants.m in Sources */,
+				3A73207020BBAFFB00F45379 /* SpaceTable.swift in Sources */,
 				B6FBB53E20AC70180066EE2D /* MainViewController.swift in Sources */,
 				3A44325520B64CE90009FC39 /* FSCalendar+Deprecated.m in Sources */,
 				3A44325420B64CE90009FC39 /* FSCalendar.m in Sources */,
@@ -579,6 +586,7 @@
 				3A44325E20B64CE90009FC39 /* FSCalendarExtensions.m in Sources */,
 				3A44326320B64CE90009FC39 /* FSCalendarWeekdayView.m in Sources */,
 				3A73206920BBAD5300F45379 /* FMDatabase.m in Sources */,
+				3A73207220BBB04100F45379 /* Constant.swift in Sources */,
 				3AEDB40020A4406C0069726C /* AppDelegate.swift in Sources */,
 				3A73206B20BBAD5300F45379 /* FMDatabaseQueue.m in Sources */,
 				3A44326020B64CE90009FC39 /* FSCalendarScopeHandle.m in Sources */,
