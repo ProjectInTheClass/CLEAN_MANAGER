@@ -34,6 +34,10 @@
 		3A73206D20BBAD5300F45379 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A73206820BBAD5300F45379 /* FMDatabasePool.m */; };
 		3A73207020BBAFFB00F45379 /* SpaceTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A73206F20BBAFFB00F45379 /* SpaceTable.swift */; };
 		3A73207220BBB04100F45379 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A73207120BBB04100F45379 /* Constant.swift */; };
+		3A73207420BBE9AB00F45379 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A73207320BBE9AB00F45379 /* Calendar.storyboard */; };
+		3A7320B220BBF04D00F45379 /* Add.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A7320B120BBF04D00F45379 /* Add.storyboard */; };
+		3A7320B420BBF0EA00F45379 /* CleanScheduler.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A7320B320BBF0EA00F45379 /* CleanScheduler.storyboard */; };
+		3A7320B620BBF22E00F45379 /* DetailSet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A7320B520BBF22E00F45379 /* DetailSet.storyboard */; };
 		3AEDB40020A4406C0069726C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDB3FF20A4406C0069726C /* AppDelegate.swift */; };
 		3AEDB40220A4406C0069726C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDB40120A4406C0069726C /* ViewController.swift */; };
 		3AEDB40520A4406C0069726C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AEDB40320A4406C0069726C /* Main.storyboard */; };
@@ -123,6 +127,10 @@
 		3A73206E20BBADBE00F45379 /* database2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "database2-Bridging-Header.h"; sourceTree = "<group>"; };
 		3A73206F20BBAFFB00F45379 /* SpaceTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceTable.swift; sourceTree = "<group>"; };
 		3A73207120BBB04100F45379 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		3A73207320BBE9AB00F45379 /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		3A7320B120BBF04D00F45379 /* Add.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Add.storyboard; sourceTree = "<group>"; };
+		3A7320B320BBF0EA00F45379 /* CleanScheduler.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CleanScheduler.storyboard; sourceTree = "<group>"; };
+		3A7320B520BBF22E00F45379 /* DetailSet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailSet.storyboard; sourceTree = "<group>"; };
 		3AEDB3FC20A4406C0069726C /* CLEAN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLEAN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AEDB3FF20A4406C0069726C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AEDB40120A4406C0069726C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -247,6 +255,10 @@
 				3AEDB3FF20A4406C0069726C /* AppDelegate.swift */,
 				B6CBED3420B2E55700FDC309 /* AnimUtils.swift */,
 				3AEDB40320A4406C0069726C /* Main.storyboard */,
+				3A73207320BBE9AB00F45379 /* Calendar.storyboard */,
+				3A7320B120BBF04D00F45379 /* Add.storyboard */,
+				3A7320B320BBF0EA00F45379 /* CleanScheduler.storyboard */,
+				3A7320B520BBF22E00F45379 /* DetailSet.storyboard */,
 				3AEDB40820A4406C0069726C /* LaunchScreen.storyboard */,
 			);
 			name = View;
@@ -468,7 +480,11 @@
 			files = (
 				3AEDB40A20A4406C0069726C /* LaunchScreen.storyboard in Resources */,
 				3AEDB40720A4406C0069726C /* Assets.xcassets in Resources */,
+				3A7320B620BBF22E00F45379 /* DetailSet.storyboard in Resources */,
 				3A44326620B64CE90009FC39 /* Info.plist in Resources */,
+				3A7320B420BBF0EA00F45379 /* CleanScheduler.storyboard in Resources */,
+				3A73207420BBE9AB00F45379 /* Calendar.storyboard in Resources */,
+				3A7320B220BBF04D00F45379 /* Add.storyboard in Resources */,
 				3AEDB40520A4406C0069726C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
