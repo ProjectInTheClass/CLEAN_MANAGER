@@ -12,7 +12,7 @@
         <!--청소달력-->
         <scene sceneID="qqS-wO-Yu3">
             <objects>
-                <viewController title="청소달력" id="I00-r2-d8C" sceneMemberID="viewController">
+                <viewController title="청소달력" id="I00-r2-d8C" customClass="CalendarViewController" customModule="CLEAN" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cV7-xA-PJ5"/>
                         <viewControllerLayoutGuide type="bottom" id="SIy-6u-nhi"/>
