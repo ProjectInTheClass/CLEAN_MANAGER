@@ -40,25 +40,25 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         super.didReceiveMemoryWarning()
     }
     
-    override func loadView() {
+//    override func loadView() {
+    
+//        let view = UIView(frame: UIScreen.main.bounds)
+//        view.backgroundColor = UIColor.groupTableViewBackground
+//        self.view = view
+//        
+//        let height: CGFloat = UIDevice.current.model.hasPrefix("iPad") ? 400 : 350
+//        let calendar = FSCalendar(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: height))
+//        
+//        //calendar.allowsMultipleSelection = true  // 여러날짜 동시선택기능
+//        calendar.dataSource = self
+//        calendar.delegate = self
+//        calendar.backgroundColor = UIColor.white
+//        
+//        self.view.addSubview(calendar)
+//        self.calendar = calendar
         
-        let view = UIView(frame: UIScreen.main.bounds)
-        view.backgroundColor = UIColor.groupTableViewBackground
-        self.view = view
         
-        let height: CGFloat = UIDevice.current.model.hasPrefix("iPad") ? 400 : 350
-        let calendar = FSCalendar(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: height))
-        
-        //calendar.allowsMultipleSelection = true  // 여러날짜 동시선택기능
-        calendar.dataSource = self
-        calendar.delegate = self
-        calendar.backgroundColor = UIColor.white
-        
-        self.view.addSubview(calendar)
-        self.calendar = calendar
-        
-        
-    }
+//    }
     
     
     /*
