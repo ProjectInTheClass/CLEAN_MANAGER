@@ -9,20 +9,15 @@
 import Foundation
 import FSCalendar
 import UIKit
-import UserNotifications
 
 
 class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource {
-    
-    
-    
     
     private let formatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         return formatter
     }()
-    
     
     //   @IBOutlet weak var calendar: FSCalendar!
     
@@ -31,8 +26,6 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Calendar"
-        
-        
     }
     
     

@@ -26,6 +26,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("You use alarm")
             }
         })
+        
+        let answerYes = UNNotificationAction(identifier: "answerYes", title: "청소했어요", options: [.foreground])
+        let answerNo = UNNotificationAction(identifier: "answerNo", title: "청소안했어요", options: [.foreground])
+        
+        let selectCategory = UNNotificationCategory(identifier: "selectCategory", actions: [answerYes, answerNo], intentIdentifiers: [], options: [])
+        UNUserNotificationCenter.current().setNotificationCategories([selectCategory])
+        
+        
         return true
     }
 
