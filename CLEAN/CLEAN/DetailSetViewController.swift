@@ -24,9 +24,12 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var start_picker: UIDatePicker!
     @IBOutlet weak var cycle_picker: UIPickerView!
     @IBOutlet weak var alarm_picker: UIPickerView!
+    
+    @IBOutlet weak var label_cycle: UILabel!
+    
     let muteForPickerData = ["1", "2", "3"]
-    
-    
+    let month = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"]
+    let day = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30"]
     var countries = [Country]()
     
     override func viewDidLoad() {
@@ -36,10 +39,6 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         alarm_picker.dataSource = self
         cycle_picker.delegate = self
         cycle_picker.dataSource = self
-        
-        countries.append(Country(country: "a", cities: ["a1", "a2", "a3"]))
-        countries.append(Country(country: "b", cities: ["b1", "b2", "b3"]))
-        countries.append(Country(country: "c", cities: ["c1", "c2", "c3"]))
     }
     
     override func didReceiveMemoryWarning() {
@@ -59,11 +58,10 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if pickerView == cycle_picker {
             if component == 0 {
-                return countries.count
+                return month.count
             }
             else {
-                let i = pickerView.selectedRow(inComponent: 0)
-                return countries[i].cities.count
+                return day.count
             }
         }
         else {
@@ -75,11 +73,10 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if(pickerView == cycle_picker){
             if component == 0 {
-                return countries[row].country
+                return month[row]
             }
             else {
-                let i = pickerView.selectedRow(inComponent: 0)
-                return countries[i].cities[row]
+                return day[row]
             }
         }
         else {
@@ -89,8 +86,10 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if pickerView == cycle_picker{
-        pickerView.reloadComponent(1)
+        if pickerView == cycle_picker
+        {
+            label_cycle.text = "주기: \(month[pickerView.selectedRow(inComponent: 0)])개월 \(day[pickerView.selectedRow(inComponent: 1)])일"
+            pickerView.reloadComponent(1)
         }
         
     }

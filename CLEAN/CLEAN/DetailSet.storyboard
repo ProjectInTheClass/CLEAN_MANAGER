@@ -144,7 +144,7 @@
                                 </date>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="주기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgm-26-kff">
-                                <rect key="frame" x="13" y="198" width="42" height="21"/>
+                                <rect key="frame" x="13" y="198" width="346" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -193,6 +193,7 @@
                     <connections>
                         <outlet property="alarm_picker" destination="ofs-kH-enc" id="XZP-b0-gMq"/>
                         <outlet property="cycle_picker" destination="GWC-mG-TpA" id="t1U-Jx-IJ4"/>
+                        <outlet property="label_cycle" destination="fgm-26-kff" id="WgQ-5u-15Q"/>
                         <outlet property="start_picker" destination="bq4-dC-2y0" id="Qgk-1N-N4o"/>
                     </connections>
                 </viewController>
