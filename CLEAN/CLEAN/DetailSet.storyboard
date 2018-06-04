@@ -122,7 +122,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QyL-VI-19E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2650" y="1054"/>
+            <point key="canvasLocation" x="2572" y="249"/>
         </scene>
         <!--Detail Set View Controller-->
         <scene sceneID="OCY-kF-PI9">
@@ -193,8 +193,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="P9t-nT-S7E">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="fB8-7b-l8I"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="alarm_picker" destination="ofs-kH-enc" id="XZP-b0-gMq"/>
+                        <outlet property="btn_done" destination="fB8-7b-l8I" id="sxQ-IG-j0h"/>
                         <outlet property="cycle_picker" destination="GWC-mG-TpA" id="t1U-Jx-IJ4"/>
                         <outlet property="label_alarm" destination="dIJ-Z3-nLf" id="rJN-JQ-zA5"/>
                         <outlet property="label_cycle" destination="fgm-26-kff" id="WgQ-5u-15Q"/>
@@ -205,7 +209,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5QS-vE-jTJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3396" y="1053.8230884557722"/>
+            <point key="canvasLocation" x="2572" y="916"/>
         </scene>
     </scenes>
 </document>

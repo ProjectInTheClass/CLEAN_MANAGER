@@ -15,10 +15,11 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var start_picker: UIDatePicker!
     @IBOutlet weak var cycle_picker: UIPickerView!
     @IBOutlet weak var alarm_picker: UIPickerView!
+    @IBOutlet weak var txt_memo: UITextView!
     @IBOutlet weak var label_cycle: UILabel!
     @IBOutlet weak var label_alarm: UILabel!
     @IBOutlet weak var label_start: UILabel!
-    @IBOutlet weak var txt_memo: UITextView!
+    @IBOutlet weak var btn_done: UIBarButtonItem!
     
     let alarm_data = ["소리", "진동", "무음"]
     let month = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"]
@@ -31,6 +32,8 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         alarm_picker.dataSource = self
         cycle_picker.delegate = self
         cycle_picker.dataSource = self
+        
+        btn_done.title = "done"
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
