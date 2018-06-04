@@ -33,7 +33,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let selectCategory = UNNotificationCategory(identifier: "selectCategory", actions: [answerYes, answerNo], intentIdentifiers: [], options: [])
         UNUserNotificationCenter.current().setNotificationCategories([selectCategory])
         
-        
         return true
     }
 

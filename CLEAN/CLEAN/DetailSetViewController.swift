@@ -10,27 +10,19 @@ import Foundation
 import UIKit
 
 
-class Country{
-    var country: String
-    var cities: [String]
-    
-    init(country:String, cities:[String]) {
-        self.cities = cities
-        self.country = country
-    }
-}
 
-class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextViewDelegate, UITextFieldDelegate {
     @IBOutlet weak var start_picker: UIDatePicker!
     @IBOutlet weak var cycle_picker: UIPickerView!
     @IBOutlet weak var alarm_picker: UIPickerView!
-    
     @IBOutlet weak var label_cycle: UILabel!
+    @IBOutlet weak var label_alarm: UILabel!
+    @IBOutlet weak var label_start: UILabel!
+    @IBOutlet weak var txt_memo: UITextView!
     
-    let muteForPickerData = ["1", "2", "3"]
-    let month = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"]
-    let day = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30"]
-    var countries = [Country]()
+    let alarm_data = ["소리", "진동", "무음"]
+    let month = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"]
+    let day = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +31,47 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         alarm_picker.dataSource = self
         cycle_picker.delegate = self
         cycle_picker.dataSource = self
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        txt_memo.text = "memo..."
+        txt_memo.textColor = UIColor.lightGray
+        txt_memo.delegate = self
+    }
+    
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if txt_memo.textColor == UIColor.lightGray {
+            txt_memo.text = nil
+            txt_memo.textColor = UIColor.black
+        }
+    }
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if txt_memo.text.isEmpty {
+            txt_memo.text = "memo..."
+            txt_memo.textColor = UIColor.lightGray
+        }
+    }
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if txt_memo.textColor == UIColor.lightGray {
+            txt_memo.text = nil
+            txt_memo.textColor = UIColor.black
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if (txt_memo.text?.isEmpty)! {
+            txt_memo.text = "memo..."
+            txt_memo.textColor = UIColor.lightGray
+        }
+    }
+    
+
+    @IBAction func date_picker_changed(_ sender: UIDatePicker) {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMMM - dd - YYYY"
+        label_start.text = "시작일: " + formatter.string(from: start_picker.date)
     }
     
     override func didReceiveMemoryWarning() {
@@ -65,7 +98,7 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             }
         }
         else {
-            return muteForPickerData.count
+            return alarm_data.count
         }
         
     }
@@ -80,7 +113,7 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             }
         }
         else {
-            return muteForPickerData[row]
+            return alarm_data[row]
         }
         
     }
@@ -91,7 +124,10 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             label_cycle.text = "주기: \(month[pickerView.selectedRow(inComponent: 0)])개월 \(day[pickerView.selectedRow(inComponent: 1)])일"
             pickerView.reloadComponent(1)
         }
-        
+        else
+        {
+            label_alarm.text = "알람: \(alarm_data[pickerView.selectedRow(inComponent: 0)])"
+        }
     }
 
 }
