@@ -12,7 +12,7 @@ import UIKit
 class Constants: NSObject{
     
     struct Database{
-        static let dbPath = NSString()
+        static let db_name = "test_db1"
     }
     struct DetailSet {
         static let alarm_data = ["소리", "진동", "무음"]
@@ -30,4 +30,5 @@ class Constants: NSObject{
     struct Button{
         static let done = "done"
     }
+
 }
