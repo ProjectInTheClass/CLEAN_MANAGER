@@ -7,7 +7,7 @@
 //
 import Foundation
 
-class DetailSet {
+class EventData {
     var database_path : String
     var file_mgr : FileManager
     var dir_path : [String]
@@ -41,15 +41,19 @@ class DetailSet {
             print("contactDB is exist")
         }
     }
-    func find_event(event_id: Int)
+    func find_event(event_id: Int, get_data: EventInfo)
     {
         let contactDB = FMDatabase(path: self.database_path)
         if contactDB.open() {
-            let sql_select = Constants.DB_event.SQL_set_detail + "\(event_id)"
+            let sql_select = Constants.DB_event.sql_set_detail + "\(event_id)"
             print(sql_select)
             do {
                 let result = try contactDB.executeQuery(sql_select, values: [])
                 if result.next(){
+       //             get_data.set_init(eid: result.Int(forColumn: "EID"), ename: <#T##String#>, front_date: <#T##String#>, cycle: <#T##String#>, alarm: <#T##Int#>, memo: <#T##String#>)
+//                    get_data.eid = Int(result.int(forColumn: "EID"))
+ //                   get_data.ename = result.string(forColumn: "ENAME")
+  //                  get_data.front_date =
 //                    phone.text = result.string(forColumn: "AGE")
 //                    resultLabel.text = "\(result.string(forColumn: "NAME")!) find!"
                 } else {

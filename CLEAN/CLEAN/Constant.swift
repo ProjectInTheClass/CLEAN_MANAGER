@@ -53,7 +53,7 @@ class Constants: NSObject{
         static let from_ed = "FROM " + Constants.Database.te_name
         static let condition_eid = "WHERE EID = "
         
-        static let SQL_set_detail = select_ed + from_ed + condition_eid
+        static let sql_set_detail = select_ed + from_ed + condition_eid
     }
     struct DetailSet {
         static let alarm_data = ["소리", "진동", "무음"]

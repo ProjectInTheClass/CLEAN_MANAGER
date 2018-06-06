@@ -41,6 +41,7 @@
 		3AC42E2120C749F4003D82F9 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC42E0820C74858003D82F9 /* FMDatabaseAdditions.m */; };
 		3AC42E2320C749F4003D82F9 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC42E0A20C74858003D82F9 /* FMDatabasePool.m */; };
 		3AC42E2820C772B4003D82F9 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC42E2720C772B4003D82F9 /* Subject.swift */; };
+		3AC42E2B20C7863A003D82F9 /* Infos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC42E2A20C7863A003D82F9 /* Infos.swift */; };
 		3AEDB40020A4406C0069726C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDB3FF20A4406C0069726C /* AppDelegate.swift */; };
 		3AEDB40220A4406C0069726C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDB40120A4406C0069726C /* ViewController.swift */; };
 		3AEDB40520A4406C0069726C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AEDB40320A4406C0069726C /* Main.storyboard */; };
@@ -139,6 +140,7 @@
 		3AC42E0A20C74858003D82F9 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = ../FMDatabasePool.m; sourceTree = "<group>"; };
 		3AC42E1020C74886003D82F9 /* FMDB_Bridging_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDB_Bridging_Header.h; sourceTree = "<group>"; };
 		3AC42E2720C772B4003D82F9 /* Subject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		3AC42E2A20C7863A003D82F9 /* Infos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Infos.swift; sourceTree = "<group>"; };
 		3AEDB3FC20A4406C0069726C /* CLEAN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLEAN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AEDB3FF20A4406C0069726C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AEDB40120A4406C0069726C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -324,6 +326,15 @@
 			name = interface;
 			sourceTree = "<group>";
 		};
+		3AC42E2920C785AE003D82F9 /* Define */ = {
+			isa = PBXGroup;
+			children = (
+				3A73207120BBB04100F45379 /* Constant.swift */,
+				3AC42E2A20C7863A003D82F9 /* Infos.swift */,
+			);
+			name = Define;
+			sourceTree = "<group>";
+		};
 		3AEDB3F320A4406C0069726C = {
 			isa = PBXGroup;
 			children = (
@@ -350,9 +361,9 @@
 		3AEDB3FE20A4406C0069726C /* CLEAN */ = {
 			isa = PBXGroup;
 			children = (
-				3AC42E2620C77295003D82F9 /* interface */,
-				3A73207120BBB04100F45379 /* Constant.swift */,
 				3AC42E1220C74935003D82F9 /* FMDB */,
+				3AC42E2620C77295003D82F9 /* interface */,
+				3AC42E2920C785AE003D82F9 /* Define */,
 				3AA09CC620AEB29200B9C820 /* Model */,
 				3AA09CC820AEB2AC00B9C820 /* Control */,
 				3AA09CC720AEB2A300B9C820 /* View */,
@@ -636,6 +647,7 @@
 				3A44325620B64CE90009FC39 /* FSCalendarAppearance.m in Sources */,
 				3A44325A20B64CE90009FC39 /* FSCalendarCollectionViewLayout.m in Sources */,
 				3A44326120B64CE90009FC39 /* FSCalendarStickyHeader.m in Sources */,
+				3AC42E2B20C7863A003D82F9 /* Infos.swift in Sources */,
 				3AEDB40220A4406C0069726C /* ViewController.swift in Sources */,
 				3A44325D20B64CE90009FC39 /* FSCalendarDelegationProxy.m in Sources */,
 				3A39471220C7454A0089717A /* EventData.swift in Sources */,
