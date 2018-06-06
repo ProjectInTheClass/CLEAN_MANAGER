@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1AC5B09A612F0A11A9CC025A /* Pods_CLEANTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 674656127D51431991DEA30D /* Pods_CLEANTests.framework */; };
 		3A3946EB20C28BDF0089717A /* DetailSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3946EA20C28BDF0089717A /* DetailSetViewController.swift */; };
-		3A39471220C7454A0089717A /* DetailSetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A39471120C7454A0089717A /* DetailSetData.swift */; };
+		3A39471220C7454A0089717A /* EventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A39471120C7454A0089717A /* EventData.swift */; };
 		3A39471320C7474C0089717A /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A73204C20BBAD0700F45379 /* libsqlite3.0.tbd */; };
 		3A44325420B64CE90009FC39 /* FSCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A44322D20B64CE90009FC39 /* FSCalendar.m */; };
 		3A44325520B64CE90009FC39 /* FSCalendar+Deprecated.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A44322E20B64CE90009FC39 /* FSCalendar+Deprecated.m */; };
@@ -40,6 +40,7 @@
 		3AC42E1E20C749F4003D82F9 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC42E0420C74858003D82F9 /* FMResultSet.m */; };
 		3AC42E2120C749F4003D82F9 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC42E0820C74858003D82F9 /* FMDatabaseAdditions.m */; };
 		3AC42E2320C749F4003D82F9 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC42E0A20C74858003D82F9 /* FMDatabasePool.m */; };
+		3AC42E2820C772B4003D82F9 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC42E2720C772B4003D82F9 /* Subject.swift */; };
 		3AEDB40020A4406C0069726C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDB3FF20A4406C0069726C /* AppDelegate.swift */; };
 		3AEDB40220A4406C0069726C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDB40120A4406C0069726C /* ViewController.swift */; };
 		3AEDB40520A4406C0069726C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AEDB40320A4406C0069726C /* Main.storyboard */; };
@@ -79,7 +80,7 @@
 		288CD2B9C8F2AE3A0DB576ED /* Pods-CLEANUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLEANUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CLEANUITests/Pods-CLEANUITests.release.xcconfig"; sourceTree = "<group>"; };
 		32121066C77A8D094BA5F569 /* Pods-CLEANTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLEANTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CLEANTests/Pods-CLEANTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3A3946EA20C28BDF0089717A /* DetailSetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailSetViewController.swift; sourceTree = "<group>"; };
-		3A39471120C7454A0089717A /* DetailSetData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailSetData.swift; sourceTree = "<group>"; };
+		3A39471120C7454A0089717A /* EventData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventData.swift; sourceTree = "<group>"; };
 		3A44322C20B64CE90009FC39 /* FSCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendar.h; path = FSCalendar/FSCalendar.h; sourceTree = "<group>"; };
 		3A44322D20B64CE90009FC39 /* FSCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendar.m; path = FSCalendar/FSCalendar.m; sourceTree = "<group>"; };
 		3A44322E20B64CE90009FC39 /* FSCalendar+Deprecated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "FSCalendar+Deprecated.m"; path = "FSCalendar/FSCalendar+Deprecated.m"; sourceTree = "<group>"; };
@@ -137,6 +138,7 @@
 		3AC42E0920C74858003D82F9 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = ../FMDatabasePool.h; sourceTree = "<group>"; };
 		3AC42E0A20C74858003D82F9 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = ../FMDatabasePool.m; sourceTree = "<group>"; };
 		3AC42E1020C74886003D82F9 /* FMDB_Bridging_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDB_Bridging_Header.h; sourceTree = "<group>"; };
+		3AC42E2720C772B4003D82F9 /* Subject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		3AEDB3FC20A4406C0069726C /* CLEAN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLEAN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AEDB3FF20A4406C0069726C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AEDB40120A4406C0069726C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -252,8 +254,8 @@
 		3AA09CC620AEB29200B9C820 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3AC42E2520C75EC8003D82F9 /* DB */,
 				3A73206F20BBAFFB00F45379 /* SpaceTable.swift */,
-				3A39471120C7454A0089717A /* DetailSetData.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -306,6 +308,22 @@
 			name = FMDB;
 			sourceTree = "<group>";
 		};
+		3AC42E2520C75EC8003D82F9 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				3A39471120C7454A0089717A /* EventData.swift */,
+			);
+			name = DB;
+			sourceTree = "<group>";
+		};
+		3AC42E2620C77295003D82F9 /* interface */ = {
+			isa = PBXGroup;
+			children = (
+				3AC42E2720C772B4003D82F9 /* Subject.swift */,
+			);
+			name = interface;
+			sourceTree = "<group>";
+		};
 		3AEDB3F320A4406C0069726C = {
 			isa = PBXGroup;
 			children = (
@@ -332,6 +350,7 @@
 		3AEDB3FE20A4406C0069726C /* CLEAN */ = {
 			isa = PBXGroup;
 			children = (
+				3AC42E2620C77295003D82F9 /* interface */,
 				3A73207120BBB04100F45379 /* Constant.swift */,
 				3AC42E1220C74935003D82F9 /* FMDB */,
 				3AA09CC620AEB29200B9C820 /* Model */,
@@ -619,8 +638,9 @@
 				3A44326120B64CE90009FC39 /* FSCalendarStickyHeader.m in Sources */,
 				3AEDB40220A4406C0069726C /* ViewController.swift in Sources */,
 				3A44325D20B64CE90009FC39 /* FSCalendarDelegationProxy.m in Sources */,
-				3A39471220C7454A0089717A /* DetailSetData.swift in Sources */,
+				3A39471220C7454A0089717A /* EventData.swift in Sources */,
 				B6FBB54020AC70C70066EE2D /* ListViewController.swift in Sources */,
+				3AC42E2820C772B4003D82F9 /* Subject.swift in Sources */,
 				3A44326220B64CE90009FC39 /* FSCalendarTransitionCoordinator.m in Sources */,
 				84FB80C520BF795300585B5B /* CalendarViewController.swift in Sources */,
 				3A44325720B64CE90009FC39 /* FSCalendarCalculator.m in Sources */,

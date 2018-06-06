@@ -22,14 +22,15 @@ class DetailSet {
         self.database_path = docs_dir.appending(Constants.Database.db_name)
     }
     
-    func create_db()
+    func create_table()
     {
         if !self.file_mgr.fileExists(atPath: self.database_path){
             let contactDB = FMDatabase(path: self.database_path)
             
             if contactDB.open(){
-                let sql_stmt = "CREATE TABLE IF NOT EXISTS CONTACTS ( ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, AGE INTEGER )"
-                if !contactDB.executeStatements(sql_stmt){
+                let sql_create_table = Constants.Database.create_exists
+                
+                if !contactDB.executeStatements(sql_create_table){
                     print("Error0: contactDB execute Fail, \(contactDB.lastError())")
                 }
                 contactDB.close()
@@ -38,6 +39,29 @@ class DetailSet {
             }
         } else {
             print("contactDB is exist")
+        }
+    }
+    func find_event(event_id: Int)
+    {
+        let contactDB = FMDatabase(path: self.database_path)
+        if contactDB.open() {
+            let sql_select = Constants.DB_event.SQL_set_detail + "\(event_id)"
+            print(sql_select)
+            do {
+                let result = try contactDB.executeQuery(sql_select, values: [])
+                if result.next(){
+//                    phone.text = result.string(forColumn: "AGE")
+//                    resultLabel.text = "\(result.string(forColumn: "NAME")!) find!"
+                } else {
+//                    name.text = ""
+//                    phone.text = ""
+//                    resultLabel.text = "Record is not found"
+                }
+            } catch {
+                print("error")
+            }
+        } else {
+            print("else error")
         }
     }
 }
