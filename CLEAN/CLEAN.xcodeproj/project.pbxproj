@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1AC5B09A612F0A11A9CC025A /* Pods_CLEANTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 674656127D51431991DEA30D /* Pods_CLEANTests.framework */; };
 		3A3946EB20C28BDF0089717A /* DetailSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3946EA20C28BDF0089717A /* DetailSetViewController.swift */; };
+		3A39471220C7454A0089717A /* EventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A39471120C7454A0089717A /* EventData.swift */; };
+		3A39471320C7474C0089717A /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A73204C20BBAD0700F45379 /* libsqlite3.0.tbd */; };
 		3A44325420B64CE90009FC39 /* FSCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A44322D20B64CE90009FC39 /* FSCalendar.m */; };
 		3A44325520B64CE90009FC39 /* FSCalendar+Deprecated.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A44322E20B64CE90009FC39 /* FSCalendar+Deprecated.m */; };
 		3A44325620B64CE90009FC39 /* FSCalendarAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A44323020B64CE90009FC39 /* FSCalendarAppearance.m */; };
@@ -27,18 +29,19 @@
 		3A44326320B64CE90009FC39 /* FSCalendarWeekdayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A44324B20B64CE90009FC39 /* FSCalendarWeekdayView.m */; };
 		3A44326520B64CE90009FC39 /* FSCalendar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A44324E20B64CE90009FC39 /* FSCalendar-dummy.m */; };
 		3A44326620B64CE90009FC39 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A44325120B64CE90009FC39 /* Info.plist */; };
-		3A73204D20BBAD0700F45379 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A73204C20BBAD0700F45379 /* libsqlite3.0.tbd */; };
-		3A73206920BBAD5300F45379 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A73206020BBAD5300F45379 /* FMDatabase.m */; };
-		3A73206A20BBAD5300F45379 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A73206220BBAD5300F45379 /* FMResultSet.m */; };
-		3A73206B20BBAD5300F45379 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A73206420BBAD5300F45379 /* FMDatabaseQueue.m */; };
-		3A73206C20BBAD5300F45379 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A73206620BBAD5300F45379 /* FMDatabaseAdditions.m */; };
-		3A73206D20BBAD5300F45379 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A73206820BBAD5300F45379 /* FMDatabasePool.m */; };
 		3A73207020BBAFFB00F45379 /* SpaceTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A73206F20BBAFFB00F45379 /* SpaceTable.swift */; };
 		3A73207220BBB04100F45379 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A73207120BBB04100F45379 /* Constant.swift */; };
 		3A73207420BBE9AB00F45379 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A73207320BBE9AB00F45379 /* Calendar.storyboard */; };
 		3A7320B220BBF04D00F45379 /* Add.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A7320B120BBF04D00F45379 /* Add.storyboard */; };
 		3A7320B420BBF0EA00F45379 /* CleanScheduler.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A7320B320BBF0EA00F45379 /* CleanScheduler.storyboard */; };
 		3A7320B620BBF22E00F45379 /* DetailSet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A7320B520BBF22E00F45379 /* DetailSet.storyboard */; };
+		3AC42E0D20C74858003D82F9 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC42E0620C74858003D82F9 /* FMDatabaseQueue.m */; };
+		3AC42E1C20C749F4003D82F9 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC42E0220C74858003D82F9 /* FMDatabase.m */; };
+		3AC42E1E20C749F4003D82F9 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC42E0420C74858003D82F9 /* FMResultSet.m */; };
+		3AC42E2120C749F4003D82F9 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC42E0820C74858003D82F9 /* FMDatabaseAdditions.m */; };
+		3AC42E2320C749F4003D82F9 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC42E0A20C74858003D82F9 /* FMDatabasePool.m */; };
+		3AC42E2820C772B4003D82F9 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC42E2720C772B4003D82F9 /* Subject.swift */; };
+		3AC42E2B20C7863A003D82F9 /* Infos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC42E2A20C7863A003D82F9 /* Infos.swift */; };
 		3AEDB40020A4406C0069726C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDB3FF20A4406C0069726C /* AppDelegate.swift */; };
 		3AEDB40220A4406C0069726C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDB40120A4406C0069726C /* ViewController.swift */; };
 		3AEDB40520A4406C0069726C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AEDB40320A4406C0069726C /* Main.storyboard */; };
@@ -78,6 +81,7 @@
 		288CD2B9C8F2AE3A0DB576ED /* Pods-CLEANUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLEANUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CLEANUITests/Pods-CLEANUITests.release.xcconfig"; sourceTree = "<group>"; };
 		32121066C77A8D094BA5F569 /* Pods-CLEANTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLEANTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CLEANTests/Pods-CLEANTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3A3946EA20C28BDF0089717A /* DetailSetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailSetViewController.swift; sourceTree = "<group>"; };
+		3A39471120C7454A0089717A /* EventData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventData.swift; sourceTree = "<group>"; };
 		3A44322C20B64CE90009FC39 /* FSCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendar.h; path = FSCalendar/FSCalendar.h; sourceTree = "<group>"; };
 		3A44322D20B64CE90009FC39 /* FSCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendar.m; path = FSCalendar/FSCalendar.m; sourceTree = "<group>"; };
 		3A44322E20B64CE90009FC39 /* FSCalendar+Deprecated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "FSCalendar+Deprecated.m"; path = "FSCalendar/FSCalendar+Deprecated.m"; sourceTree = "<group>"; };
@@ -117,24 +121,26 @@
 		3A44325020B64CE90009FC39 /* FSCalendar-umbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCalendar-umbrella.h"; sourceTree = "<group>"; };
 		3A44325120B64CE90009FC39 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A73204C20BBAD0700F45379 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		3A73205E20BBAD5300F45379 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
-		3A73205F20BBAD5300F45379 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
-		3A73206020BBAD5300F45379 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
-		3A73206120BBAD5300F45379 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
-		3A73206220BBAD5300F45379 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		3A73206320BBAD5300F45379 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
-		3A73206420BBAD5300F45379 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
-		3A73206520BBAD5300F45379 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		3A73206620BBAD5300F45379 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		3A73206720BBAD5300F45379 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
-		3A73206820BBAD5300F45379 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
-		3A73206E20BBADBE00F45379 /* database2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "database2-Bridging-Header.h"; sourceTree = "<group>"; };
 		3A73206F20BBAFFB00F45379 /* SpaceTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceTable.swift; sourceTree = "<group>"; };
 		3A73207120BBB04100F45379 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		3A73207320BBE9AB00F45379 /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		3A7320B120BBF04D00F45379 /* Add.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Add.storyboard; sourceTree = "<group>"; };
 		3A7320B320BBF0EA00F45379 /* CleanScheduler.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CleanScheduler.storyboard; sourceTree = "<group>"; };
 		3A7320B520BBF22E00F45379 /* DetailSet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailSet.storyboard; sourceTree = "<group>"; };
+		3AC42E0020C74858003D82F9 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = ../FMDB.h; sourceTree = "<group>"; };
+		3AC42E0120C74858003D82F9 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = ../FMDatabase.h; sourceTree = "<group>"; };
+		3AC42E0220C74858003D82F9 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = ../FMDatabase.m; sourceTree = "<group>"; };
+		3AC42E0320C74858003D82F9 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = ../FMResultSet.h; sourceTree = "<group>"; };
+		3AC42E0420C74858003D82F9 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = ../FMResultSet.m; sourceTree = "<group>"; };
+		3AC42E0520C74858003D82F9 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = ../FMDatabaseQueue.h; sourceTree = "<group>"; };
+		3AC42E0620C74858003D82F9 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = ../FMDatabaseQueue.m; sourceTree = "<group>"; };
+		3AC42E0720C74858003D82F9 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = ../FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		3AC42E0820C74858003D82F9 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = ../FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		3AC42E0920C74858003D82F9 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = ../FMDatabasePool.h; sourceTree = "<group>"; };
+		3AC42E0A20C74858003D82F9 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = ../FMDatabasePool.m; sourceTree = "<group>"; };
+		3AC42E1020C74886003D82F9 /* FMDB_Bridging_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDB_Bridging_Header.h; sourceTree = "<group>"; };
+		3AC42E2720C772B4003D82F9 /* Subject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		3AC42E2A20C7863A003D82F9 /* Infos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Infos.swift; sourceTree = "<group>"; };
 		3AEDB3FC20A4406C0069726C /* CLEAN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLEAN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AEDB3FF20A4406C0069726C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AEDB40120A4406C0069726C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -168,7 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A73204D20BBAD0700F45379 /* libsqlite3.0.tbd in Frameworks */,
+				3A39471320C7474C0089717A /* libsqlite3.0.tbd in Frameworks */,
 				713116078B3315BD38ADAEFA /* Pods_CLEAN.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +256,7 @@
 		3AA09CC620AEB29200B9C820 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3AC42E2520C75EC8003D82F9 /* DB */,
 				3A73206F20BBAFFB00F45379 /* SpaceTable.swift */,
 			);
 			name = Model;
@@ -284,6 +291,50 @@
 			name = Control;
 			sourceTree = "<group>";
 		};
+		3AC42E1220C74935003D82F9 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				3AC42E0020C74858003D82F9 /* FMDB.h */,
+				3AC42E0120C74858003D82F9 /* FMDatabase.h */,
+				3AC42E0220C74858003D82F9 /* FMDatabase.m */,
+				3AC42E0320C74858003D82F9 /* FMResultSet.h */,
+				3AC42E0420C74858003D82F9 /* FMResultSet.m */,
+				3AC42E0520C74858003D82F9 /* FMDatabaseQueue.h */,
+				3AC42E0620C74858003D82F9 /* FMDatabaseQueue.m */,
+				3AC42E0720C74858003D82F9 /* FMDatabaseAdditions.h */,
+				3AC42E0820C74858003D82F9 /* FMDatabaseAdditions.m */,
+				3AC42E0920C74858003D82F9 /* FMDatabasePool.h */,
+				3AC42E0A20C74858003D82F9 /* FMDatabasePool.m */,
+				3AC42E1020C74886003D82F9 /* FMDB_Bridging_Header.h */,
+			);
+			name = FMDB;
+			sourceTree = "<group>";
+		};
+		3AC42E2520C75EC8003D82F9 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				3A39471120C7454A0089717A /* EventData.swift */,
+			);
+			name = DB;
+			sourceTree = "<group>";
+		};
+		3AC42E2620C77295003D82F9 /* interface */ = {
+			isa = PBXGroup;
+			children = (
+				3AC42E2720C772B4003D82F9 /* Subject.swift */,
+			);
+			name = interface;
+			sourceTree = "<group>";
+		};
+		3AC42E2920C785AE003D82F9 /* Define */ = {
+			isa = PBXGroup;
+			children = (
+				3A73207120BBB04100F45379 /* Constant.swift */,
+				3AC42E2A20C7863A003D82F9 /* Infos.swift */,
+			);
+			name = Define;
+			sourceTree = "<group>";
+		};
 		3AEDB3F320A4406C0069726C = {
 			isa = PBXGroup;
 			children = (
@@ -310,19 +361,9 @@
 		3AEDB3FE20A4406C0069726C /* CLEAN */ = {
 			isa = PBXGroup;
 			children = (
-				3A73205E20BBAD5300F45379 /* FMDB.h */,
-				3A73205F20BBAD5300F45379 /* FMDatabase.h */,
-				3A73206020BBAD5300F45379 /* FMDatabase.m */,
-				3A73206120BBAD5300F45379 /* FMResultSet.h */,
-				3A73206220BBAD5300F45379 /* FMResultSet.m */,
-				3A73206320BBAD5300F45379 /* FMDatabaseQueue.h */,
-				3A73206420BBAD5300F45379 /* FMDatabaseQueue.m */,
-				3A73206520BBAD5300F45379 /* FMDatabaseAdditions.h */,
-				3A73206620BBAD5300F45379 /* FMDatabaseAdditions.m */,
-				3A73206720BBAD5300F45379 /* FMDatabasePool.h */,
-				3A73206820BBAD5300F45379 /* FMDatabasePool.m */,
-				3A73206E20BBADBE00F45379 /* database2-Bridging-Header.h */,
-				3A73207120BBB04100F45379 /* Constant.swift */,
+				3AC42E1220C74935003D82F9 /* FMDB */,
+				3AC42E2620C77295003D82F9 /* interface */,
+				3AC42E2920C785AE003D82F9 /* Define */,
 				3AA09CC620AEB29200B9C820 /* Model */,
 				3AA09CC820AEB2AC00B9C820 /* Control */,
 				3AA09CC720AEB2A300B9C820 /* View */,
@@ -594,6 +635,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AC42E1C20C749F4003D82F9 /* FMDatabase.m in Sources */,
+				3AC42E1E20C749F4003D82F9 /* FMResultSet.m in Sources */,
+				3AC42E2120C749F4003D82F9 /* FMDatabaseAdditions.m in Sources */,
+				3AC42E2320C749F4003D82F9 /* FMDatabasePool.m in Sources */,
 				3A44325B20B64CE90009FC39 /* FSCalendarConstants.m in Sources */,
 				3A73207020BBAFFB00F45379 /* SpaceTable.swift in Sources */,
 				B6FBB53E20AC70180066EE2D /* MainViewController.swift in Sources */,
@@ -602,9 +647,12 @@
 				3A44325620B64CE90009FC39 /* FSCalendarAppearance.m in Sources */,
 				3A44325A20B64CE90009FC39 /* FSCalendarCollectionViewLayout.m in Sources */,
 				3A44326120B64CE90009FC39 /* FSCalendarStickyHeader.m in Sources */,
+				3AC42E2B20C7863A003D82F9 /* Infos.swift in Sources */,
 				3AEDB40220A4406C0069726C /* ViewController.swift in Sources */,
 				3A44325D20B64CE90009FC39 /* FSCalendarDelegationProxy.m in Sources */,
+				3A39471220C7454A0089717A /* EventData.swift in Sources */,
 				B6FBB54020AC70C70066EE2D /* ListViewController.swift in Sources */,
+				3AC42E2820C772B4003D82F9 /* Subject.swift in Sources */,
 				3A44326220B64CE90009FC39 /* FSCalendarTransitionCoordinator.m in Sources */,
 				84FB80C520BF795300585B5B /* CalendarViewController.swift in Sources */,
 				3A44325720B64CE90009FC39 /* FSCalendarCalculator.m in Sources */,
@@ -612,19 +660,15 @@
 				3A44325E20B64CE90009FC39 /* FSCalendarExtensions.m in Sources */,
 				3A44326320B64CE90009FC39 /* FSCalendarWeekdayView.m in Sources */,
 				84099DBF20C2E3B000A99BDF /* AlarmTestViewController.swift in Sources */,
-				3A73206920BBAD5300F45379 /* FMDatabase.m in Sources */,
 				3A73207220BBB04100F45379 /* Constant.swift in Sources */,
 				3AEDB40020A4406C0069726C /* AppDelegate.swift in Sources */,
-				3A73206B20BBAD5300F45379 /* FMDatabaseQueue.m in Sources */,
 				3A44326020B64CE90009FC39 /* FSCalendarScopeHandle.m in Sources */,
 				3A3946EB20C28BDF0089717A /* DetailSetViewController.swift in Sources */,
+				3AC42E0D20C74858003D82F9 /* FMDatabaseQueue.m in Sources */,
 				3A44325820B64CE90009FC39 /* FSCalendarCell.m in Sources */,
-				3A73206A20BBAD5300F45379 /* FMResultSet.m in Sources */,
 				B6CBED3520B2E55700FDC309 /* AnimUtils.swift in Sources */,
 				3A44325C20B64CE90009FC39 /* FSCalendarDelegationFactory.m in Sources */,
-				3A73206C20BBAD5300F45379 /* FMDatabaseAdditions.m in Sources */,
 				3A44325F20B64CE90009FC39 /* FSCalendarHeaderView.m in Sources */,
-				3A73206D20BBAD5300F45379 /* FMDatabasePool.m in Sources */,
 				B6CBED3920B2FC6600FDC309 /* FinishListViewController.swift in Sources */,
 				3A44326520B64CE90009FC39 /* FSCalendar-dummy.m in Sources */,
 			);
@@ -798,6 +842,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "--.CLEAN";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = CLEAN/FMDB_Bridging_Header.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -812,6 +857,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "--.CLEAN";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = CLEAN/FMDB_Bridging_Header.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

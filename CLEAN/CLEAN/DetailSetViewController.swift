@@ -15,14 +15,26 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var start_picker: UIDatePicker!
     @IBOutlet weak var cycle_picker: UIPickerView!
     @IBOutlet weak var alarm_picker: UIPickerView!
+    @IBOutlet weak var txt_memo: UITextView!
     @IBOutlet weak var label_cycle: UILabel!
     @IBOutlet weak var label_alarm: UILabel!
     @IBOutlet weak var label_start: UILabel!
-    @IBOutlet weak var txt_memo: UITextView!
+    @IBOutlet weak var btn_done: UIBarButtonItem!
     
-    let alarm_data = ["소리", "진동", "무음"]
-    let month = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"]
-    let day = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30"]
+    let alarm_data = Constants.DetailSet.alarm_data
+    let month = Constants.DetailSet.month
+    let day = Constants.DetailSet.day
+    let memo_place_holder = Constants.DetailSet.memo_place_holder
+    
+    func init_space_holder (_ text: String?, _ textView: UITextView) {
+        textView.text = text
+        if text != nil {
+            txt_memo.textColor = Constants.TextShow.space_holder_color
+        }
+        else {
+            txt_memo.textColor = Constants.TextShow.text_color
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,46 +43,42 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         alarm_picker.dataSource = self
         cycle_picker.delegate = self
         cycle_picker.dataSource = self
+        
+        btn_done.title = Constants.Button.done
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        txt_memo.text = "memo..."
-        txt_memo.textColor = UIColor.lightGray
+        init_space_holder(memo_place_holder, txt_memo)
         txt_memo.delegate = self
     }
     
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         if txt_memo.textColor == UIColor.lightGray {
-            txt_memo.text = nil
-            txt_memo.textColor = UIColor.black
+            init_space_holder( nil, txt_memo)
         }
     }
     func textViewDidEndEditing(_ textView: UITextView) {
         if txt_memo.text.isEmpty {
-            txt_memo.text = "memo..."
-            txt_memo.textColor = UIColor.lightGray
+            init_space_holder(memo_place_holder, txt_memo)
         }
     }
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if txt_memo.textColor == UIColor.lightGray {
-            txt_memo.text = nil
-            txt_memo.textColor = UIColor.black
+            init_space_holder(nil, txt_memo)
         }
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if (txt_memo.text?.isEmpty)! {
-            txt_memo.text = "memo..."
-            txt_memo.textColor = UIColor.lightGray
+            init_space_holder(memo_place_holder, txt_memo)
         }
     }
     
 
     @IBAction func date_picker_changed(_ sender: UIDatePicker) {
         let formatter = DateFormatter()
-        formatter.dateFormat = "MMMM - dd - YYYY"
+        formatter.dateFormat = Constants.DetailSet.date_format
         label_start.text = "시작일: " + formatter.string(from: start_picker.date)
     }
     
@@ -81,10 +89,10 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         if pickerView == cycle_picker{
-            return 2
+            return Constants.DetailSet.cycle_picker_num
         }
         else{
-            return 1
+            return Constants.DetailSet.alarm_picker_num
         }
     }
     
