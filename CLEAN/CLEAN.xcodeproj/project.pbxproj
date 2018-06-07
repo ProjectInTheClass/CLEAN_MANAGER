@@ -256,8 +256,8 @@
 		3AA09CC620AEB29200B9C820 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3AC42E2520C75EC8003D82F9 /* DB */,
 				3A73206F20BBAFFB00F45379 /* SpaceTable.swift */,
+				3AC42E2520C75EC8003D82F9 /* DB */,
 			);
 			name = Model;
 			sourceTree = "<group>";
