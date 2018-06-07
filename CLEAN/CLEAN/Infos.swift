@@ -17,12 +17,12 @@ class EventInfo {
     var memo : String
     
     init(eid: Int, ename: String, front_date: String, cycle: String, alarm: Int, memo: String) {
-    self.eid = eid
-    self.ename = ename
-    self.front_date = front_date
-    self.cycle = cycle
-    self.alarm = alarm
-    self.memo = memo
+        self.eid = eid
+        self.ename = ename
+        self.front_date = front_date
+        self.cycle = cycle
+        self.alarm = alarm
+        self.memo = memo
     }
 
     
@@ -35,4 +35,26 @@ class EventInfo {
         self.memo = memo
     }
     
+}
+
+class EventName {
+    var eid : Int = 0
+    var ename : String = ""
+    var front_date : String = ""
+    
+    func set_init(eid: Int, ename: String, front_date: String){
+        self.eid = eid
+        self.ename = ename
+        self.front_date = front_date
+    }
+}
+
+class EventNames {
+    var data : [EventName]
+    var count : Int
+    
+    init(){
+        data = Array<EventName>()
+        count = 0
+    }
 }

@@ -50,13 +50,13 @@ class EventData {
             do {
                 let result = try contactDB.executeQuery(sql_select, values: [])
                 if result.next(){
-       //             get_data.set_init(eid: result.Int(forColumn: "EID"), ename: <#T##String#>, front_date: <#T##String#>, cycle: <#T##String#>, alarm: <#T##Int#>, memo: <#T##String#>)
-//                    get_data.eid = Int(result.int(forColumn: "EID"))
- //                   get_data.ename = result.string(forColumn: "ENAME")
-  //                  get_data.front_date =
+                    get_data.set_init(eid: result.long(forColumnIndex: 0), ename: result.string(forColumnIndex: 1)!, front_date: result.string(forColumnIndex: 2)!, cycle: result.string(forColumnIndex: 3)!, alarm: result.long(forColumnIndex: 4), memo: result.string(forColumnIndex: 5)!)
+//                  get_data.front_date =
 //                    phone.text = result.string(forColumn: "AGE")
 //                    resultLabel.text = "\(result.string(forColumn: "NAME")!) find!"
                 } else {
+                    print("panic: (\(event_id)) detail set not found!!")
+                    exit(0)
 //                    name.text = ""
 //                    phone.text = ""
 //                    resultLabel.text = "Record is not found"
@@ -64,8 +64,38 @@ class EventData {
             } catch {
                 print("error")
             }
+            contactDB.close()
         } else {
             print("else error")
         }
+    }
+    
+    func find_events(space_id: Int, get_datas: EventNames){
+        let contactDB = FMDatabase(path: self.database_path)
+        let get_data = EventName()
+        if contactDB.open() {
+            let sql_select = Constants.DB_event.sql_collections + "\(space_id)"
+            print(sql_select)
+            do {
+                let result = try contactDB.executeQuery(sql_select, values: [])
+                if result.next(){
+                    get_data.set_init(eid: result.long(forColumnIndex: 0), ename: result.string(forColumnIndex: 1)!, front_date: result.string(forColumnIndex: 2)!)
+                    get_datas.data.append(get_data)
+                    get_datas.count+=1
+                } else {
+                    print("panic: (\(space_id)) detail set not found!!")
+                    exit(0)
+                    //                    name.text = ""
+                    //                    phone.text = ""
+                    //                    resultLabel.text = "Record is not found"
+                }
+            } catch {
+                print("error")
+            }
+            contactDB.close()
+        } else {
+            print("else error")
+        }
+
     }
 }
