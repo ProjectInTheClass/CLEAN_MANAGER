@@ -42,6 +42,8 @@ class AlarmTestViewController: UIViewController {
       
         
         let date = Picker.date
+        
+        // let date = 2018-12-06
         let triggerDate = Calendar.current.dateComponents([.year,.month,.day,.hour,.minute,.second,],
                                                           from: date)
         let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
