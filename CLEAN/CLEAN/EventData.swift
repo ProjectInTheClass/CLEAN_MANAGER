@@ -50,7 +50,7 @@ class EventData {
             do {
                 let result = try contactDB.executeQuery(sql_select, values: [])
                 if result.next(){
-                    get_data.set_init(eid: result.long(forColumnIndex: 0), ename: result.string(forColumnIndex: 1)!, front_date: result.string(forColumnIndex: 2)!, cycle: result.string(forColumnIndex: 3)!, alarm: result.long(forColumnIndex: 4), memo: result.string(forColumnIndex: 5)!)
+                    get_data.set_init(eid: result.long(forColumnIndex: 0), sid: -1, ename: result.string(forColumnIndex: 1)!, front_date: result.string(forColumnIndex: 2)!, cycle: result.string(forColumnIndex: 3)!, alarm: result.long(forColumnIndex: 4), memo: result.string(forColumnIndex: 5)!)
 //                  get_data.front_date =
 //                    phone.text = result.string(forColumn: "AGE")
 //                    resultLabel.text = "\(result.string(forColumn: "NAME")!) find!"
@@ -96,6 +96,40 @@ class EventData {
         } else {
             print("else error")
         }
+    }
+    func insert_event(get_data: EventInfo){
+        let contactDB = FMDatabase(path: self.database_path)
+        if contactDB.open(){
+            let insertSQL =  Constants.DB_event.sql_event_insert + "(\(get_data.sid), '\(get_data.ename)', '\(get_data.front_date)', '\(get_data.cycle)', '\(get_data.alarm)', '\(get_data.memo)')"
 
+            print(insertSQL)
+            let result = contactDB.executeUpdate(insertSQL, withArgumentsIn: [])
+            if !result{
+                print("panic: insert error")
+                exit(0)
+            } else {
+                print("insert success")
+            }
+        }else {
+            print("Error3: contactDB open Fail, \(contactDB.lastError())")
+        }
+    }
+    
+   
+    
+    func undate_event(get_data: EventInfo) {
+        let contactDB = FMDatabase(path: self.database_path)
+        if contactDB.open() {
+            let updateSQL = Constants.DB_event.sql_event_update + "ENAME='\(get_data.ename), FRONTDATE='\(get_data.front_date)', CYCLE='\(get_data.cycle)', ALARM=\(get_data.alarm), MEMO='\(get_data.memo)'" + "WHERE EID = \(get_data.eid)"
+            let result = contactDB.executeUpdate(updateSQL, withArgumentsIn: [])
+            if !result{
+                print("panic: insert error")
+                exit(0)
+            } else {
+                print("insert success")
+            }
+        }else {
+            print("Error3: contactDB open Fail, \(contactDB.lastError())")
+        }
     }
 }

@@ -87,7 +87,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6vJ-zI-HSq">
-                                <rect key="frame" x="0.0" y="120" width="375" height="498"/>
+                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="cX3-sM-Miv">
                                     <size key="itemSize" width="125" height="125"/>
@@ -327,52 +327,52 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="UXh-yT-cIm">
-                                        <rect key="frame" x="0.0" y="151" width="375" height="151"/>
+                                        <rect key="frame" x="0.0" y="151" width="375" height="150.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYS-72-EYE">
-                                                <rect key="frame" x="0.0" y="0.0" width="125" height="151"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="150.5"/>
                                                 <state key="normal" title="Button" image="bathroom"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQ9-VA-Uv2">
-                                                <rect key="frame" x="125" y="0.0" width="125" height="151"/>
+                                                <rect key="frame" x="125" y="0.0" width="125" height="150.5"/>
                                                 <state key="normal" title="Button" image="bathroom"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zS5-Xm-h4y">
-                                                <rect key="frame" x="250" y="0.0" width="125" height="151"/>
+                                                <rect key="frame" x="250" y="0.0" width="125" height="150.5"/>
                                                 <state key="normal" title="Button" image="bathroom"/>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="A8k-cG-ycY">
-                                        <rect key="frame" x="0.0" y="302" width="375" height="150"/>
+                                        <rect key="frame" x="0.0" y="301.5" width="375" height="151"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fit-vr-7wC">
-                                                <rect key="frame" x="0.0" y="0.0" width="125" height="150"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="151"/>
                                                 <state key="normal" title="Button" image="bathroom"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9A-E7-rL5">
-                                                <rect key="frame" x="125" y="0.0" width="125" height="150"/>
+                                                <rect key="frame" x="125" y="0.0" width="125" height="151"/>
                                                 <state key="normal" title="Button" image="bathroom"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsU-6H-Y1m">
-                                                <rect key="frame" x="250" y="0.0" width="125" height="150"/>
+                                                <rect key="frame" x="250" y="0.0" width="125" height="151"/>
                                                 <state key="normal" title="Button" image="bathroom"/>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="G4Z-Fx-Kux">
-                                        <rect key="frame" x="0.0" y="452" width="375" height="151"/>
+                                        <rect key="frame" x="0.0" y="452.5" width="375" height="150.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24S-nm-g8x">
-                                                <rect key="frame" x="0.0" y="0.0" width="125" height="151"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="150.5"/>
                                                 <state key="normal" title="Button" image="bathroom"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J44-Rz-mgY">
-                                                <rect key="frame" x="125" y="0.0" width="125" height="151"/>
+                                                <rect key="frame" x="125" y="0.0" width="125" height="150.5"/>
                                                 <state key="normal" title="Button" image="bathroom"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgV-qt-v9L">
-                                                <rect key="frame" x="250" y="0.0" width="125" height="151"/>
+                                                <rect key="frame" x="250" y="0.0" width="125" height="150.5"/>
                                                 <state key="normal" title="Button" image="bathroom"/>
                                             </button>
                                         </subviews>

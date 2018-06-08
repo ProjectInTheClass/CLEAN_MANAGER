@@ -10,14 +10,16 @@ import Foundation
 
 class EventInfo {
     var eid : Int
+    var sid : Int
     var ename : String
     var front_date : String
     var cycle : String
     var alarm : Int
     var memo : String
     
-    init(eid: Int, ename: String, front_date: String, cycle: String, alarm: Int, memo: String) {
+    init(eid: Int, sid: Int, ename: String, front_date: String, cycle: String, alarm: Int, memo: String) {
         self.eid = eid
+        self.sid = sid
         self.ename = ename
         self.front_date = front_date
         self.cycle = cycle
@@ -26,8 +28,9 @@ class EventInfo {
     }
 
     
-    func set_init(eid: Int, ename: String, front_date: String, cycle: String, alarm: Int, memo: String) {
+    func set_init(eid: Int,sid: Int, ename: String, front_date: String, cycle: String, alarm: Int, memo: String) {
         self.eid = eid
+        self.sid = sid
         self.ename = ename
         self.front_date = front_date
         self.cycle = cycle

@@ -89,7 +89,7 @@ extension AlarmTestViewController: UNUserNotificationCenterDelegate {
             let action1 = UIAlertAction(title: "확인", style: .default, handler: nil)
             alert1.addAction(action1)
             present(alert1, animated: true, completion: nil)
-        
+
         case "answerNo":
             
             let alert2 = UIAlertController(title: "화장실-변기", message: "청소 처리 안됨", preferredStyle: .alert)
