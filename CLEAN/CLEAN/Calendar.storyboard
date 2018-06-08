@@ -6,11 +6,10 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Data Source-->
+        <!--청소달력-->
         <scene sceneID="qqS-wO-Yu3">
             <objects>
                 <viewController title="청소달력" id="I00-r2-d8C" customClass="CalendarViewController" customModule="CLEAN" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,25 +20,7 @@
                     <view key="view" contentMode="scaleToFill" id="jwm-mn-L2R">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hVW-Q4-dE6" customClass="FSCalendar">
-                                <rect key="frame" x="16" y="0.0" width="343" height="240"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="Zxd-Jn-5ey"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="dataSource" destination="I00-r2-d8C" id="9f0-32-3AX"/>
-                                    <outlet property="delegate" destination="I00-r2-d8C" id="2Kn-ZL-FQN"/>
-                                </connections>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="hVW-Q4-dE6" firstAttribute="leading" secondItem="jwm-mn-L2R" secondAttribute="leadingMargin" id="8LS-R2-s6H"/>
-                            <constraint firstItem="hVW-Q4-dE6" firstAttribute="top" secondItem="jwm-mn-L2R" secondAttribute="topMargin" id="r2V-g4-M4z"/>
-                            <constraint firstItem="hVW-Q4-dE6" firstAttribute="trailing" secondItem="jwm-mn-L2R" secondAttribute="trailingMargin" id="vl4-Wb-2HE"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="An4-1G-MFV"/>
                 </viewController>

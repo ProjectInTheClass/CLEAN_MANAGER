@@ -23,13 +23,39 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     
     private weak var calendar: FSCalendar!
     
+    
+    // Called when the view controller’s content view (the top of its view hierarchy) is created and loaded
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Calendar"
     }
     
-    
+    // Intended for any operations that you want always to occur before the view becomes visible
     override func viewWillAppear(_ animated: Bool) {
+        calendar.calendarHeaderView.backgroundColor = UIColor.white
+        calendar.calendarWeekdayView.backgroundColor = UIColor.white
+        
+        calendar.appearance.eventSelectionColor = UIColor.white
+        calendar.appearance.headerDateFormat = "yyyy년 M월";
+        calendar.appearance.headerTitleColor = UIColor.black
+        calendar.appearance.headerMinimumDissolvedAlpha = 0.0;
+        calendar.appearance.titleWeekendColor = UIColor.red
+    
+        
+        calendar.appearance.eventOffset = CGPoint(x: 10, y: -7)
+        calendar.register(FSCalendarCell.self, forCellReuseIdentifier: "cell")
+        
+        calendar.appearance.todayColor = UIColor.lightGray
+        calendar.appearance.borderSelectionColor = UIColor.orange
+        calendar.appearance.selectionColor = UIColor.white
+        
+        calendar.appearance.titleSelectionColor = UIColor.black
+        
+        // calendar.today = nil
+        calendar.select(Date.init())
+        
+        calendar.reloadData()
+        
         
     }
     
@@ -37,25 +63,25 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         super.didReceiveMemoryWarning()
     }
     
-//    override func loadView() {
+    override func loadView() {
     
-//        let view = UIView(frame: UIScreen.main.bounds)
-//        view.backgroundColor = UIColor.groupTableViewBackground
-//        self.view = view
-//        
-//        let height: CGFloat = UIDevice.current.model.hasPrefix("iPad") ? 400 : 350
-//        let calendar = FSCalendar(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: height))
-//        
-//        //calendar.allowsMultipleSelection = true  // 여러날짜 동시선택기능
-//        calendar.dataSource = self
-//        calendar.delegate = self
-//        calendar.backgroundColor = UIColor.white
-//        
-//        self.view.addSubview(calendar)
-//        self.calendar = calendar
+        let view = UIView(frame: UIScreen.main.bounds)
+        view.backgroundColor = UIColor.groupTableViewBackground
+        self.view = view
+        
+        let height: CGFloat = UIDevice.current.model.hasPrefix("iPad") ? 450 : 350
+        let calendar = FSCalendar(frame: CGRect(x: 0, y: 50, width: self.view.bounds.width, height: height))
+        
+        //calendar.allowsMultipleSelection = true  // 여러날짜 동시선택기능
+        calendar.dataSource = self
+        calendar.delegate = self
+        calendar.backgroundColor = UIColor.white
+        
+        view.addSubview(calendar)
+        self.calendar = calendar
         
         
-//    }
+    }
     
     
     /*
