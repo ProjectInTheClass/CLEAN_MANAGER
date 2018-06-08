@@ -26,6 +26,10 @@ class Constants: NSObject{
         //*************        
         //common create
         static let insert = "INSERT INTO "
+        static let update = "UPDATE "
+        static let set = "SET "
+        
+        
         static let insert_contant = "(SID, ENAME, FRONTDATE, CYCLE, ALARM, MEMO) values "
         static let create_exists = "CREATE TABLE IF NOT EXISTS "
         
@@ -43,6 +47,7 @@ class Constants: NSObject{
         static let sql_set_detail = select_ed + from_ed + condition_eid
         static let sql_collections = select_cl + from_ed + condition_sid
         static let sql_event_insert = Constants.Database.insert + Constants.Database.te_name + Constants.Database.insert_contant
+        static let sql_event_update = Constants.Database.update + Constants.Database.te_name + Constants.Database.set
     }
     struct DetailSet {
         static let alarm_data = ["소리", "진동", "무음"]
