@@ -39,6 +39,9 @@ struct Clean {
     var name:String
     var place:Int       //place 값에 따라 알맞은 사진넣기?
     
+    var date = Date()
+    
+    
     init(name:String, place:Int) {
         self.name = name
         self.place = place
@@ -66,15 +69,8 @@ let cleanArray = [
 class Cleaning {
     var clean:Clean
     
-    var startDate:Date
-    var dueDate:Date
-    var cycle:Int
-    
-    init(clean:Clean, startDate:Date, dueDate:Date, cycle:Int){
+    init(clean:Clean){
         self.clean = clean
-        self.startDate = startDate
-        self.dueDate = dueDate
-        self.cycle = cycle
         
     }
     

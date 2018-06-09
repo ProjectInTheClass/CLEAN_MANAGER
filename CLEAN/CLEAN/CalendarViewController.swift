@@ -11,8 +11,13 @@ import FSCalendar
 import UIKit
 
 
-class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource {
+class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource,UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    var dateExample = ["2018-06-17", "2018-06-12", "2018-06-29", "2018-06-19"]
+
     private let formatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
@@ -28,10 +33,25 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Calendar"
+        
+        let height: CGFloat = UIDevice.current.model.hasPrefix("iPad") ? 450 : 350
+        let calendar = FSCalendar(frame: CGRect(x: 0, y: 50, width: self.view.bounds.width, height: height))
+        
+        //calendar.allowsMultipleSelection = true  // 여러날짜 동시선택기능
+        calendar.dataSource = self
+        calendar.delegate = self
+        calendar.backgroundColor = UIColor.white
+        
+        view.addSubview(calendar)
+        self.calendar = calendar
+        
     }
     
     // Intended for any operations that you want always to occur before the view becomes visible
     override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        
         calendar.calendarHeaderView.backgroundColor = UIColor.white
         calendar.calendarWeekdayView.backgroundColor = UIColor.white
         
@@ -52,34 +72,48 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         calendar.appearance.titleSelectionColor = UIColor.black
         
         // calendar.today = nil
+    
         calendar.select(Date.init())
         
         calendar.reloadData()
         
         
+        // calendar.selectedDate 로 선택된 날짜에 따라서 테이블 뷰를 생성하게해야됨???...
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    override func loadView() {
     
-        let view = UIView(frame: UIScreen.main.bounds)
-        view.backgroundColor = UIColor.groupTableViewBackground
-        self.view = view
+//    해야되는 청소가 적어도 1개 이상이면 해당날짜에 청소아이콘 띄울 수 있게 하기
+    func calendar(_ calendar: FSCalendar, imageFor date: Date) -> UIImage? {
+    
+        let dateString = self.formatter.string(from: date)
         
-        let height: CGFloat = UIDevice.current.model.hasPrefix("iPad") ? 450 : 350
-        let calendar = FSCalendar(frame: CGRect(x: 0, y: 50, width: self.view.bounds.width, height: height))
+        if self.dateExample.contains(dateString) {
+            return dateExample.contains(dateString) ? UIImage(named: "exam_Icon") : nil
+        }
+        return nil
+    }
+    
+    
+
+    // 테이블 뷰 (override X)  -> 선택된 날짜(calendar.selecedDate)하고 청소들의 날짜 비교해서 같은 값
+    // 들의 개수만큼 행 개수 생성하기
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        //calendar.allowsMultipleSelection = true  // 여러날짜 동시선택기능
-        calendar.dataSource = self
-        calendar.delegate = self
-        calendar.backgroundColor = UIColor.white
+        return 1
+    }
+    
+    // 청소목록에서 선택된날짜와 청소하는 날짜가 같은것들의 청소 목록들 나오게 하기..
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        view.addSubview(calendar)
-        self.calendar = calendar
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
+    //    cell.textLabel?.text = "Index \(indexPath.row)"
+        cell.textLabel?.text = "청소 하기"
+        return cell
         
     }
     
@@ -89,10 +123,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
      return
      }
      
-     // 각 날짜에 특정 문자열이나 이미지 표시할때 이부분 이용
-     func calendar(calendar: FSCalendar, subtitleFordate date: NSDate) -> String? {
-     return "A"
-     }
+   
      
      // 특정 날짜를 선택했을 때 발생하는 이벤트를 처리하는 곳
      func calendar(calendar: FSCalendar, didSelectDate date: NSDate) {

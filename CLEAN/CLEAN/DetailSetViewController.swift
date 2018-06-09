@@ -63,8 +63,8 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         var triggerDate = Calendar.current.dateComponents([.year,.month,.day,], from: date)
         
         // 해당 날짜의 알람 울릴 시각 설정
-        triggerDate.hour = 18
-        triggerDate.minute = 39
+        triggerDate.hour = 22
+        triggerDate.minute = 6
         triggerDate.second = 0
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
