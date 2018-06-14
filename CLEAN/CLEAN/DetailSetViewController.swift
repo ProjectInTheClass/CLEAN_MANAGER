@@ -2,17 +2,21 @@
 //  DetailSetViewController.swift
 //  CLEAN
 //
-//  Created by 김장현 on 2018. 6. 2..
-//  Copyright © 2018년 김장현. All rights reserved.
+//  Created by clean on 2018. 6. 2..
+//  Copyright © 2018년 clean. All rights reserved.
 //
 
 import Foundation
 import UIKit
-import UserNotifications
 
 
 
 class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextViewDelegate, UITextFieldDelegate {
+    
+    
+    
+    
+    
     @IBOutlet weak var start_picker: UIDatePicker!
     @IBOutlet weak var cycle_picker: UIPickerView!
     @IBOutlet weak var alarm_picker: UIPickerView!
@@ -27,6 +31,8 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     let day = Constants.DetailSet.day
     let memo_place_holder = Constants.DetailSet.memo_place_holder
     
+    var offset = 0
+    
     func init_space_holder (_ text: String?, _ textView: UITextView) {
         textView.text = text
         if text != nil {
@@ -35,51 +41,6 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         else {
             txt_memo.textColor = Constants.TextShow.text_color
         }
-    }
-    
-    
-    @IBAction func alarmStart() {
-        CreateNotice()
-    }
-    
-    
-    func CreateNotice() {
-        let content = UNMutableNotificationContent()
-        content.title = "청소지역(화장실) 해당청소(변기)"
-        //content.subtitle = "Too hard"
-        content.body = "청소해야돼 or 청소했니?"
-        content.sound = UNNotificationSound.default()
-        content.badge = 1
-        
-        content.categoryIdentifier = "selectCategory"
-        
-        
-        //    버튼 클릭 후에 홈으로 나갔을 때 5초뒤에 알람 나오는것, 시간차이를 이용해서 알람내고싶을때 이거 사용
-        //    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5.0, repeats: false)
-        
-        // 년,월,일 까지 받음
-        let date = start_picker.date
-        
-        var triggerDate = Calendar.current.dateComponents([.year,.month,.day,], from: date)
-        
-        // 해당 날짜의 알람 울릴 시각 설정
-        triggerDate.hour = 22
-        triggerDate.minute = 6
-        triggerDate.second = 0
-        
-        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
-        
-        
-        let requestIdentifier = "requset Identifier"
-        let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)
-        
-        //foreground 에서도 작동하기위해 추가한것중하나  as   추가
-        UNUserNotificationCenter.current().delegate = self as UNUserNotificationCenterDelegate
-        
-        UNUserNotificationCenter.current().add(request) { (error) in
-            print(error as Any)
-        }
-        
     }
     
     override func viewDidLoad() {
@@ -91,9 +52,8 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         cycle_picker.dataSource = self
         
         btn_done.title = Constants.Button.done
-        
-       UNUserNotificationCenter.current().delegate = self as UNUserNotificationCenterDelegate
-        
+        txt_memo.text = String(offset)
+        print(offset)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -124,7 +84,7 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
     }
     
-    
+
     @IBAction func date_picker_changed(_ sender: UIDatePicker) {
         let formatter = DateFormatter()
         formatter.dateFormat = Constants.DetailSet.date_format
@@ -186,41 +146,5 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             label_alarm.text = "알람: \(alarm_data[pickerView.selectedRow(inComponent: 0)])"
         }
     }
-    
+
 }
-
-extension DetailSetViewController: UNUserNotificationCenterDelegate {
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        
-        completionHandler([.alert, .badge, .sound])
-    }
-    
-    // 알람 눌러서 스크롤내리면 2가지 항목이 나오는데 각각 선택했을때 어떤식으로 처리할지 여기서
-    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        
-        switch response.actionIdentifier {
-        case "answerYes":
-            let alert1 = UIAlertController(title: "화장실-변기", message: "청소 완료", preferredStyle: .alert)
-            let action1 = UIAlertAction(title: "확인", style: .default, handler: nil)
-            alert1.addAction(action1)
-            present(alert1, animated: true, completion: nil)
-           // test
-            print("*******************")
-            
-        case "answerNo":
-            
-            let alert2 = UIAlertController(title: "화장실-변기", message: "청소 처리 안됨", preferredStyle: .alert)
-            let action2 = UIAlertAction(title: "확인", style: .default, handler: nil)
-            alert2.addAction(action2)
-            present(alert2, animated: true, completion: nil)
-            
-            
-        default:
-            break
-        }
-        completionHandler()
-    }
-    
-}
-
-

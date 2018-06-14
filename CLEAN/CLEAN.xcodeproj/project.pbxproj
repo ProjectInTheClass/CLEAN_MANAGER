@@ -52,6 +52,7 @@
 		3E8100A4753A4D6CA529D417 /* Pods_CLEANUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28F6C03E12F199F6AAC71AA /* Pods_CLEANUITests.framework */; };
 		713116078B3315BD38ADAEFA /* Pods_CLEAN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA401160F79D0B5BF18AAEC /* Pods_CLEAN.framework */; };
 		84FB80C520BF795300585B5B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB80C420BF795300585B5B /* CalendarViewController.swift */; };
+		B6147A4F20D268D200A1B66D /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6147A4E20D268D200A1B66D /* ListCollectionViewCell.swift */; };
 		B6CBED3520B2E55700FDC309 /* AnimUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CBED3420B2E55700FDC309 /* AnimUtils.swift */; };
 		B6CBED3920B2FC6600FDC309 /* FinishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CBED3820B2FC6600FDC309 /* FinishListViewController.swift */; };
 		B6FBB53E20AC70180066EE2D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FBB53D20AC70180066EE2D /* MainViewController.swift */; };
@@ -159,6 +160,7 @@
 		84FB80C420BF795300585B5B /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		92283D2CA4F44621C938E250 /* Pods-CLEANTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLEANTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CLEANTests/Pods-CLEANTests.release.xcconfig"; sourceTree = "<group>"; };
 		A80F8BCAF250B1F80184A715 /* Pods-CLEAN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLEAN.release.xcconfig"; path = "Pods/Target Support Files/Pods-CLEAN/Pods-CLEAN.release.xcconfig"; sourceTree = "<group>"; };
+		B6147A4E20D268D200A1B66D /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		B6CBED3420B2E55700FDC309 /* AnimUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimUtils.swift; sourceTree = "<group>"; };
 		B6CBED3820B2FC6600FDC309 /* FinishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishListViewController.swift; sourceTree = "<group>"; };
 		B6FBB53D20AC70180066EE2D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 		3AA09CC720AEB2A300B9C820 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B6147A4E20D268D200A1B66D /* ListCollectionViewCell.swift */,
 				3AEDB3FF20A4406C0069726C /* AppDelegate.swift */,
 				B6CBED3420B2E55700FDC309 /* AnimUtils.swift */,
 				3AEDB40320A4406C0069726C /* Main.storyboard */,
@@ -650,6 +653,7 @@
 				3A39471220C7454A0089717A /* EventData.swift in Sources */,
 				B6FBB54020AC70C70066EE2D /* ListViewController.swift in Sources */,
 				3AC42E2820C772B4003D82F9 /* Subject.swift in Sources */,
+				B6147A4F20D268D200A1B66D /* ListCollectionViewCell.swift in Sources */,
 				3A44326220B64CE90009FC39 /* FSCalendarTransitionCoordinator.m in Sources */,
 				84FB80C520BF795300585B5B /* CalendarViewController.swift in Sources */,
 				3A44325720B64CE90009FC39 /* FSCalendarCalculator.m in Sources */,
