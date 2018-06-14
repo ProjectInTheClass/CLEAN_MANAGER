@@ -194,7 +194,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="P9t-nT-S7E">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="fB8-7b-l8I"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="fB8-7b-l8I">
+                            <connections>
+                                    <action selector="alarmStart" destination="q4H-Ym-sx0" id="PgR-0B-ucE"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="alarm_picker" destination="ofs-kH-enc" id="XZP-b0-gMq"/>
