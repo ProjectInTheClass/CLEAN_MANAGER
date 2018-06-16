@@ -3,23 +3,30 @@
 //  CLEAN
 //
 //  Created by eunji on 2018. 5. 16..
-//  Copyright © 2018년 김장현. All rights reserved.
+//  Copyright © 2018년 clean. All rights reserved.
 //
 
 import UIKit
 
 class ListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     @IBOutlet weak var collectionView: UICollectionView!
+    var depth = 0
     
-    var num = 9
+    
+    
+    
+    
+    var images = [UIImage(named: "livingroom"), UIImage(named: "kitchen"), UIImage(named: "bathroom"), UIImage(named: "mainroom"), UIImage(named: "smallroom"), UIImage(named: "bedroom"), UIImage(named: "dressroom"),UIImage(named: "electronics"), UIImage(named: "etc")]
+    
+    var num: Int {
+        return images.count
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.navigationController?.isNavigationBarHidden = false
-        collectionView.delegate = self
         collectionView.dataSource = self
-        // Do any additional setup after loading the view.
+        collectionView.delegate = self
+        self.navigationController?.isNavigationBarHidden = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,24 +39,33 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return num
+        return images.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "idiot", for: indexPath)
-        // cell.image =
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "idiot", for: indexPath) as! ListCollectionViewCell
+        cell.placeImageView.image = images[indexPath.row]
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        num = indexPath.row
         //collectionView.reloadData()
         
-        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "list") as? ListViewController     {
-            vc.num = indexPath.row
-            self.navigationController?.pushViewController(vc, animated: false);
+        if depth == 0 && indexPath.row == 2 {
+            if let vc = self.storyboard?.instantiateViewController(withIdentifier: "list") as? ListViewController     {
+                vc.images=[UIImage(named: "basin"), UIImage(named: "floor"), UIImage(named: "mirror"), UIImage(named: "toilet"), UIImage(named: "towerholder")]
+                vc.depth = self.depth+1
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        } else {
+            if let vc = UIStoryboard.init(name: "DetailSet", bundle: nil).instantiateInitialViewController() as? DetailSetViewController {
+            //self.present(vc, animated: true, completion: nil)
+                vc.offset = indexPath.row + depth*9
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
         }
-    
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
