@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "수건정리함.png",
+      "filename" : "basin.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "수건정리함-1.png",
       "scale" : "2x"
     },
     {

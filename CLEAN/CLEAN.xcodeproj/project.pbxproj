@@ -53,7 +53,6 @@
 		713116078B3315BD38ADAEFA /* Pods_CLEAN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA401160F79D0B5BF18AAEC /* Pods_CLEAN.framework */; };
 		84FB80C520BF795300585B5B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB80C420BF795300585B5B /* CalendarViewController.swift */; };
 		B6147A4F20D268D200A1B66D /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6147A4E20D268D200A1B66D /* ListCollectionViewCell.swift */; };
-		B6147A5120D2711700A1B66D /* exam_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B6147A5020D2711700A1B66D /* exam_Icon.png */; };
 		B6CBED3520B2E55700FDC309 /* AnimUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CBED3420B2E55700FDC309 /* AnimUtils.swift */; };
 		B6CBED3920B2FC6600FDC309 /* FinishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CBED3820B2FC6600FDC309 /* FinishListViewController.swift */; };
 		B6FBB53E20AC70180066EE2D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FBB53D20AC70180066EE2D /* MainViewController.swift */; };
@@ -162,7 +161,6 @@
 		92283D2CA4F44621C938E250 /* Pods-CLEANTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLEANTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CLEANTests/Pods-CLEANTests.release.xcconfig"; sourceTree = "<group>"; };
 		A80F8BCAF250B1F80184A715 /* Pods-CLEAN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLEAN.release.xcconfig"; path = "Pods/Target Support Files/Pods-CLEAN/Pods-CLEAN.release.xcconfig"; sourceTree = "<group>"; };
 		B6147A4E20D268D200A1B66D /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
-		B6147A5020D2711700A1B66D /* exam_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = exam_Icon.png; path = ../../../../Downloads/exam_Icon.png; sourceTree = "<group>"; };
 		B6CBED3420B2E55700FDC309 /* AnimUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimUtils.swift; sourceTree = "<group>"; };
 		B6CBED3820B2FC6600FDC309 /* FinishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishListViewController.swift; sourceTree = "<group>"; };
 		B6FBB53D20AC70180066EE2D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -276,7 +274,6 @@
 				3A7320B320BBF0EA00F45379 /* CleanScheduler.storyboard */,
 				3A7320B520BBF22E00F45379 /* DetailSet.storyboard */,
 				3AEDB40820A4406C0069726C /* LaunchScreen.storyboard */,
-				B6147A5020D2711700A1B66D /* exam_Icon.png */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -534,7 +531,6 @@
 				3AEDB40A20A4406C0069726C /* LaunchScreen.storyboard in Resources */,
 				3AEDB40720A4406C0069726C /* Assets.xcassets in Resources */,
 				3A7320B620BBF22E00F45379 /* DetailSet.storyboard in Resources */,
-				B6147A5120D2711700A1B66D /* exam_Icon.png in Resources */,
 				3A44326620B64CE90009FC39 /* Info.plist in Resources */,
 				3A7320B420BBF0EA00F45379 /* CleanScheduler.storyboard in Resources */,
 				3A73207420BBE9AB00F45379 /* Calendar.storyboard in Resources */,

@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "욕실.png",
+      "filename" : "bathroom.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "욕실-1.png",
       "scale" : "2x"
     },
     {

@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "바닥.png",
+      "filename" : "floor.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "바닥-1.png",
       "scale" : "2x"
     },
     {

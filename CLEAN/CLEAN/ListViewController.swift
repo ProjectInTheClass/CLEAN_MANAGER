@@ -12,10 +12,6 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
     @IBOutlet weak var collectionView: UICollectionView!
     var depth = 0
     
-    
-    
-    
-    
     var images = [UIImage(named: "livingroom"), UIImage(named: "kitchen"), UIImage(named: "bathroom"), UIImage(named: "mainroom"), UIImage(named: "smallroom"), UIImage(named: "bedroom"), UIImage(named: "dressroom"),UIImage(named: "electronics"), UIImage(named: "etc")]
     
     var num: Int {

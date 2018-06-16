@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "안방.png",
+      "filename" : "mainroom.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "안방-1.png",
       "scale" : "2x"
     },
     {

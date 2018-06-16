@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "변기.png",
+      "filename" : "towerholder.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "변기-1.png",
       "scale" : "2x"
     },
     {
