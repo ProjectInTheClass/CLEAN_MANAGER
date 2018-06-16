@@ -97,6 +97,12 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         return nil
     }
     
+    /*
+    // 특정 날짜를 선택했을 때 발생하는 이벤트를 처리하는 곳
+    func calendar(calendar: FSCalendar, didSelectDate date: NSDate) {
+        print(date)
+    }
+    */
     
 
     // 테이블 뷰 (override X)  -> 선택된 날짜(calendar.selecedDate)하고 청소들의 날짜 비교해서 같은 값
@@ -124,11 +130,6 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
      }
      
    
-     
-     // 특정 날짜를 선택했을 때 발생하는 이벤트를 처리하는 곳
-     func calendar(calendar: FSCalendar, didSelectDate date: NSDate) {
-     print(date)
-     }
-     */
+ */
     
 }
