@@ -74,8 +74,7 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         //    버튼 클릭 후에 홈으로 나갔을 때 5초뒤에 알람 나오는것, 시간차이를 이용해서 알람내고싶을때 이거 사용
         
         //    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5.0, repeats: false)
-        
-        
+
         
         // 년,월,일 까지 받음
         
@@ -89,9 +88,9 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         // 해당 날짜의 알람 울릴 시각 설정
         
-        triggerDate.hour = 22
+        triggerDate.hour = 14
         
-        triggerDate.minute = 6
+        triggerDate.minute = 16
         
         triggerDate.second = 0
         
