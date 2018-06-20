@@ -38,7 +38,7 @@ class EventData {
                 print("ERROR1: contactDB open fail, \(contactDB.lastError())")
             }
         } else {
-            print("contactDB is exist")
+            print("DB is exist")
         }
     }
     
@@ -74,20 +74,22 @@ class EventData {
     
     func find_all_event(get_datas: EventNames){
         let contactDB = FMDatabase(path: self.database_path)
-        let get_data = EventName()
+        
         if contactDB.open() {
-            let sql_select = "SELECT * FROM EVENT"
+            let sql_select = "SELECT EID, ENAME, FRONTDATE FROM EVENT"
             print(sql_select)
             do {
                 let result = try contactDB.executeQuery(sql_select, values: [])
                 while(result.next()){
                     if result.next(){
+                        let get_data = EventName()
                         get_data.set_init(eid: result.long(forColumnIndex: 0), ename: result.string(forColumnIndex: 1)!, front_date: result.string(forColumnIndex: 2)!)
+                        print("debug: eid" + String(result.long(forColumnIndex: 0)))
                         get_datas.data.append(get_data)
                         get_datas.count+=1
                     } else {
-                        print("panic: () detail set not found!!")
-                        exit(0)
+                        print("panic: (find all event) detail set not found!!")
+                        //exit(0)
                     }
                 }
             } catch {
@@ -179,7 +181,7 @@ class EventData {
                     //                    phone.text = result.string(forColumn: "AGE")
                     //                    resultLabel.text = "\(result.string(forColumn: "NAME")!) find!"
                 } else {
-                    print("panic: () detail set not found!!")
+                    print("panic: (debug) detail set not found!!")
                     exit(0)
                     //                    name.text = ""
                     //                    phone.text = ""

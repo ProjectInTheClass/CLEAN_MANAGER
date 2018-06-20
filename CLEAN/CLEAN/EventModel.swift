@@ -23,10 +23,19 @@ class EventModel {
         event_data.find_all_event(get_datas: data)
     }
     
-    func dataAt(date: Date) -> [EventInfo] {
+    func dataAt(date: Date) -> [EventName] {
         let target = formatter.string(from: date)
-        return data.filter { (info) -> Bool in
+        return data.data.filter { (info) -> Bool in
             return info.front_date == target
+        }
+    }
+    
+    func data_debug() {
+        var i = 0
+        print("count: " + String(data.count))
+        while(i < data.count){
+            print("i: " + String(i)+"eid: " + String(data.data[i].eid) + "ename: " + data.data[i].ename + "data: " + data.data[i].front_date)
+            i += 1
         }
     }
 }

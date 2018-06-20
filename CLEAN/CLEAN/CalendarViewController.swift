@@ -15,7 +15,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     
     @IBOutlet weak var tableView: UITableView!
 
-    var selected: [EventInfo] = []
+    var selected: [EventName] = []
     
     var dateExample = ["2018-06-17", "2018-06-12", "2018-06-29", "2018-06-19"]
 
@@ -46,8 +46,11 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         
         view.addSubview(calendar)
         self.calendar = calendar
-        
         event_data.create_table()
+        
+        EventModel.shared.data_setting()
+        EventModel.shared.data_debug()
+        
     }
     
     // Intended for any operations that you want always to occur before the view becomes visible
@@ -116,10 +119,10 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        let item = selected[indexPath.row]
+    //    let item = selected[indexPath.row]
         
     //    cell.textLabel?.text = "Index \(indexPath.row)"
-        cell.textLabel?.text = item.memo
+    //    cell.textLabel?.text = item.memo
         return cell
         
     }
