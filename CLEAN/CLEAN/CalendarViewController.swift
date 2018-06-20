@@ -76,10 +76,12 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         calendar.appearance.selectionColor = UIColor.white
         
         calendar.appearance.titleSelectionColor = UIColor.black
-        
-
+    
         calendar.select(Date.init())
+    
         
+        selected = EventModel.shared.dataAt(date: Date.init())
+        tableView.reloadData()
        // calendar.reloadData()
         
         
@@ -111,6 +113,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     // 들의 개수만큼 행 개수 생성하기
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
+   //     print("\(selected.count)")
         return selected.count
     }
     
@@ -119,10 +122,10 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-    //    let item = selected[indexPath.row]
+        let item = selected[indexPath.row]
         
     //    cell.textLabel?.text = "Index \(indexPath.row)"
-    //    cell.textLabel?.text = item.memo
+        cell.textLabel?.text = item.front_date
         return cell
         
     }
