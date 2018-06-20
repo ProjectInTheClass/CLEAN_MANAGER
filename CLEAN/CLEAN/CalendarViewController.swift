@@ -47,10 +47,19 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         view.addSubview(calendar)
         self.calendar = calendar
         event_data.create_table()
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         EventModel.shared.data_setting()
         EventModel.shared.data_debug()
-        
+//        let date = Date()
+//        let formmater = DateFormatter()
+//        let format: String = "yyyy-MM-dd"
+//        formmater.dateFormat = format
+//        
+//        let selected = EventModel.shared.dataAt(date: date as Date)
+//        tableView.reloadData()
     }
     
     // Intended for any operations that you want always to occur before the view becomes visible
@@ -78,10 +87,13 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         calendar.appearance.titleSelectionColor = UIColor.black
     
         calendar.select(Date.init())
+<<<<<<< HEAD
     
         
         selected = EventModel.shared.dataAt(date: Date.init())
         tableView.reloadData()
+=======
+>>>>>>> e70179e72594cfa053aa8f2c7128463f811928c6
        // calendar.reloadData()
         
         
