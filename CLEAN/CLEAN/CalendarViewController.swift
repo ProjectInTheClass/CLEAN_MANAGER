@@ -14,7 +14,8 @@ import UIKit
 class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource,UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-    
+
+    var selected: [EventInfo] = []
     
     var dateExample = ["2018-06-17", "2018-06-12", "2018-06-29", "2018-06-19"]
 
@@ -71,11 +72,10 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         
         calendar.appearance.titleSelectionColor = UIColor.black
         
-        // calendar.today = nil
-    
+
         calendar.select(Date.init())
         
-        calendar.reloadData()
+       // calendar.reloadData()
         
         
         // calendar.selectedDate 로 선택된 날짜에 따라서 테이블 뷰를 생성하게해야됨???...
@@ -97,19 +97,16 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         return nil
     }
     
-    /*
-    // 특정 날짜를 선택했을 때 발생하는 이벤트를 처리하는 곳
-    func calendar(calendar: FSCalendar, didSelectDate date: NSDate) {
-        print(date)
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        selected = EventModel.shared.dataAt(date: date as Date)
+        tableView.reloadData()
     }
-    */
     
-
     // 테이블 뷰 (override X)  -> 선택된 날짜(calendar.selecedDate)하고 청소들의 날짜 비교해서 같은 값
     // 들의 개수만큼 행 개수 생성하기
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 1
+        return selected.count
     }
     
     // 청소목록에서 선택된날짜와 청소하는 날짜가 같은것들의 청소 목록들 나오게 하기..
@@ -117,13 +114,15 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
+        let item = selected[indexPath.row]
+        
     //    cell.textLabel?.text = "Index \(indexPath.row)"
-        cell.textLabel?.text = "청소 하기"
+        cell.textLabel?.text = item.memo
         return cell
         
     }
     
-    
+
     /*
      func calendar(calendar: FSCalendar!, hasEventForDate date: NSDate!) -> Bool {
      return

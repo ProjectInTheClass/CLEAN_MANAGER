@@ -196,7 +196,7 @@
                     <navigationItem key="navigationItem" id="P9t-nT-S7E">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="fB8-7b-l8I">
                             <connections>
-                                    <action selector="alarmStart" destination="q4H-Ym-sx0" id="PgR-0B-ucE"/>
+                                <action selector="btn_done:" destination="q4H-Ym-sx0" id="psm-SR-1df"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1AC5B09A612F0A11A9CC025A /* Pods_CLEANTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 674656127D51431991DEA30D /* Pods_CLEANTests.framework */; };
+		3A2D3A8920D9D51F00B0E645 /* DateLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D3A8820D9D51F00B0E645 /* DateLogic.swift */; };
 		3A3946EB20C28BDF0089717A /* DetailSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3946EA20C28BDF0089717A /* DetailSetViewController.swift */; };
 		3A39471220C7454A0089717A /* EventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A39471120C7454A0089717A /* EventData.swift */; };
 		3A39471320C7474C0089717A /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A73204C20BBAD0700F45379 /* libsqlite3.0.tbd */; };
@@ -51,6 +52,7 @@
 		3AEDB42020A4406C0069726C /* CLEANUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDB41F20A4406C0069726C /* CLEANUITests.swift */; };
 		3E8100A4753A4D6CA529D417 /* Pods_CLEANUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28F6C03E12F199F6AAC71AA /* Pods_CLEANUITests.framework */; };
 		713116078B3315BD38ADAEFA /* Pods_CLEAN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA401160F79D0B5BF18AAEC /* Pods_CLEAN.framework */; };
+		84CB06CE20D62A0300CC2B32 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CB06CD20D62A0300CC2B32 /* EventModel.swift */; };
 		84FB80C520BF795300585B5B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB80C420BF795300585B5B /* CalendarViewController.swift */; };
 		B6147A4F20D268D200A1B66D /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6147A4E20D268D200A1B66D /* ListCollectionViewCell.swift */; };
 		B6CBED3520B2E55700FDC309 /* AnimUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CBED3420B2E55700FDC309 /* AnimUtils.swift */; };
@@ -80,6 +82,7 @@
 		1DA401160F79D0B5BF18AAEC /* Pods_CLEAN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CLEAN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		288CD2B9C8F2AE3A0DB576ED /* Pods-CLEANUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLEANUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CLEANUITests/Pods-CLEANUITests.release.xcconfig"; sourceTree = "<group>"; };
 		32121066C77A8D094BA5F569 /* Pods-CLEANTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLEANTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CLEANTests/Pods-CLEANTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3A2D3A8820D9D51F00B0E645 /* DateLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateLogic.swift; sourceTree = "<group>"; };
 		3A3946EA20C28BDF0089717A /* DetailSetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailSetViewController.swift; sourceTree = "<group>"; };
 		3A39471120C7454A0089717A /* EventData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventData.swift; sourceTree = "<group>"; };
 		3A44322C20B64CE90009FC39 /* FSCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendar.h; path = FSCalendar/FSCalendar.h; sourceTree = "<group>"; };
@@ -157,6 +160,7 @@
 		3AFF591A20B69EC6004E7EDA /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		674656127D51431991DEA30D /* Pods_CLEANTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CLEANTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D31885822A424DAADC7B204 /* Pods-CLEANUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLEANUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CLEANUITests/Pods-CLEANUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		84CB06CD20D62A0300CC2B32 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		84FB80C420BF795300585B5B /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		92283D2CA4F44621C938E250 /* Pods-CLEANTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLEANTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CLEANTests/Pods-CLEANTests.release.xcconfig"; sourceTree = "<group>"; };
 		A80F8BCAF250B1F80184A715 /* Pods-CLEAN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLEAN.release.xcconfig"; path = "Pods/Target Support Files/Pods-CLEAN/Pods-CLEAN.release.xcconfig"; sourceTree = "<group>"; };
@@ -198,6 +202,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A2D3A8720D9D4DD00B0E645 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				3A2D3A8820D9D51F00B0E645 /* DateLogic.swift */,
+			);
+			name = Logic;
+			sourceTree = "<group>";
+		};
 		3A44325220B64CE90009FC39 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +270,7 @@
 			children = (
 				3A73206F20BBAFFB00F45379 /* SpaceTable.swift */,
 				3AC42E2520C75EC8003D82F9 /* DB */,
+				84CB06CD20D62A0300CC2B32 /* EventModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -364,6 +377,7 @@
 				3AC42E1220C74935003D82F9 /* FMDB */,
 				3AC42E2620C77295003D82F9 /* interface */,
 				3AC42E2920C785AE003D82F9 /* Define */,
+				3A2D3A8720D9D4DD00B0E645 /* Logic */,
 				3AA09CC620AEB29200B9C820 /* Model */,
 				3AA09CC820AEB2AC00B9C820 /* Control */,
 				3AA09CC720AEB2A300B9C820 /* View */,
@@ -652,8 +666,10 @@
 				3A44325D20B64CE90009FC39 /* FSCalendarDelegationProxy.m in Sources */,
 				3A39471220C7454A0089717A /* EventData.swift in Sources */,
 				B6FBB54020AC70C70066EE2D /* ListViewController.swift in Sources */,
+				84CB06CE20D62A0300CC2B32 /* EventModel.swift in Sources */,
 				3AC42E2820C772B4003D82F9 /* Subject.swift in Sources */,
 				B6147A4F20D268D200A1B66D /* ListCollectionViewCell.swift in Sources */,
+				3A2D3A8920D9D51F00B0E645 /* DateLogic.swift in Sources */,
 				3A44326220B64CE90009FC39 /* FSCalendarTransitionCoordinator.m in Sources */,
 				84FB80C520BF795300585B5B /* CalendarViewController.swift in Sources */,
 				3A44325720B64CE90009FC39 /* FSCalendarCalculator.m in Sources */,
