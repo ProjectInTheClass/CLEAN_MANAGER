@@ -54,7 +54,7 @@ class Constants: NSObject{
         static let week = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22"]
         static let day = ["0", "1", "2", "3", "4", "5", "6"]
         static let memo_place_holder = "memo..."
-        static let date_format = "MMMM - dd - YYYY"
+        static let date_format = "yyyy-MM-dd"
         static let alarm_picker_num = 1
         static let cycle_picker_num = 2
     }

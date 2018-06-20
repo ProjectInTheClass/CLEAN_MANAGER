@@ -16,10 +16,13 @@ class DateLogic {
         self.front_date =  front_date
         self.cycle = cycle
     }
-        
-    func cycle_to_double() {
+    
+    func cycle_to_int() -> Int {
         //cycle parsing
         //cycle to double
+        let parts = cycle.components(separatedBy: "/")
+        let days: Int = Int(parts[0])! * 7 + Int(parts[1])!
+        return days
     }
     
     func getToday(format: String = "yyyy-MM-dd") -> String {
@@ -29,27 +32,34 @@ class DateLogic {
         return formmater.string(from: now as Date)
     }
     
-    func getSomeWeekDate(week: Double) -> String {
+    func getSomeWeekDate(day:Int) -> String {
         let now = Date()
         let resultDate: Date
         let formmater = DateFormatter()
         
-        if week > 0 {
-            resultDate = Date(timeInterval: 604800 * week, since: now as Date)
+        if day > 0 {
+            resultDate = Date(timeInterval: 86400.0 * Double(day), since: now as Date)
+            formmater.dateFormat = "yyyy-MM-dd"
+            return formmater.string(from: resultDate as Date)
         } else {
-            resultDate = Date(timeInterval: -604800 * fabs(week), since: now as Date)
+            return "-1"
         }
-
-        formmater.dateFormat = "yyyy-MM-dd"
-        return formmater.string(from: resultDate as Date)
     }
     
-    func init_front_date(front_date: String, cycle: String) -> String {
-        
+    func init_front_date() {
+        let now = getToday()
+        let days = cycle_to_int()
+        while(now < front_date) {
+            self.front_date = getSomeWeekDate(day: days)
+            if  self.front_date == "-1" {
+                print("get some week date error")
+                exit(0)
+            }
+        }
     }
     
-    func next_front_date(cycle: String) -> String {
-        var today = getToday()
-        
+    func next_front_date(cycle: String) {
+        let days = cycle_to_int()
+        self.front_date = getSomeWeekDate(day: days)
     }
 }

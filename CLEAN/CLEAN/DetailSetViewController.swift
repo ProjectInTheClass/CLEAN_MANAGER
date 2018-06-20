@@ -27,7 +27,7 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     let day = Constants.DetailSet.day
     let memo_place_holder = Constants.DetailSet.memo_place_holder
     
-    let event_info = EventInfo(eid: 0, sid: 0, ename: "", front_date: "", cycle: "", alarm: -1, memo: "")
+    let event_info = EventInfo(eid: -1, sid: -1, ename: "", front_date: "", cycle: "", alarm: -1, memo: "")
     
     var offset = 0
     
@@ -146,7 +146,12 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     @IBAction func btn_done(_ sender: Any) {
+        event_info.memo = txt_memo.text
+        //event_info.sid =
+        //event_info.eid =
         
+        
+        event_info.debug()
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
@@ -176,7 +181,7 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         let formatter = DateFormatter()
         formatter.dateFormat = Constants.DetailSet.date_format
         label_start.text = "시작일: " + formatter.string(from: start_picker.date)
-        
+        event_info.front_date = formatter.string(from: start_picker.date)
     }
     
     override func didReceiveMemoryWarning() {
@@ -227,15 +232,13 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         if pickerView == cycle_picker
         {
             label_cycle.text = "주기: \(week[pickerView.selectedRow(inComponent: 0)])주 \(day[pickerView.selectedRow(inComponent: 1)])일"
-            event_info.set_cycle(cycle: "\(week[pickerView.selectedRow(inComponent: 0)])/\(day[pickerView.selectedRow(inComponent: 1)])")
-            print(event_info.cycle)
+            event_info.cycle = "\(week[pickerView.selectedRow(inComponent: 0)])/\(day[pickerView.selectedRow(inComponent: 1)])"
             pickerView.reloadComponent(1)
         }
         else
         {
             label_alarm.text = "알람: \(alarm_data[pickerView.selectedRow(inComponent: 0)])"
-            event_info.set_alarm(alarm: pickerView.selectedRow(inComponent: 0))
-            print("알람: \(pickerView.selectedRow(inComponent: 0))")
+            event_info.alarm = pickerView.selectedRow(inComponent: 0)
         }
     }
 

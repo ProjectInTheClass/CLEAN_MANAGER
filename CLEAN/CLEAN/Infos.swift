@@ -55,6 +55,9 @@ class EventInfo {
     func set_memo(memo: String){
         self.memo = memo
     }
+    func debug() {
+        print("event info: eid: \(self.eid)  sid: \(self.sid)  ename: \(self.ename)  front_date: \(self.front_date)    cycle: \(self.cycle)   alarm: \(self.alarm)    memo: \(self.memo)")
+    }
 }
 
 class EventName {
