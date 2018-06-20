@@ -30,6 +30,7 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     let event_info = EventInfo(eid: -1, sid: -1, ename: "", front_date: "", cycle: "", alarm: 0, memo: "")
     
     var offset = 0
+    var isInsert = false
     
     func init_space_holder (_ text: String?, _ textView: UITextView) {
         textView.text = text
@@ -146,6 +147,7 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         event_info.front_date = formmater.string(from: now as Date)
         event_info.cycle = "0/0"
         event_info.sid = offset
+        print(isInsert)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

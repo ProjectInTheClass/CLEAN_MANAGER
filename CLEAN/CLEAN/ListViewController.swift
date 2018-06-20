@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SendDataDelegate {
-    func sendData(data: String)
+    func sendData(isNew: Bool, offset: Int)
 }
 
 class ListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
@@ -63,6 +63,7 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
             if let vc = UIStoryboard.init(name: "DetailSet", bundle: nil).instantiateInitialViewController() as? DetailSetViewController {
             //self.present(vc, animated: true, completion: nil)
                 vc.offset = indexPath.row + depth*9
+                vc.isInsert = true
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }
