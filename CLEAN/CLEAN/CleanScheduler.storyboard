@@ -43,13 +43,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="20" reuseIdentifier="list" rowHeight="110" id="LTz-Lt-tYb">
                                         <rect key="frame" x="0.0" y="28" width="375" height="110"/>
-
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="LTz-Lt-tYb" id="Rp1-jv-zR8">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="88.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="109"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qVM-UA-0O3">
@@ -75,6 +73,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="N3p-wF-BRl" kind="show" trigger="accessoryAction" id="rpy-WR-CwO"/>
+                                            <segue destination="kpL-ja-Zl4" kind="show" id="5aI-8J-nHF"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -147,16 +146,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" title="세면대" id="JaL-le-DA4">
-                        <barButtonItem key="rightBarButtonItem" title="수정" id="2w3-X8-aP0">
-                            <connections>
-                                <segue destination="kpL-ja-Zl4" kind="show" id="mhc-Jg-gOe"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="수정" id="2w3-X8-aP0"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XmZ-TP-OWK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1871" y="1459"/>
+            <point key="canvasLocation" x="1782" y="967"/>
         </scene>
         <!--DetailSet-->
         <scene sceneID="7tu-oa-RPg">

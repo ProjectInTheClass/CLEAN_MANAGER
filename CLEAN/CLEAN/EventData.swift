@@ -52,7 +52,7 @@ class EventData {
             do {
                 let result = try contactDB.executeQuery(sql_select, values: [])
                 if result.next(){
-                    get_data.set_init(eid: result.long(forColumnIndex: 0), sid: result.long(forColumnIndex: 1), ename: result.string(forColumnIndex: 2)!, front_date: result.string(forColumnIndex: 3)!, cycle: result.string(forColumnIndex: 4)!, alarm: result.long(forColumnIndex: 5), memo: result.string(forColumnIndex: 6)!)
+                    get_data.set_init(valid: result.long(forColumnIndex: 0), eid: result.long(forColumnIndex: 1), sid: result.long(forColumnIndex: 2), ename: result.string(forColumnIndex: 3)!, front_date: result.string(forColumnIndex: 4)!, cycle: result.string(forColumnIndex: 5)!, alarm: result.long(forColumnIndex: 6), memo: result.string(forColumnIndex: 7)!)
 //                  get_data.front_date =
 //                    phone.text = result.string(forColumn: "AGE")
 //                    resultLabel.text = "\(result.string(forColumn: "NAME")!) find!"
@@ -76,15 +76,15 @@ class EventData {
         let contactDB = FMDatabase(path: self.database_path)
         
         if contactDB.open() {
-            let sql_select = "SELECT EID, ENAME, FRONTDATE FROM EVENT"
+            let sql_select = "SELECT VALID, EID, ENAME, FRONTDATE FROM EVENT"
             print(sql_select)
             do {
                 let result = try contactDB.executeQuery(sql_select, values: [])
                 while(result.next()){
                     if result.next(){
                         let get_data = EventName()
-                        get_data.set_init(eid: result.long(forColumnIndex: 0), ename: result.string(forColumnIndex: 1)!, front_date: result.string(forColumnIndex: 2)!)
-                        print("debug: eid" + String(result.long(forColumnIndex: 0)))
+                        get_data.set_init(valid: result.long(forColumnIndex: 0), eid: result.long(forColumnIndex: 1), ename: result.string(forColumnIndex: 2)!, front_date: result.string(forColumnIndex: 3)!)
+                        print("debug: eid" + String(result.long(forColumnIndex: 1)))
                         get_datas.data.append(get_data)
                         get_datas.count+=1
                     } else {
@@ -113,7 +113,7 @@ class EventData {
                 let result = try contactDB.executeQuery(sql_select, values: [])
                 while(result.next()){
                     if result.next(){
-                        get_data.set_init(eid: result.long(forColumnIndex: 0), ename: result.string(forColumnIndex: 1)!, front_date: result.string(forColumnIndex: 2)!)
+                        get_data.set_init(valid: result.long(forColumnIndex: 0), eid: result.long(forColumnIndex: 1), ename: result.string(forColumnIndex: 2)!, front_date: result.string(forColumnIndex: 3)!)
                         get_datas.data.append(get_data)
                         get_datas.count+=1
                     } else {

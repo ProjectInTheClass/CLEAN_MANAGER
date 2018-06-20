@@ -29,11 +29,11 @@ class Constants: NSObject{
         static let update = "UPDATE "
         static let set = "SET "
     
-        static let insert_contant = "(SID, ENAME, FRONTDATE, CYCLE, ALARM, MEMO) values "
+        static let insert_contant = "(EID, SID, ENAME, FRONTDATE, CYCLE, ALARM, MEMO) values "
         static let create_exists = "CREATE TABLE IF NOT EXISTS "
         
         //base column
-        static let te_column = "( EID INTEGER PRIMARY KEY AUTOINCREMENT, SID INTEGER, ENAME TEXT, FRONTDATE TEXT, CYCLE TEXT, ALARM INTEGER, MEMO TEXT )"
+        static let te_column = "( VALID INTEGER, EID INTEGER, SID INTEGER, ENAME TEXT, FRONTDATE TEXT, CYCLE TEXT, ALARM INTEGER, MEMO TEXT )"
         static let mkt_event = create_exists + te_name + te_column
     }
     struct DB_event{
