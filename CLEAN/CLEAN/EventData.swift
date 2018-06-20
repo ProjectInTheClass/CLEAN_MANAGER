@@ -28,7 +28,7 @@ class EventData {
             let contactDB = FMDatabase(path: self.database_path)
             
             if contactDB.open(){
-                let sql_create_table = Constants.Database.create_exists
+                let sql_create_table = Constants.DB_event.sql_etable_create
                 
                 if !contactDB.executeStatements(sql_create_table){
                     print("Error0: contactDB execute Fail, \(contactDB.lastError())")
@@ -38,9 +38,11 @@ class EventData {
                 print("ERROR1: contactDB open fail, \(contactDB.lastError())")
             }
         } else {
-            print("contactDB is exist")
+            print("DB is exist")
         }
     }
+    
+    
     func find_event(event_id: Int, get_data: EventInfo)
     {
         let contactDB = FMDatabase(path: self.database_path)
@@ -50,7 +52,7 @@ class EventData {
             do {
                 let result = try contactDB.executeQuery(sql_select, values: [])
                 if result.next(){
-                    get_data.set_init(eid: result.long(forColumnIndex: 0), sid: -1, ename: result.string(forColumnIndex: 1)!, front_date: result.string(forColumnIndex: 2)!, cycle: result.string(forColumnIndex: 3)!, alarm: result.long(forColumnIndex: 4), memo: result.string(forColumnIndex: 5)!)
+                    get_data.set_init(eid: result.long(forColumnIndex: 0), sid: result.long(forColumnIndex: 1), ename: result.string(forColumnIndex: 2)!, front_date: result.string(forColumnIndex: 3)!, cycle: result.string(forColumnIndex: 4)!, alarm: result.long(forColumnIndex: 5), memo: result.string(forColumnIndex: 6)!)
 //                  get_data.front_date =
 //                    phone.text = result.string(forColumn: "AGE")
 //                    resultLabel.text = "\(result.string(forColumn: "NAME")!) find!"
@@ -70,6 +72,37 @@ class EventData {
         }
     }
     
+    func find_all_event(get_datas: EventNames){
+        let contactDB = FMDatabase(path: self.database_path)
+        
+        if contactDB.open() {
+            let sql_select = "SELECT EID, ENAME, FRONTDATE FROM EVENT"
+            print(sql_select)
+            do {
+                let result = try contactDB.executeQuery(sql_select, values: [])
+                while(result.next()){
+                    if result.next(){
+                        let get_data = EventName()
+                        get_data.set_init(eid: result.long(forColumnIndex: 0), ename: result.string(forColumnIndex: 1)!, front_date: result.string(forColumnIndex: 2)!)
+                        print("debug: eid" + String(result.long(forColumnIndex: 0)))
+                        get_datas.data.append(get_data)
+                        get_datas.count+=1
+                    } else {
+                        print("panic: (find all event) detail set not found!!")
+                        //exit(0)
+                    }
+                }
+            } catch {
+                print("error")
+            }
+            contactDB.close()
+        } else {
+            print("else error")
+        }
+
+    }
+    
+    
     func find_events(space_id: Int, get_datas: EventNames){
         let contactDB = FMDatabase(path: self.database_path)
         let get_data = EventName()
@@ -78,16 +111,15 @@ class EventData {
             print(sql_select)
             do {
                 let result = try contactDB.executeQuery(sql_select, values: [])
-                if result.next(){
-                    get_data.set_init(eid: result.long(forColumnIndex: 0), ename: result.string(forColumnIndex: 1)!, front_date: result.string(forColumnIndex: 2)!)
-                    get_datas.data.append(get_data)
-                    get_datas.count+=1
-                } else {
-                    print("panic: (\(space_id)) detail set not found!!")
-                    exit(0)
-                    //                    name.text = ""
-                    //                    phone.text = ""
-                    //                    resultLabel.text = "Record is not found"
+                while(result.next()){
+                    if result.next(){
+                        get_data.set_init(eid: result.long(forColumnIndex: 0), ename: result.string(forColumnIndex: 1)!, front_date: result.string(forColumnIndex: 2)!)
+                        get_datas.data.append(get_data)
+                        get_datas.count+=1
+                    } else {
+                        print("panic: (\(space_id)) detail set not found!!")
+                        exit(0)
+                    }
                 }
             } catch {
                 print("error")
@@ -97,6 +129,7 @@ class EventData {
             print("else error")
         }
     }
+    
     func insert_event(get_data: EventInfo){
         let contactDB = FMDatabase(path: self.database_path)
         if contactDB.open(){
@@ -130,6 +163,37 @@ class EventData {
             }
         }else {
             print("Error3: contactDB open Fail, \(contactDB.lastError())")
+        }
+    }
+    
+    func debug()
+    {
+        let contactDB = FMDatabase(path: self.database_path)
+        if contactDB.open() {
+            let sql_select = "SELECT * FROM EVENT"
+            print(sql_select)
+            do {
+                let result = try contactDB.executeQuery(sql_select, values: [])
+                while(result.next()){
+                if result.next(){
+                    print("\n\n******************\neid: \(result.long(forColumnIndex: 0))\nsid: \(result.long(forColumnIndex: 1))\nename: \(result.string(forColumnIndex: 2)!))\nfront_date: \(result.string(forColumnIndex: 3)!)\ncycle: \(result.string(forColumnIndex: 3)!)\nalarm: \(result.long(forColumnIndex: 5))\nmemo: \(result.string(forColumnIndex: 5)!)\n**********************\n\n")
+                    //                  get_data.front_date =
+                    //                    phone.text = result.string(forColumn: "AGE")
+                    //                    resultLabel.text = "\(result.string(forColumn: "NAME")!) find!"
+                } else {
+                    print("panic: (debug) detail set not found!!")
+                    exit(0)
+                    //                    name.text = ""
+                    //                    phone.text = ""
+                    //                    resultLabel.text = "Record is not found"
+                }
+            }
+            } catch {
+                print("error")
+            }
+            contactDB.close()
+        } else {
+            print("else error")
         }
     }
 }

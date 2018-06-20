@@ -15,7 +15,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     
     @IBOutlet weak var tableView: UITableView!
 
-    var selected: [EventInfo] = []
+    var selected: [EventName] = []
     
     var dateExample = ["2018-06-17", "2018-06-12", "2018-06-29", "2018-06-19"]
 
@@ -35,6 +35,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         super.viewDidLoad()
         self.title = "Calendar"
         
+        let event_data = EventData()
         let height: CGFloat = UIDevice.current.model.hasPrefix("iPad") ? 450 : 350
         let calendar = FSCalendar(frame: CGRect(x: 0, y: 50, width: self.view.bounds.width, height: height))
         
@@ -45,6 +46,10 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         
         view.addSubview(calendar)
         self.calendar = calendar
+        event_data.create_table()
+        
+        EventModel.shared.data_setting()
+        EventModel.shared.data_debug()
         
     }
     
@@ -114,10 +119,10 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        let item = selected[indexPath.row]
+    //    let item = selected[indexPath.row]
         
     //    cell.textLabel?.text = "Index \(indexPath.row)"
-        cell.textLabel?.text = item.memo
+    //    cell.textLabel?.text = item.memo
         return cell
         
     }
