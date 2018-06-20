@@ -40,6 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="startView" width="375" height="667"/>
+        <image name="startView" width="187" height="333"/>
     </resources>
 </document>

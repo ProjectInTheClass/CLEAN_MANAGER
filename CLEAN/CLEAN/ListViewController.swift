@@ -55,7 +55,7 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         if depth == 0 && indexPath.row == 2 {
             if let vc = self.storyboard?.instantiateViewController(withIdentifier: "list") as? ListViewController     {
-                vc.images=[UIImage(named: "basin"), UIImage(named: "floor"), UIImage(named: "toilet")]
+                vc.images=[UIImage(named: "basin"), UIImage(named: "bath"), UIImage(named: "floor"), UIImage(named: "toilet")]
                 vc.depth = (self.depth+indexPath.row)*10
                 /* vc.images=[UIImage(named: "basin"), UIImage(named: "floor"), UIImage(named: "mirror"), UIImage(named: "toilet"), UIImage(named: "towerholder")]
                 vc.depth = self.depth+1 */

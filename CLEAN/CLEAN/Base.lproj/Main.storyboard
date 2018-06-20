@@ -13,7 +13,7 @@
         <scene sceneID="1IA-Vk-YcG">
             <objects>
                 <viewControllerPlaceholder storyboardIdentifier="Calendar" storyboardName="Calendar" id="ruk-lF-PDt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" id="IKQ-SR-WNf"/>
+                    <tabBarItem key="tabBarItem" title="" image="calendar" selectedImage="calendar" id="IKQ-SR-WNf"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bmZ-13-dSR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -259,7 +259,7 @@
         <scene sceneID="uRi-Ww-eWB">
             <objects>
                 <viewControllerPlaceholder storyboardName="Add" id="I3x-98-ZYa" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" id="aQE-5N-cK6"/>
+                    <tabBarItem key="tabBarItem" title="" image="plus" id="aQE-5N-cK6"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZNj-zm-phw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -269,7 +269,7 @@
         <scene sceneID="CAr-ba-s5Z">
             <objects>
                 <viewControllerPlaceholder storyboardName="CleanScheduler" id="Y64-UX-y70" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" id="Pa1-bH-0Z2"/>
+                    <tabBarItem key="tabBarItem" title="" image="broom" selectedImage="broom" id="Pa1-bH-0Z2"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UpF-Vk-eIR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -594,6 +594,8 @@
     </scenes>
     <resources>
         <image name="bathroom" width="375" height="603"/>
+        <image name="broom" width="32" height="32"/>
+        <image name="calendar" width="32" height="32"/>
         <image name="plus" width="32" height="32"/>
     </resources>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
