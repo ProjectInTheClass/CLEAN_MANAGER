@@ -64,6 +64,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         calendar.appearance.eventSelectionColor = UIColor.white
         calendar.appearance.headerDateFormat = "yyyy년 M월";
         calendar.appearance.headerTitleColor = UIColor.black
+       // calendar.appearance.  = UIFont.boldSystemFontOfSize(16.0) ?
         calendar.appearance.headerMinimumDissolvedAlpha = 0.0;
         calendar.appearance.titleWeekendColor = UIColor.red
     
@@ -72,7 +73,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         calendar.register(FSCalendarCell.self, forCellReuseIdentifier: "cell")
         
         calendar.appearance.todayColor = UIColor.lightGray
-        calendar.appearance.borderSelectionColor = UIColor.orange
+        calendar.appearance.borderSelectionColor = UIColor(red: 42/255, green: 91/255, blue: 168/255, alpha: 1)
         calendar.appearance.selectionColor = UIColor.white
         
         calendar.appearance.titleSelectionColor = UIColor.black
