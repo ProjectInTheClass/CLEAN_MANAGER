@@ -182,7 +182,7 @@ class EventData {
                     //                    resultLabel.text = "\(result.string(forColumn: "NAME")!) find!"
                 } else {
                     print("panic: (debug) detail set not found!!")
-                    exit(0)
+                    //exit(0)
                     //                    name.text = ""
                     //                    phone.text = ""
                     //                    resultLabel.text = "Record is not found"

@@ -58,13 +58,13 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
         if depth == 0 && indexPath.row == 2 {
             if let vc = self.storyboard?.instantiateViewController(withIdentifier: "list") as? ListViewController     {
                 vc.images=[UIImage(named: "basin"), UIImage(named: "floor"), UIImage(named: "toilet")]
-                vc.depth = self.depth+1
+                vc.depth = (self.depth+indexPath.row)*10
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         } else {
             if let vc = UIStoryboard.init(name: "DetailSet", bundle: nil).instantiateInitialViewController() as? DetailSetViewController {
             //self.present(vc, animated: true, completion: nil)
-                vc.offset = indexPath.row + depth*9
+                vc.offset = indexPath.row + depth
                 vc.isInsert = true
                 self.navigationController?.pushViewController(vc, animated: true)
             }

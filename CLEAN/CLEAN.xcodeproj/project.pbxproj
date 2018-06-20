@@ -55,6 +55,7 @@
 		84CB06CE20D62A0300CC2B32 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CB06CD20D62A0300CC2B32 /* EventModel.swift */; };
 		84FB80C520BF795300585B5B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB80C420BF795300585B5B /* CalendarViewController.swift */; };
 		B6147A4F20D268D200A1B66D /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6147A4E20D268D200A1B66D /* ListCollectionViewCell.swift */; };
+		B63AC82B20DAA4A800A8DDE1 /* CleanSchedulerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63AC82A20DAA4A800A8DDE1 /* CleanSchedulerViewController.swift */; };
 		B6CBED3520B2E55700FDC309 /* AnimUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CBED3420B2E55700FDC309 /* AnimUtils.swift */; };
 		B6CBED3920B2FC6600FDC309 /* FinishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CBED3820B2FC6600FDC309 /* FinishListViewController.swift */; };
 		B6FBB53E20AC70180066EE2D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FBB53D20AC70180066EE2D /* MainViewController.swift */; };
@@ -165,6 +166,7 @@
 		92283D2CA4F44621C938E250 /* Pods-CLEANTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLEANTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CLEANTests/Pods-CLEANTests.release.xcconfig"; sourceTree = "<group>"; };
 		A80F8BCAF250B1F80184A715 /* Pods-CLEAN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLEAN.release.xcconfig"; path = "Pods/Target Support Files/Pods-CLEAN/Pods-CLEAN.release.xcconfig"; sourceTree = "<group>"; };
 		B6147A4E20D268D200A1B66D /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
+		B63AC82A20DAA4A800A8DDE1 /* CleanSchedulerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSchedulerViewController.swift; sourceTree = "<group>"; };
 		B6CBED3420B2E55700FDC309 /* AnimUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimUtils.swift; sourceTree = "<group>"; };
 		B6CBED3820B2FC6600FDC309 /* FinishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishListViewController.swift; sourceTree = "<group>"; };
 		B6FBB53D20AC70180066EE2D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 				B6FBB53D20AC70180066EE2D /* MainViewController.swift */,
 				B6CBED3820B2FC6600FDC309 /* FinishListViewController.swift */,
 				3A3946EA20C28BDF0089717A /* DetailSetViewController.swift */,
+				B63AC82A20DAA4A800A8DDE1 /* CleanSchedulerViewController.swift */,
 			);
 			name = Control;
 			sourceTree = "<group>";
@@ -678,6 +681,7 @@
 				3A44326320B64CE90009FC39 /* FSCalendarWeekdayView.m in Sources */,
 				3A73207220BBB04100F45379 /* Constant.swift in Sources */,
 				3AEDB40020A4406C0069726C /* AppDelegate.swift in Sources */,
+				B63AC82B20DAA4A800A8DDE1 /* CleanSchedulerViewController.swift in Sources */,
 				3A44326020B64CE90009FC39 /* FSCalendarScopeHandle.m in Sources */,
 				3A3946EB20C28BDF0089717A /* DetailSetViewController.swift in Sources */,
 				3AC42E0D20C74858003D82F9 /* FMDatabaseQueue.m in Sources */,

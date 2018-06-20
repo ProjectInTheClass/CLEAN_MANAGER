@@ -13,7 +13,7 @@ class AnimUtils: NSObject, UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, animationControllerForTransitionFrom fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         print(fromVC, toVC)
         if let _ = toVC as? UINavigationController {
-            return ScrollingAnim(tabBarController : tabBarController)
+            return nil//ScrollingAnim(tabBarController : tabBarController)
         } else {
             return nil
         }

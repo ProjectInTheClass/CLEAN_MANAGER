@@ -11,7 +11,7 @@ import Foundation
 
 
 // 청소해야될 모든 물건들 있으면 추가하기
-enum CleanObjects {
+enum CleanObjects: Int {
     
     // 공통적인것
     case floor

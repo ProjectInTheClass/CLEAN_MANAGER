@@ -33,7 +33,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     // Called when the view controller’s content view (the top of its view hierarchy) is created and loaded
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Calendar"
+        self.title = ""//Calendar"
         
         let event_data = EventData()
         let height: CGFloat = UIDevice.current.model.hasPrefix("iPad") ? 450 : 350

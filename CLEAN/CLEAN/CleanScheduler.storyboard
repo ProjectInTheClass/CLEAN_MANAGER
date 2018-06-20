@@ -30,7 +30,7 @@
         <!--청소목록-->
         <scene sceneID="JRh-rG-8vw">
             <objects>
-                <viewController id="GZD-Aj-yUf" sceneMemberID="viewController">
+                <viewController id="GZD-Aj-yUf" customClass="CleanSchedulerViewController" customModule="CLEAN" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FRz-yj-kiD"/>
                         <viewControllerLayoutGuide type="bottom" id="pEA-fg-To8"/>
@@ -44,7 +44,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="20" rowHeight="110" id="LTz-Lt-tYb">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="20" reuseIdentifier="list" rowHeight="110" id="LTz-Lt-tYb">
                                         <rect key="frame" x="0.0" y="28" width="375" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="LTz-Lt-tYb" id="Rp1-jv-zR8">
@@ -114,6 +114,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" title="청소목록" id="iOW-Qh-kDq"/>
+                    <connections>
+                        <outlet property="tableView" destination="yrv-Ak-BEx" id="rC3-Hm-0Zj"/>
+                        <outlet property="titleLabel" destination="61Z-VN-Faa" id="gDK-6a-4Db"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="etY-Yl-X5J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

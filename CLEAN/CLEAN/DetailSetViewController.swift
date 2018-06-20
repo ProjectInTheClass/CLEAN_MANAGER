@@ -148,6 +148,9 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         event_info.cycle = "0/0"
         event_info.sid = offset
         print(isInsert)
+        
+        //navigationController?.title = String(offset)
+        self.navigationItem.title = cleanArray[CleanObjects(rawValue: offset) ?? .floor]?.name ?? String(offset)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
