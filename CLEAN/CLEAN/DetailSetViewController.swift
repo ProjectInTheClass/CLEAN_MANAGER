@@ -23,9 +23,11 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var btn_done: UIBarButtonItem!
     
     let alarm_data = Constants.DetailSet.alarm_data
-    let month = Constants.DetailSet.month
+    let week = Constants.DetailSet.week
     let day = Constants.DetailSet.day
     let memo_place_holder = Constants.DetailSet.memo_place_holder
+    
+    let event_info = EventInfo(eid: 0, sid: 0, ename: "", front_date: "", cycle: "", alarm: -1, memo: "")
     
     var offset = 0
     
@@ -143,6 +145,9 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         txt_memo.delegate = self
     }
     
+    @IBAction func btn_done(_ sender: Any) {
+        
+    }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         if txt_memo.textColor == UIColor.lightGray {
@@ -171,6 +176,7 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         let formatter = DateFormatter()
         formatter.dateFormat = Constants.DetailSet.date_format
         label_start.text = "시작일: " + formatter.string(from: start_picker.date)
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -190,7 +196,7 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if pickerView == cycle_picker {
             if component == 0 {
-                return month.count
+                return week.count
             }
             else {
                 return day.count
@@ -205,7 +211,7 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if(pickerView == cycle_picker){
             if component == 0 {
-                return month[row]
+                return week[row]
             }
             else {
                 return day[row]
@@ -220,12 +226,16 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView == cycle_picker
         {
-            label_cycle.text = "주기: \(month[pickerView.selectedRow(inComponent: 0)])개월 \(day[pickerView.selectedRow(inComponent: 1)])일"
+            label_cycle.text = "주기: \(week[pickerView.selectedRow(inComponent: 0)])주 \(day[pickerView.selectedRow(inComponent: 1)])일"
+            event_info.set_cycle(cycle: "\(week[pickerView.selectedRow(inComponent: 0)])/\(day[pickerView.selectedRow(inComponent: 1)])")
+            print(event_info.cycle)
             pickerView.reloadComponent(1)
         }
         else
         {
             label_alarm.text = "알람: \(alarm_data[pickerView.selectedRow(inComponent: 0)])"
+            event_info.set_alarm(alarm: pickerView.selectedRow(inComponent: 0))
+            print("알람: \(pickerView.selectedRow(inComponent: 0))")
         }
     }
 

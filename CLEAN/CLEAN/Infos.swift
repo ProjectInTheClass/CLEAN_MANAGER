@@ -26,7 +26,6 @@ class EventInfo {
         self.alarm = alarm
         self.memo = memo
     }
-
     
     func set_init(eid: Int,sid: Int, ename: String, front_date: String, cycle: String, alarm: Int, memo: String) {
         self.eid = eid
@@ -38,6 +37,24 @@ class EventInfo {
         self.memo = memo
     }
     
+    func set_sid(sid: Int){
+        self.sid = sid
+    }
+    func set_ename(ename: String){
+        self.ename = ename
+    }
+    func set_front_date(front_date: String){
+        self.front_date = front_date
+    }
+    func set_cycle(cycle: String){
+        self.cycle = cycle
+    }
+    func set_alarm(alarm: Int){
+        self.alarm = alarm
+    }
+    func set_memo(memo: String){
+        self.memo = memo
+    }
 }
 
 class EventName {
