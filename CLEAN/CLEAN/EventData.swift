@@ -42,6 +42,7 @@ class EventData {
         }
     }
     
+    
     func find_event(event_id: Int, get_data: EventInfo)
     {
         let contactDB = FMDatabase(path: self.database_path)
@@ -71,6 +72,33 @@ class EventData {
         }
     }
     
+    func find_all_event(get_datas: EventNames){
+        let contactDB = FMDatabase(path: self.database_path)
+        let get_data = EventName()
+        if contactDB.open() {
+            let sql_select = "SELECT * FROM EVENT"
+            print(sql_select)
+            do {
+                let result = try contactDB.executeQuery(sql_select, values: [])
+                while(result.next()){
+                    if result.next(){
+                        get_data.set_init(eid: result.long(forColumnIndex: 0), ename: result.string(forColumnIndex: 1)!, front_date: result.string(forColumnIndex: 2)!)
+                        get_datas.data.append(get_data)
+                        get_datas.count+=1
+                    } else {
+                        print("panic: () detail set not found!!")
+                        exit(0)
+                    }
+                }
+            } catch {
+                print("error")
+            }
+            contactDB.close()
+        } else {
+            print("else error")
+        }
+
+    }
     
     
     func find_events(space_id: Int, get_datas: EventNames){
