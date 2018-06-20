@@ -11,25 +11,31 @@ import Foundation
 class EventModel {
     // 객체를 한개로 해주기위해서..
     static let shared = EventModel()
-    
+    var data = EventNames()
     let formatter = DateFormatter()
     
     init() {
         formatter.dateFormat = "yyyy-MM-dd"
     }
     
-     // detail에서 추가했을때 data에 추가되게하기 , 특정 날짜가아닌 요일로해야할듯??
-    var data = [
-        EventInfo(eid: 1,sid: 1,ename: "bath",front_date: "2018-06-17",cycle: "3/1",alarm: 1,memo: "clean Bathroom"),
-        EventInfo(eid: 2,sid: 2,ename: "oven",front_date: "2018-06-12",cycle: "4/1",alarm: 1,memo: "clean Oven"),
-        EventInfo(eid: 3,sid: 3,ename: "floor",front_date: "2018-06-29",cycle: "0/1",alarm: 1,memo: "clean Floor"),
-        EventInfo(eid: 4,sid: 4,ename: "window",front_date: "2018-06-17",cycle: "1/0",alarm: 1,memo: "clean Window")
-    ]
+    func data_setting() {
+        let event_data = EventData()
+        event_data.find_all_event(get_datas: data)
+    }
     
-    func dataAt(date: Date) -> [EventInfo] {
+    func dataAt(date: Date) -> [EventName] {
         let target = formatter.string(from: date)
-        return data.filter { (info) -> Bool in
+        return data.data.filter { (info) -> Bool in
             return info.front_date == target
+        }
+    }
+    
+    func data_debug() {
+        var i = 0
+        print("count: " + String(data.count))
+        while(i < data.count){
+            print("i: " + String(i)+"eid: " + String(data.data[i].eid) + "ename: " + data.data[i].ename + "data: " + data.data[i].front_date)
+            i += 1
         }
     }
 }

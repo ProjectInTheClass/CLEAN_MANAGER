@@ -8,7 +8,12 @@
 
 import UIKit
 
+protocol SendDataDelegate {
+    func sendData(isNew: Bool, offset: Int)
+}
+
 class ListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    var delegate: SendDataDelegate?
     @IBOutlet weak var collectionView: UICollectionView!
     var depth = 0
     
@@ -58,6 +63,7 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
             if let vc = UIStoryboard.init(name: "DetailSet", bundle: nil).instantiateInitialViewController() as? DetailSetViewController {
             //self.present(vc, animated: true, completion: nil)
                 vc.offset = indexPath.row + depth*9
+                vc.isInsert = true
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }
