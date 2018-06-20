@@ -46,6 +46,8 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "idiot", for: indexPath) as! ListCollectionViewCell
         cell.placeImageView.image = images[indexPath.row]
+        cell.layer.borderColor = UIColor.gray.cgColor
+        cell.layer.borderWidth = 0.25
         
         return cell
     }
@@ -55,13 +57,13 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         if depth == 0 && indexPath.row == 0 {
             if let vc = self.storyboard?.instantiateViewController(withIdentifier: "list") as? ListViewController     {
-                vc.images=[UIImage(named: "sofa"), UIImage(named: "floor")]
+                vc.images=[UIImage(named: "sofa"), UIImage(named: "floor2")]
                 vc.depth = (self.depth+indexPath.row)*10
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         } else if depth == 0 && indexPath.row == 1 {
             if let vc = self.storyboard?.instantiateViewController(withIdentifier: "list") as? ListViewController     {
-                vc.images=[UIImage(named: "microwave"), UIImage(named: "floor")]
+                vc.images=[UIImage(named: "microwave"), UIImage(named: "floor2")]
                 vc.depth = (self.depth+indexPath.row)*10
                 self.navigationController?.pushViewController(vc, animated: true)
             }
@@ -73,25 +75,25 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
             }
         }  else if depth == 0 && indexPath.row == 3 {
             if let vc = self.storyboard?.instantiateViewController(withIdentifier: "list") as? ListViewController     {
-                vc.images=[UIImage(named: "bed"), UIImage(named: "floor")]
+                vc.images=[UIImage(named: "bed"), UIImage(named: "floor2")]
                 vc.depth = (self.depth+indexPath.row)*10
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         } else if depth == 0 && indexPath.row == 4 {
             if let vc = self.storyboard?.instantiateViewController(withIdentifier: "list") as? ListViewController     {
-                vc.images=[UIImage(named: "bed"), UIImage(named: "floor")]
+                vc.images=[UIImage(named: "bed"), UIImage(named: "floor2")]
                 vc.depth = (self.depth+indexPath.row)*10
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         } else if depth == 0 && indexPath.row == 5 {
             if let vc = self.storyboard?.instantiateViewController(withIdentifier: "list") as? ListViewController     {
-                vc.images=[UIImage(named: "bed"), UIImage(named: "floor")]
+                vc.images=[UIImage(named: "bed"), UIImage(named: "floor2")]
                 vc.depth = (self.depth+indexPath.row)*10
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         } else if depth == 0 && indexPath.row == 6 {
             if let vc = self.storyboard?.instantiateViewController(withIdentifier: "list") as? ListViewController     {
-                vc.images=[UIImage(named: "closet"), UIImage(named: "floor")]
+                vc.images=[UIImage(named: "closet"), UIImage(named: "floor2")]
                 vc.depth = (self.depth+indexPath.row)*10
                 self.navigationController?.pushViewController(vc, animated: true)
             }
