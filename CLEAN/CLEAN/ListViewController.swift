@@ -8,7 +8,12 @@
 
 import UIKit
 
+protocol SendDataDelegate {
+    func sendData(data: String)
+}
+
 class ListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    var delegate: SendDataDelegate?
     @IBOutlet weak var collectionView: UICollectionView!
     var depth = 0
     

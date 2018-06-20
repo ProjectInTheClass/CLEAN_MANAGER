@@ -27,7 +27,7 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     let day = Constants.DetailSet.day
     let memo_place_holder = Constants.DetailSet.memo_place_holder
     
-    let event_info = EventInfo(eid: -1, sid: -1, ename: "", front_date: "", cycle: "", alarm: -1, memo: "")
+    let event_info = EventInfo(eid: -1, sid: -1, ename: "", front_date: "", cycle: "", alarm: 0, memo: "")
     
     var offset = 0
     
@@ -132,12 +132,20 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         cycle_picker.delegate = self
         cycle_picker.dataSource = self
         
+        
+        let now = Date()
+        let formmater = DateFormatter()
+        let format: String = "yyyy-MM-dd"
+        
         btn_done.title = Constants.Button.done
         
         UNUserNotificationCenter.current().delegate = self as UNUserNotificationCenterDelegate
         
         txt_memo.text = String(offset)
-        print(offset)
+        formmater.dateFormat = format
+        event_info.front_date = formmater.string(from: now as Date)
+        event_info.cycle = "0/0"
+        event_info.sid = offset
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
