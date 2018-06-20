@@ -125,7 +125,7 @@
             </objects>
             <point key="canvasLocation" x="2572" y="249"/>
         </scene>
-        <!--Detail Set View Controller-->
+        <!--주기설정-->
         <scene sceneID="OCY-kF-PI9">
             <objects>
                 <viewController id="q4H-Ym-sx0" customClass="DetailSetViewController" customModule="CLEAN" customModuleProvider="target" sceneMemberID="viewController">
@@ -224,8 +224,8 @@
                             <constraint firstAttribute="trailingMargin" secondItem="fuX-gE-DYa" secondAttribute="trailing" id="z5V-Nu-hmt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="P9t-nT-S7E">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="fB8-7b-l8I">
+                    <navigationItem key="navigationItem" title="주기설정" id="P9t-nT-S7E">
+                        <barButtonItem key="rightBarButtonItem" title="완료" id="fB8-7b-l8I">
                             <connections>
                                 <action selector="btn_done:" destination="q4H-Ym-sx0" id="psm-SR-1df"/>
                             </connections>
