@@ -157,11 +157,14 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     @IBAction func btn_done(_ sender: Any) {
         event_info.memo = txt_memo.text
-        //event_info.sid =
-        //event_info.eid =
-        
-        
+        let event_data = EventData()
+        if event_info.eid == -1 {
+            event_data.insert_event(get_data: event_info)
+        } else {
+            event_data.undate_event(get_data: event_info)
+        }
         event_info.debug()
+        event_data.debug()
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {

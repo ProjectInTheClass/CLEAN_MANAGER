@@ -35,6 +35,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         super.viewDidLoad()
         self.title = "Calendar"
         
+        let event_data = EventData()
         let height: CGFloat = UIDevice.current.model.hasPrefix("iPad") ? 450 : 350
         let calendar = FSCalendar(frame: CGRect(x: 0, y: 50, width: self.view.bounds.width, height: height))
         
@@ -46,6 +47,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         view.addSubview(calendar)
         self.calendar = calendar
         
+        event_data.create_table()
     }
     
     // Intended for any operations that you want always to occur before the view becomes visible
