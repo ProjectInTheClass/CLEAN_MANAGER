@@ -32,7 +32,6 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     var offset = 0
     var isInsert = false
     
-    
     func init_space_holder (_ text: String?, _ textView: UITextView) {
         textView.text = text
         if text != nil {
@@ -166,7 +165,6 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
         event_info.debug()
         event_data.debug()
-        //view.removeFromSuperview()
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {

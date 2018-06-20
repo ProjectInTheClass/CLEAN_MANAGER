@@ -13,7 +13,7 @@ import UIKit
 class Constants: NSObject{
     
     struct Database {
-        static let db_name = "test_db3"
+        static let db_name = "test_db2"
         
         //base table name
         static let interface_te_name = "EVENT"

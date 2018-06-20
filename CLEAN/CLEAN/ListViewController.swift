@@ -46,8 +46,6 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "idiot", for: indexPath) as! ListCollectionViewCell
         cell.placeImageView.image = images[indexPath.row]
-        cell.layer.borderColor = UIColor.black.cgColor
-        cell.layer.borderWidth = 1
         
         return cell
     }
@@ -57,7 +55,7 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         if depth == 0 && indexPath.row == 2 {
             if let vc = self.storyboard?.instantiateViewController(withIdentifier: "list") as? ListViewController     {
-                vc.images=[UIImage(named: "basin"), UIImage(named: "floor"), UIImage(named: "toilet")]
+                vc.images=[UIImage(named: "basin"), UIImage(named: "floor"), UIImage(named: "mirror"), UIImage(named: "toilet"), UIImage(named: "towerholder")]
                 vc.depth = self.depth+1
                 self.navigationController?.pushViewController(vc, animated: true)
             }
