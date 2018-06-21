@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1AC5B09A612F0A11A9CC025A /* Pods_CLEANTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 674656127D51431991DEA30D /* Pods_CLEANTests.framework */; };
 		3A2D3A8920D9D51F00B0E645 /* DateLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D3A8820D9D51F00B0E645 /* DateLogic.swift */; };
-		3A35DECA20DB4C6700C489B0 /* ReCallMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A35DEC920DB4C6700C489B0 /* ReCallMain.storyboard */; };
+		3A35DECC20DB5C6300C489B0 /* CleanTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A35DECB20DB5C6300C489B0 /* CleanTableData.swift */; };
 		3A3946EB20C28BDF0089717A /* DetailSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3946EA20C28BDF0089717A /* DetailSetViewController.swift */; };
 		3A39471220C7454A0089717A /* EventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A39471120C7454A0089717A /* EventData.swift */; };
 		3A39471320C7474C0089717A /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A73204C20BBAD0700F45379 /* libsqlite3.0.tbd */; };
@@ -44,6 +44,7 @@
 		3AC42E2320C749F4003D82F9 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC42E0A20C74858003D82F9 /* FMDatabasePool.m */; };
 		3AC42E2820C772B4003D82F9 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC42E2720C772B4003D82F9 /* Subject.swift */; };
 		3AC42E2B20C7863A003D82F9 /* Infos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC42E2A20C7863A003D82F9 /* Infos.swift */; };
+		3AC7878020DB694600D869D0 /* TableViewMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC7877F20DB694600D869D0 /* TableViewMain.swift */; };
 		3AEDB40020A4406C0069726C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDB3FF20A4406C0069726C /* AppDelegate.swift */; };
 		3AEDB40220A4406C0069726C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDB40120A4406C0069726C /* ViewController.swift */; };
 		3AEDB40520A4406C0069726C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AEDB40320A4406C0069726C /* Main.storyboard */; };
@@ -85,7 +86,7 @@
 		288CD2B9C8F2AE3A0DB576ED /* Pods-CLEANUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLEANUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CLEANUITests/Pods-CLEANUITests.release.xcconfig"; sourceTree = "<group>"; };
 		32121066C77A8D094BA5F569 /* Pods-CLEANTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLEANTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CLEANTests/Pods-CLEANTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3A2D3A8820D9D51F00B0E645 /* DateLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateLogic.swift; sourceTree = "<group>"; };
-		3A35DEC920DB4C6700C489B0 /* ReCallMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReCallMain.storyboard; sourceTree = "<group>"; };
+		3A35DECB20DB5C6300C489B0 /* CleanTableData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CleanTableData.swift; sourceTree = "<group>"; };
 		3A3946EA20C28BDF0089717A /* DetailSetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailSetViewController.swift; sourceTree = "<group>"; };
 		3A39471120C7454A0089717A /* EventData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventData.swift; sourceTree = "<group>"; };
 		3A44322C20B64CE90009FC39 /* FSCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendar.h; path = FSCalendar/FSCalendar.h; sourceTree = "<group>"; };
@@ -147,6 +148,7 @@
 		3AC42E1020C74886003D82F9 /* FMDB_Bridging_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDB_Bridging_Header.h; sourceTree = "<group>"; };
 		3AC42E2720C772B4003D82F9 /* Subject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		3AC42E2A20C7863A003D82F9 /* Infos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Infos.swift; sourceTree = "<group>"; };
+		3AC7877F20DB694600D869D0 /* TableViewMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewMain.swift; sourceTree = "<group>"; };
 		3AEDB3FC20A4406C0069726C /* CLEAN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLEAN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AEDB3FF20A4406C0069726C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AEDB40120A4406C0069726C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 				3A73206F20BBAFFB00F45379 /* SpaceTable.swift */,
 				3AC42E2520C75EC8003D82F9 /* DB */,
 				84CB06CD20D62A0300CC2B32 /* EventModel.swift */,
+				3A35DECB20DB5C6300C489B0 /* CleanTableData.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -286,7 +289,6 @@
 				3AEDB3FF20A4406C0069726C /* AppDelegate.swift */,
 				B6CBED3420B2E55700FDC309 /* AnimUtils.swift */,
 				3AEDB40320A4406C0069726C /* Main.storyboard */,
-				3A35DEC920DB4C6700C489B0 /* ReCallMain.storyboard */,
 				3A73207320BBE9AB00F45379 /* Calendar.storyboard */,
 				3A7320B120BBF04D00F45379 /* Add.storyboard */,
 				3A7320B320BBF0EA00F45379 /* CleanScheduler.storyboard */,
@@ -306,6 +308,7 @@
 				B6CBED3820B2FC6600FDC309 /* FinishListViewController.swift */,
 				3A3946EA20C28BDF0089717A /* DetailSetViewController.swift */,
 				B63AC82A20DAA4A800A8DDE1 /* CleanSchedulerViewController.swift */,
+				3AC7877F20DB694600D869D0 /* TableViewMain.swift */,
 			);
 			name = Control;
 			sourceTree = "<group>";
@@ -552,7 +555,6 @@
 				3AEDB40720A4406C0069726C /* Assets.xcassets in Resources */,
 				3A7320B620BBF22E00F45379 /* DetailSet.storyboard in Resources */,
 				3A44326620B64CE90009FC39 /* Info.plist in Resources */,
-				3A35DECA20DB4C6700C489B0 /* ReCallMain.storyboard in Resources */,
 				3A7320B420BBF0EA00F45379 /* CleanScheduler.storyboard in Resources */,
 				3A73207420BBE9AB00F45379 /* Calendar.storyboard in Resources */,
 				3A7320B220BBF04D00F45379 /* Add.storyboard in Resources */,
@@ -676,6 +678,7 @@
 				84CB06CE20D62A0300CC2B32 /* EventModel.swift in Sources */,
 				3AC42E2820C772B4003D82F9 /* Subject.swift in Sources */,
 				B6147A4F20D268D200A1B66D /* ListCollectionViewCell.swift in Sources */,
+				3A35DECC20DB5C6300C489B0 /* CleanTableData.swift in Sources */,
 				3A2D3A8920D9D51F00B0E645 /* DateLogic.swift in Sources */,
 				3A44326220B64CE90009FC39 /* FSCalendarTransitionCoordinator.m in Sources */,
 				84FB80C520BF795300585B5B /* CalendarViewController.swift in Sources */,
@@ -687,6 +690,7 @@
 				3AEDB40020A4406C0069726C /* AppDelegate.swift in Sources */,
 				B63AC82B20DAA4A800A8DDE1 /* CleanSchedulerViewController.swift in Sources */,
 				3A44326020B64CE90009FC39 /* FSCalendarScopeHandle.m in Sources */,
+				3AC7878020DB694600D869D0 /* TableViewMain.swift in Sources */,
 				3A3946EB20C28BDF0089717A /* DetailSetViewController.swift in Sources */,
 				3AC42E0D20C74858003D82F9 /* FMDatabaseQueue.m in Sources */,
 				3A44325820B64CE90009FC39 /* FSCalendarCell.m in Sources */,

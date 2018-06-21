@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PF4-lv-seg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17E199" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PF4-lv-seg">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,7 +30,7 @@
         <!--청소목록-->
         <scene sceneID="JRh-rG-8vw">
             <objects>
-                <viewController id="GZD-Aj-yUf" customClass="CleanSchedulerViewController" customModule="CLEAN" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GZD-Aj-yUf" customClass="CleanTableViewController" customModule="CLEAN" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FRz-yj-kiD"/>
                         <viewControllerLayoutGuide type="bottom" id="pEA-fg-To8"/>
@@ -98,7 +98,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="kpL-ja-Zl4" kind="show" id="5aI-8J-nHF"/>
+                                            <segue destination="kpL-ja-Zl4" kind="show" id="L5q-Ph-c7O"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -115,8 +115,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="청소목록" id="iOW-Qh-kDq"/>
                     <connections>
-                        <outlet property="tableView" destination="yrv-Ak-BEx" id="rC3-Hm-0Zj"/>
-                        <outlet property="titleLabel" destination="61Z-VN-Faa" id="gDK-6a-4Db"/>
+                        <outlet property="tableview" destination="yrv-Ak-BEx" id="mgs-fU-XmZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="etY-Yl-X5J" userLabel="First Responder" sceneMemberID="firstResponder"/>
