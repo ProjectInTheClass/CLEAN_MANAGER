@@ -37,7 +37,7 @@ class Constants: NSObject{
         static let mkt_event = create_exists + te_name + te_column
     }
     struct DB_event{
-        static let select_ed = "SELECT EID, SID, ENAME, FRONTDATE, CYCLE, ALARM, MEMO "
+        static let select_ed = "SELECT VALID, EID, SID, ENAME, FRONTDATE, CYCLE, ALARM, MEMO "
         static let select_cl = "SELECT EID, ENAME, FRONTDATE "
         static let from_ed = "FROM " + Constants.Database.te_name
         static let condition_eid = "WHERE EID = "

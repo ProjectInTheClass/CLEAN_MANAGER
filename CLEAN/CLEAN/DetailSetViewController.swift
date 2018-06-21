@@ -26,6 +26,7 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     let week = Constants.DetailSet.week
     let day = Constants.DetailSet.day
     let memo_place_holder = Constants.DetailSet.memo_place_holder
+    let event_data = EventData()
     
     let event_info = EventInfo(valid: -1, eid: -1, sid: -1, ename: "", front_date: "", cycle: "", alarm: 0, memo: "")
     
@@ -143,11 +144,12 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         UNUserNotificationCenter.current().delegate = self as UNUserNotificationCenterDelegate
         
         txt_memo.text = String(offset)
+        event_data.find_event(event_id: offset, get_data: event_info)
         formmater.dateFormat = format
         event_info.front_date = formmater.string(from: now as Date)
-        event_info.cycle = "0/0"
-        event_info.sid = offset/10
-        event_info.eid = offset
+        event_info.debug()
+        
+        //event_info.cycle = "0/0"
         
         print(isInsert)
         
@@ -162,13 +164,11 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     @IBAction func btn_done(_ sender: Any) {
-        event_info.memo = txt_memo.text
-        let event_data = EventData()
-        if event_info.eid == -1 {
-            event_data.insert_event(get_data: event_info)
-        } else {
-            event_data.undate_event(get_data: event_info)
+        if(event_info.valid == 0){
+            event_info.valid = 1
         }
+        event_info.memo = txt_memo.text
+        event_data.undate_event(get_data: event_info)
         event_info.debug()
         event_data.debug()
     }
