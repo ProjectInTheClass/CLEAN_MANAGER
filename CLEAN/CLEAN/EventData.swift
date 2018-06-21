@@ -121,9 +121,10 @@ class EventData {
     
     func find_all_event(get_datas: EventNames){
         let contactDB = FMDatabase(path: self.database_path)
-        
+        get_datas.data = []
+        get_datas.count = 0
         if contactDB.open() {
-            let sql_select = "SELECT VALID, EID, ENAME, FRONTDATE FROM EVENT ORDER BY FRONTDATE"
+            let sql_select = "SELECT VALID, EID, ENAME, FRONTDATE FROM EVENT WHERE VALID = 1 ORDER BY FRONTDATE"
             print(sql_select)
             do {
                 let result = try contactDB.executeQuery(sql_select, values: [])
