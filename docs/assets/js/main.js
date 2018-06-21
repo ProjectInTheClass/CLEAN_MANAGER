@@ -1,105 +1,139 @@
 /*
-	Overflow by HTML5 UP
+	Stellar by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
 (function($) {
 
-	var	$window = $(window),
-		$body = $('body'),
-		settings = {
+	skel.breakpoints({
+		xlarge: '(max-width: 1680px)',
+		large: '(max-width: 1280px)',
+		medium: '(max-width: 980px)',
+		small: '(max-width: 736px)',
+		xsmall: '(max-width: 480px)',
+		xxsmall: '(max-width: 360px)'
+	});
 
-			// Parallax background effect?
-				parallax: true,
+	$(function() {
 
-			// Parallax factor (lower = more intense, higher = less intense).
-				parallaxFactor: 10
+		var	$window = $(window),
+			$body = $('body'),
+			$main = $('#main');
 
-		};
+		// Disable animations/transitions until the page has loaded.
+			$body.addClass('is-loading');
 
-	// Breakpoints.
-		breakpoints({
-			wide:    [ '1081px',  '1680px' ],
-			normal:  [ '841px',   '1080px' ],
-			narrow:  [ '737px',   '840px'  ],
-			mobile:  [ null,      '736px'  ]
-		});
+			$window.on('load', function() {
+				window.setTimeout(function() {
+					$body.removeClass('is-loading');
+				}, 100);
+			});
 
-	// Mobile?
-		if (browser.mobile)
-			$body.addClass('is-scroll');
+		// Fix: Placeholder polyfill.
+			$('form').placeholder();
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+		// Prioritize "important" elements on medium.
+			skel.on('+medium -medium', function() {
+				$.prioritize(
+					'.important\\28 medium\\29',
+					skel.breakpoint('medium').active
+				);
+			});
 
-	// Scrolly.
-		$('.scrolly-middle').scrolly({
-			speed: 1000,
-			anchor: 'middle'
-		});
+		// Nav.
+			var $nav = $('#nav');
 
-		$('.scrolly').scrolly({
-			speed: 1000,
-			offset: function() { return (breakpoints.active('<=mobile') ? 70 : 190); }
-		});
+			if ($nav.length > 0) {
 
-	// Parallax background.
+				// Shrink effect.
+					$main
+						.scrollex({
+							mode: 'top',
+							enter: function() {
+								$nav.addClass('alt');
+							},
+							leave: function() {
+								$nav.removeClass('alt');
+							},
+						});
 
-		// Disable parallax on IE/Edge (smooth scrolling is jerky), and on mobile platforms (= better performance).
-			if (browser.name == 'ie'
-			||	browser.name == 'edge'
-			||	browser.mobile)
-				settings.parallax = false;
+				// Links.
+					var $nav_a = $nav.find('a');
 
-		if (settings.parallax) {
+					$nav_a
+						.scrolly({
+							speed: 1000,
+							offset: function() { return $nav.height(); }
+						})
+						.on('click', function() {
 
-			var $dummy = $(), $bg;
+							var $this = $(this);
 
-			$window
-				.on('scroll.overflow_parallax', function() {
+							// External link? Bail.
+								if ($this.attr('href').charAt(0) != '#')
+									return;
 
-					// Adjust background position.
-						$bg.css('background-position', 'center ' + (-1 * (parseInt($window.scrollTop()) / settings.parallaxFactor)) + 'px');
+							// Deactivate all links.
+								$nav_a
+									.removeClass('active')
+									.removeClass('active-locked');
 
-				})
-				.on('resize.overflow_parallax', function() {
+							// Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
+								$this
+									.addClass('active')
+									.addClass('active-locked');
 
-					// If we're in a situation where we need to temporarily disable parallax, do so.
-						if (breakpoints.active('<=narrow')) {
+						})
+						.each(function() {
 
-							$body.css('background-position', '');
-							$bg = $dummy;
+							var	$this = $(this),
+								id = $this.attr('href'),
+								$section = $(id);
 
-						}
+							// No section for this link? Bail.
+								if ($section.length < 1)
+									return;
 
-					// Otherwise, continue as normal.
-						else
-							$bg = $body;
+							// Scrollex.
+								$section.scrollex({
+									mode: 'middle',
+									initialize: function() {
 
-					// Trigger scroll handler.
-						$window.triggerHandler('scroll.overflow_parallax');
+										// Deactivate section.
+											if (skel.canUse('transition'))
+												$section.addClass('inactive');
 
-				})
-				.trigger('resize.overflow_parallax');
+									},
+									enter: function() {
 
-		}
+										// Activate section.
+											$section.removeClass('inactive');
 
-	// Poptrox.
-		$('.gallery').poptrox({
-			useBodyOverflow: false,
-			usePopupEasyClose: false,
-			overlayColor: '#0a1919',
-			overlayOpacity: 0.75,
-			usePopupDefaultStyling: false,
-			usePopupCaption: true,
-			popupLoaderText: '',
-			windowMargin: 10,
-			usePopupNav: true
-		});
+										// No locked links? Deactivate all links and activate this section's one.
+											if ($nav_a.filter('.active-locked').length == 0) {
+
+												$nav_a.removeClass('active');
+												$this.addClass('active');
+
+											}
+
+										// Otherwise, if this section's link is the one that's locked, unlock it.
+											else if ($this.hasClass('active-locked'))
+												$this.removeClass('active-locked');
+
+									}
+								});
+
+						});
+
+			}
+
+		// Scrolly.
+			$('.scrolly').scrolly({
+				speed: 1000
+			});
+
+	});
 
 })(jQuery);
