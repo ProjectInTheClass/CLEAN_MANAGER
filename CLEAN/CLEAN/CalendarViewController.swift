@@ -47,6 +47,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         view.addSubview(calendar)
         self.calendar = calendar
         event_data.create_table()
+        event_data.debug()
         
         EventModel.shared.data_setting()
         EventModel.shared.data_debug()

@@ -13,7 +13,7 @@ import UIKit
 class Constants: NSObject{
     
     struct Database {
-        static let db_name = "test_db2"
+        static let db_name = "test_db9"
         
         //base table name
         static let interface_te_name = "EVENT"
@@ -29,7 +29,7 @@ class Constants: NSObject{
         static let update = "UPDATE "
         static let set = "SET "
     
-        static let insert_contant = "(EID, SID, ENAME, FRONTDATE, CYCLE, ALARM, MEMO) values "
+        static let insert_contant = "(VALID, EID, SID, ENAME, FRONTDATE, CYCLE, ALARM, MEMO) values "
         static let create_exists = "CREATE TABLE IF NOT EXISTS "
         
         //base column
