@@ -190,7 +190,7 @@ class EventData {
     func undate_event(get_data: EventInfo) {
         let contactDB = FMDatabase(path: self.database_path)
         if contactDB.open() {
-            let updateSQL = Constants.DB_event.sql_event_update + "FRONTDATE='\(get_data.front_date)', CYCLE='\(get_data.cycle)', ALARM=\(get_data.alarm), MEMO='\(get_data.memo)'" + "WHERE EID = \(get_data.eid)"
+            let updateSQL = Constants.DB_event.sql_event_update + "VALID=\(get_data.valid), FRONTDATE='\(get_data.front_date)', CYCLE='\(get_data.cycle)', ALARM=\(get_data.alarm), MEMO='\(get_data.memo)'" + "WHERE EID = \(get_data.eid)"
             let result = contactDB.executeUpdate(updateSQL, withArgumentsIn: [])
             if !result{
                 print("panic: update error")
