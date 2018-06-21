@@ -164,6 +164,7 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     @IBAction func btn_done(_ sender: Any) {
+        print("haha")
         if(event_info.valid == 0){
             event_info.valid = 1
         }
