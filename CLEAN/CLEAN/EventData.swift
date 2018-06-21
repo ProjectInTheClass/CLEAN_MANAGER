@@ -91,7 +91,15 @@ class EventData {
             do {
                 let result = try contactDB.executeQuery(sql_select, values: [])
                 if result.next(){
-                    get_data.set_init(valid: result.long(forColumnIndex: 0), eid: result.long(forColumnIndex: 1), sid: result.long(forColumnIndex: 2), ename: result.string(forColumnIndex: 3)!, front_date: result.string(forColumnIndex: 4)!, cycle: result.string(forColumnIndex: 5)!, alarm: result.long(forColumnIndex: 6), memo: result.string(forColumnIndex: 7)!)
+                    get_data.valid = result.long(forColumnIndex: 0)
+                    get_data.eid = result.long(forColumnIndex: 1)
+                    get_data.sid = result.long(forColumnIndex: 2)
+                    get_data.ename = result.string(forColumnIndex: 3)!
+                    get_data.front_date = result.string(forColumnIndex: 4)!
+                    get_data.cycle = result.string(forColumnIndex: 5)!
+                    get_data.alarm = result.long(forColumnIndex: 6)
+                    get_data.memo = result.string(forColumnIndex: 7)!
+                    //get_data.set_init(valid: result.long(forColumnIndex: 0), eid: result.long(forColumnIndex: 1), sid: result.long(forColumnIndex: 2), ename: result.string(forColumnIndex: 3)!, front_date: result.string(forColumnIndex: 4)!, cycle: result.string(forColumnIndex: 5)!, alarm: result.long(forColumnIndex: 6), memo: result.string(forColumnIndex: 7)!)
 //                  get_data.front_date =
 //                    phone.text = result.string(forColumn: "AGE")
 //                    resultLabel.text = "\(result.string(forColumn: "NAME")!) find!"
@@ -115,7 +123,7 @@ class EventData {
         let contactDB = FMDatabase(path: self.database_path)
         
         if contactDB.open() {
-            let sql_select = "SELECT VALID, EID, ENAME, FRONTDATE FROM EVENT"
+            let sql_select = "SELECT VALID, EID, ENAME, FRONTDATE FROM EVENT ORDER BY FRONTDATE"
             print(sql_select)
             do {
                 let result = try contactDB.executeQuery(sql_select, values: [])
@@ -182,13 +190,13 @@ class EventData {
     func undate_event(get_data: EventInfo) {
         let contactDB = FMDatabase(path: self.database_path)
         if contactDB.open() {
-            let updateSQL = Constants.DB_event.sql_event_update + "ENAME='\(get_data.ename), FRONTDATE='\(get_data.front_date)', CYCLE='\(get_data.cycle)', ALARM=\(get_data.alarm), MEMO='\(get_data.memo)'" + "WHERE EID = \(get_data.eid)"
+            let updateSQL = Constants.DB_event.sql_event_update + "VALID=\(get_data.valid), FRONTDATE='\(get_data.front_date)', CYCLE='\(get_data.cycle)', ALARM=\(get_data.alarm), MEMO='\(get_data.memo)'" + "WHERE EID = \(get_data.eid)"
             let result = contactDB.executeUpdate(updateSQL, withArgumentsIn: [])
             if !result{
-                print("panic: insert error")
+                print("panic: update error")
                 exit(0)
             } else {
-                print("insert success")
+                print("update success")
             }
         }else {
             print("Error3: contactDB open Fail, \(contactDB.lastError())")
@@ -204,18 +212,10 @@ class EventData {
             do {
                 let result = try contactDB.executeQuery(sql_select, values: [])
                 while(result.next()){
-                if result.next(){
                     print("\n\n******************\nvalid: \(result.long(forColumnIndex: 0))eid: \(result.long(forColumnIndex: 1))\nsid: \(result.long(forColumnIndex: 2))\nename: \(result.string(forColumnIndex: 3)!))\nfront_date: \(result.string(forColumnIndex: 4)!)\ncycle: \(result.string(forColumnIndex: 5)!)\nalarm: \(result.long(forColumnIndex: 6))\nmemo: \(result.string(forColumnIndex: 7)!)\n**********************\n\n")
                     //                  get_data.front_date =
                     //                    phone.text = result.string(forColumn: "AGE")
                     //                    resultLabel.text = "\(result.string(forColumn: "NAME")!) find!"
-                } else {
-                    print("panic: (debug) detail set not found!!")
-                    //exit(0)
-                    //                    name.text = ""
-                    //                    phone.text = ""
-                    //                    resultLabel.text = "Record is not found"
-                }
             }
             } catch {
                 print("error")
