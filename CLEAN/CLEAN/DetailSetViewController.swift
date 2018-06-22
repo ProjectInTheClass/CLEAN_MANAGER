@@ -164,13 +164,28 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     @IBAction func btn_done(_ sender: Any) {
+        print("haha")
         if(event_info.valid == 0){
             event_info.valid = 1
         }
+        print("\n\n\n\n\n\nbtn_done\n\n\nn\n\n")
         event_info.memo = txt_memo.text
         event_data.undate_event(get_data: event_info)
         event_info.debug()
         event_data.debug()
+        
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainBoard")
+//        vc?.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+//        self.present(vc!, animated: true, completion: nil)
+    
+//        if let uvc = self.storyboard?.instantiateViewController(withIdentifier: "MainBoard") {
+//            uvc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+//            // 인자값으로 받은 뷰 컨트롤러로 화면
+//            self.present(uvc, animated: true, completion: nil)
+//        }
+        if let vc = UIStoryboard.init(name: "Calendar", bundle: nil).instantiateInitialViewController() as? DetailSetViewController {
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {

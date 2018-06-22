@@ -127,7 +127,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         let item = selected[indexPath.row]
         
     //    cell.textLabel?.text = "Index \(indexPath.row)"
-        cell.textLabel?.text = item.front_date
+        cell.textLabel?.text = "\(item.ename) 청소하기"
         return cell
         
     }
