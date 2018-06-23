@@ -2,12 +2,11 @@
 //  TableViewMain.swift
 //  CLEAN
 //
-//  Created by 김장현 on 2018. 6. 21..
-//  Copyright © 2018년 김장현. All rights reserved.
+//  Created by eunji on 2018. 6. 21..
+//  Copyright © 2018년 CLEAN. All rights reserved.
 //
 
 import Foundation
-
 
 import UIKit
 
@@ -16,7 +15,6 @@ class CleanTableViewController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet weak var tableview: UITableView!
     var datas: [EventName] = []
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,7 +26,7 @@ class CleanTableViewController: UIViewController, UITableViewDataSource, UITable
         CleanTableData.shared.data_debug()
         datas = CleanTableData.shared.data.data
         print(",,,,\ncount: \(datas.count)\n0000000")
-        self.tableview.register(UITableViewCell.self,forCellReuseIdentifier: "cell")
+        //self.tableview.register(UITableViewCell.self,forCellReuseIdentifier: "cell")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -55,19 +53,32 @@ class CleanTableViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return datas.count
+        //        return datas.count
+        return 20    //테스트용
+    }
+    
+    //테이블뷰 셀 높이 지정
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 110
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let quanx = datas[indexPath.row]
-        let image = String(quanx.eid)
-        
-        cell.textLabel?.text = quanx.ename
-        cell.detailTextLabel?.text = quanx.front_date
-        cell.imageView?.image = UIImage(named: image)
+        //        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        //        let quanx = datas[indexPath.row]
+        //        let image = String(quanx.eid)
+        //
+        //        cell.textLabel?.text = quanx.ename
+        //        cell.detailTextLabel?.text = quanx.front_date
+        //        cell.imageView?.image = UIImage(named: image)
         // Configure the cell...
+        
+        //수정본
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
+        //cell.imgView.image =
+        //cell.lblTitle.text = "제목"
+        cell.lblDays.text = "2일 지남"
+        
         
         return cell
     }

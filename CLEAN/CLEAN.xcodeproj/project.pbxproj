@@ -60,6 +60,7 @@
 		B63AC82B20DAA4A800A8DDE1 /* CleanSchedulerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63AC82A20DAA4A800A8DDE1 /* CleanSchedulerViewController.swift */; };
 		B6CBED3520B2E55700FDC309 /* AnimUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CBED3420B2E55700FDC309 /* AnimUtils.swift */; };
 		B6CBED3920B2FC6600FDC309 /* FinishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CBED3820B2FC6600FDC309 /* FinishListViewController.swift */; };
+		B6CF0A0A20DE7D3B00FC424D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CF0A0920DE7D3A00FC424D /* TableViewCell.swift */; };
 		B6FBB53E20AC70180066EE2D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FBB53D20AC70180066EE2D /* MainViewController.swift */; };
 		B6FBB54020AC70C70066EE2D /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FBB53F20AC70C70066EE2D /* ListViewController.swift */; };
 /* End PBXBuildFile section */
@@ -173,6 +174,7 @@
 		B63AC82A20DAA4A800A8DDE1 /* CleanSchedulerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSchedulerViewController.swift; sourceTree = "<group>"; };
 		B6CBED3420B2E55700FDC309 /* AnimUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimUtils.swift; sourceTree = "<group>"; };
 		B6CBED3820B2FC6600FDC309 /* FinishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishListViewController.swift; sourceTree = "<group>"; };
+		B6CF0A0920DE7D3A00FC424D /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		B6FBB53D20AC70180066EE2D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B6FBB53F20AC70C70066EE2D /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		C28F6C03E12F199F6AAC71AA /* Pods_CLEANUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CLEANUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -309,6 +311,7 @@
 				3A3946EA20C28BDF0089717A /* DetailSetViewController.swift */,
 				B63AC82A20DAA4A800A8DDE1 /* CleanSchedulerViewController.swift */,
 				3AC7877F20DB694600D869D0 /* TableViewMain.swift */,
+				B6CF0A0920DE7D3A00FC424D /* TableViewCell.swift */,
 			);
 			name = Control;
 			sourceTree = "<group>";
@@ -691,6 +694,7 @@
 				B63AC82B20DAA4A800A8DDE1 /* CleanSchedulerViewController.swift in Sources */,
 				3A44326020B64CE90009FC39 /* FSCalendarScopeHandle.m in Sources */,
 				3AC7878020DB694600D869D0 /* TableViewMain.swift in Sources */,
+				B6CF0A0A20DE7D3B00FC424D /* TableViewCell.swift in Sources */,
 				3A3946EB20C28BDF0089717A /* DetailSetViewController.swift in Sources */,
 				3AC42E0D20C74858003D82F9 /* FMDatabaseQueue.m in Sources */,
 				3A44325820B64CE90009FC39 /* FSCalendarCell.m in Sources */,
