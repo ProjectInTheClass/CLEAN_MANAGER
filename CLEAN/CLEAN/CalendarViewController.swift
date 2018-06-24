@@ -17,7 +17,8 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
 
     var selected: [EventName] = []
     
-    var dateExample = ["2018-06-17", "2018-06-12", "2018-06-29", "2018-06-19"]
+  //  var dateExample = ["2018-06-17", "2018-06-12", "2018-06-29", "2018-06-19"]
+    var dateExample = [""]
 
     private let formatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -129,6 +130,27 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     //    cell.textLabel?.text = "Index \(indexPath.row)"
         cell.textLabel?.text = "\(item.ename) 청소하기"
         return cell
+        
+        /*
+        let event_data = EventData()
+        let event_info = EventInfo(valid: -1, eid: -1, sid: -1, ename: "", front_date: "", cycle: "", alarm: 0, memo: "")
+        var offset = 0
+        
+        event_data.find_event(event_id: offset, get_data: event_info)
+        event_info.eid = offset
+        
+        if offset == 00 {
+            event_info.ename = "쇼파"
+        } else if offset == 01{
+            event_info.ename = "바닥"
+        } else if offset == 10{
+            event_info.ename = "전자레인지"
+        } else if offset == 11{
+            event_info.ename = "바닥"
+        } else if offset == 20{
+            event_info.ename = "욕실"
+ 
+ */
         
     }
     

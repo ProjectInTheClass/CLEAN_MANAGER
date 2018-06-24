@@ -13,7 +13,8 @@ import UIKit
 class Constants: NSObject{
     
     struct Database {
-        static let db_name = "test_db9"
+        static let db_name = "test_db9.sqlite"
+        static let data_name = "CLEAN_DATA_LIST"
         
         //base table name
         static let interface_te_name = "EVENT"
@@ -23,12 +24,12 @@ class Constants: NSObject{
         
         //*************
         //create query
-        //*************        
+        //*************
         //common create
         static let insert = "INSERT INTO "
         static let update = "UPDATE "
         static let set = "SET "
-    
+        
         static let insert_contant = "(VALID, EID, SID, ENAME, FRONTDATE, CYCLE, ALARM, MEMO) values "
         static let create_exists = "CREATE TABLE IF NOT EXISTS "
         
@@ -65,5 +66,5 @@ class Constants: NSObject{
     struct Button{
         static let done = "done"
     }
-
+    
 }

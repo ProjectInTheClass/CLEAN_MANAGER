@@ -25,7 +25,7 @@ class EventData {
     {
         var i = 0
         var datas : [EventInfo] = []
-
+        
         if !self.file_mgr.fileExists(atPath: self.database_path){
             let contactDB = FMDatabase(path: self.database_path)
             
@@ -72,7 +72,7 @@ class EventData {
                     insert_event(get_data: datas[i])
                     i+=1
                 }
-
+                
             } else {
                 print("ERROR1: contactDB open fail, \(contactDB.lastError())")
             }
@@ -100,15 +100,15 @@ class EventData {
                     get_data.alarm = result.long(forColumnIndex: 6)
                     get_data.memo = result.string(forColumnIndex: 7)!
                     //get_data.set_init(valid: result.long(forColumnIndex: 0), eid: result.long(forColumnIndex: 1), sid: result.long(forColumnIndex: 2), ename: result.string(forColumnIndex: 3)!, front_date: result.string(forColumnIndex: 4)!, cycle: result.string(forColumnIndex: 5)!, alarm: result.long(forColumnIndex: 6), memo: result.string(forColumnIndex: 7)!)
-//                  get_data.front_date =
-//                    phone.text = result.string(forColumn: "AGE")
-//                    resultLabel.text = "\(result.string(forColumn: "NAME")!) find!"
+                    //                  get_data.front_date =
+                    //                    phone.text = result.string(forColumn: "AGE")
+                    //                    resultLabel.text = "\(result.string(forColumn: "NAME")!) find!"
                 } else {
                     print("panic: (\(event_id)) detail set not found!!")
                     exit(0)
-//                    name.text = ""
-//                    phone.text = ""
-//                    resultLabel.text = "Record is not found"
+                    //                    name.text = ""
+                    //                    phone.text = ""
+                    //                    resultLabel.text = "Record is not found"
                 }
             } catch {
                 print("error")
@@ -142,7 +142,7 @@ class EventData {
         } else {
             print("else error")
         }
-
+        
     }
     
     
@@ -172,7 +172,7 @@ class EventData {
         let contactDB = FMDatabase(path: self.database_path)
         if contactDB.open(){
             let insertSQL =  Constants.DB_event.sql_event_insert + "(\(get_data.valid), \(get_data.eid), \(get_data.sid), '\(get_data.ename)', '\(get_data.front_date)', '\(get_data.cycle)', '\(get_data.alarm)', '\(get_data.memo)')"
-
+            
             print(insertSQL)
             let result = contactDB.executeUpdate(insertSQL, withArgumentsIn: [])
             if !result{
@@ -186,22 +186,46 @@ class EventData {
         }
     }
     
-   
+    
     
     func undate_event(get_data: EventInfo) {
-        let contactDB = FMDatabase(path: self.database_path)
-        if contactDB.open() {
-            let updateSQL = Constants.DB_event.sql_event_update + "VALID=\(get_data.valid), FRONTDATE='\(get_data.front_date)', CYCLE='\(get_data.cycle)', ALARM=\(get_data.alarm), MEMO='\(get_data.memo)'" + "WHERE EID = \(get_data.eid)"
-            let result = contactDB.executeUpdate(updateSQL, withArgumentsIn: [])
-            if !result{
-                print("panic: update error")
-                exit(0)
-            } else {
-                print("update success")
-            }
+        
+        var getData:Dictionary<String, Any> = [:]
+        getData["memo"] = get_data.memo
+        getData["valid"] = get_data.valid
+        getData["front_date"] = get_data.front_date
+        getData["cycle"] = get_data.cycle
+        getData["alarm"] = get_data.alarm
+        getData["eid"] = get_data.eid
+        getData["ename"] = get_data.ename
+        getData["sid"] = get_data.sid
+        
+        if var dataList:Array<Dictionary<String, Any>> = UserDefaults.standard.object(forKey: Constants.Database.data_name) as? Array<Dictionary<String, Any>> {
+            dataList.append(getData)
+            UserDefaults.standard.set(dataList, forKey: Constants.Database.data_name)
+            UserDefaults.standard.synchronize()
         }else {
-            print("Error3: contactDB open Fail, \(contactDB.lastError())")
+            var dataList:Array<Dictionary<String, Any>> = []
+            dataList.append(getData)
+            UserDefaults.standard.set(dataList, forKey: Constants.Database.data_name)
+            UserDefaults.standard.synchronize()
         }
+        
+        
+        
+        //        let contactDB = FMDatabase(path: self.database_path)
+        //        if contactDB.open() {
+        //            let updateSQL = Constants.DB_event.sql_event_update + "VALID=\(get_data.valid), FRONTDATE='\(get_data.front_date)', CYCLE='\(get_data.cycle)', ALARM=\(get_data.alarm), MEMO='\(get_data.memo)'" + "WHERE EID = \(get_data.eid)"
+        //            let result = contactDB.executeUpdate(updateSQL, withArgumentsIn: [])
+        //            if !result{
+        //                print("panic: update error")
+        //                exit(0)
+        //            } else {
+        //                print("update success")
+        //            }
+        //        }else {
+        //            print("Error3: contactDB open Fail, \(contactDB.lastError())")
+        //        }
     }
     
     func debug()
@@ -217,7 +241,7 @@ class EventData {
                     //                  get_data.front_date =
                     //                    phone.text = result.string(forColumn: "AGE")
                     //                    resultLabel.text = "\(result.string(forColumn: "NAME")!) find!"
-            }
+                }
             } catch {
                 print("error")
             }

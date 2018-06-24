@@ -2,7 +2,7 @@
 //  DetailSetViewController.swift
 //  CLEAN
 //
-//  Created by clean on 2018. 6. 2..
+//  Created by eunjiev on 2018. 6. 2..
 //  Copyright © 2018년 clean. All rights reserved.
 //
 
@@ -78,7 +78,7 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         //    버튼 클릭 후에 홈으로 나갔을 때 5초뒤에 알람 나오는것, 시간차이를 이용해서 알람내고싶을때 이거 사용
         
         //    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5.0, repeats: false)
-
+        
         
         // 년,월,일 까지 받음
         
@@ -170,19 +170,72 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
         print("\n\n\n\n\n\nbtn_done\n\n\nn\n\n")
         event_info.memo = txt_memo.text
+        event_info.eid = offset
+        
+        if offset == 00 {
+            event_info.ename = "쇼파"
+        } else if offset == 01{
+            event_info.ename = "바닥"
+        } else if offset == 10{
+            event_info.ename = "전자레인지"
+        } else if offset == 11{
+            event_info.ename = "바닥"
+        } else if offset == 20{
+            event_info.ename = "욕실"
+        } else if offset == 21{
+            event_info.ename = "세면대"
+        } else if offset == 22{
+            event_info.ename = "바닥"
+        } else if offset == 23{
+            event_info.ename = "변기"
+        } else if offset == 30{
+            event_info.ename = "침대"
+        } else if offset == 31{
+            event_info.ename = "바닥"
+        } else if offset == 40{
+            event_info.ename = "침대"
+        } else if offset == 41{
+            event_info.ename = "바닥"
+        } else if offset == 50{
+            event_info.ename = "침대"
+        } else if offset == 51{
+            event_info.ename = "바닥"
+        } else if offset == 60{
+            event_info.ename = "옷장"
+        } else if offset == 61{
+            event_info.ename = "바닥"
+        } else if offset == 70{
+            event_info.ename = "TV"
+        } else if offset == 71{
+            event_info.ename = "컴퓨터"
+        } else if offset == 72{
+            event_info.ename = "드라이기"
+        }
+        
+        
         event_data.undate_event(get_data: event_info)
         event_info.debug()
         event_data.debug()
         
-//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainBoard")
-//        vc?.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-//        self.present(vc!, animated: true, completion: nil)
-    
-//        if let uvc = self.storyboard?.instantiateViewController(withIdentifier: "MainBoard") {
-//            uvc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-//            // 인자값으로 받은 뷰 컨트롤러로 화면
-//            self.present(uvc, animated: true, completion: nil)
-//        }
+        let alert = UIAlertController(title: "알림", message: "저장 되었습니다.", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "확인", style: .default, handler: { action in
+            self.navigationController?.popViewController(animated: true)
+        }))
+        
+        
+        self.present(alert, animated: true)
+        
+        
+        //        let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainBoard")
+        //        vc?.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+        //        self.present(vc!, animated: true, completion: nil)
+        
+        //        if let uvc = self.storyboard?.instantiateViewController(withIdentifier: "MainBoard") {
+        //            uvc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+        //            // 인자값으로 받은 뷰 컨트롤러로 화면
+        //            self.present(uvc, animated: true, completion: nil)
+        //        }
         if let vc = UIStoryboard.init(name: "Calendar", bundle: nil).instantiateInitialViewController() as? DetailSetViewController {
             self.navigationController?.pushViewController(vc, animated: true)
         }
@@ -210,7 +263,7 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
     }
     
-
+    
     @IBAction func date_picker_changed(_ sender: UIDatePicker) {
         let formatter = DateFormatter()
         formatter.dateFormat = Constants.DetailSet.date_format
@@ -275,7 +328,7 @@ class DetailSetViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             event_info.alarm = pickerView.selectedRow(inComponent: 0)
         }
     }
-
+    
 }
 
 extension DetailSetViewController: UNUserNotificationCenterDelegate {
@@ -311,7 +364,7 @@ extension DetailSetViewController: UNUserNotificationCenterDelegate {
             
         default:
             break
-        
+            
         }
         
         completionHandler()
