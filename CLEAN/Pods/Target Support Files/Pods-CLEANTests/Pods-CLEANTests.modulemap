@@ -1,0 +1,6 @@
+framework module Pods_CLEANTests {
+  umbrella header "Pods-CLEANTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
